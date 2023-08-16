@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convertidor</title>
+<link href="rscConv/resources/css/themes.css" rel="stylesheet" type="text/css">
+<link id="csstheme" href="rscConv/resources/css/theme_0.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	background-color: white;		
+}
+</style>
+</head>
+
+<body>
+<div id="Bg-Deg" class="Bg-Deg"><i></i><i></i><i></i></div>
+<div id="Bg-Img" class="Bg-Img"><i></i><i></i><i></i><div id="Img-L" class="Img-L"><i></i><i></i><i></i></div><div id="Img-R" class="Img-R"><i></i><i></i><i></i></div><div id="Img-T" class="Img-T"><i></i><i></i><i></i></div><div id="Img-B" class="Img-B"><i></i><i></i><i></i></div></div>
+<!-- ------------------------------------------------------------------------- -->
+<div id="Cnt-Theme" class="Cnt-Theme"><span class="texto2">Tema:</span>
+	<div id="Cnt-Select2" class="Cnt-Select-2">
+		<select id="Select2" class="Select-2 texto2" name="theme" onchange="changetheme()">
+			<option value="theme_0" selected>Claro</option>
+			<option value="theme_1">Blue</option>
+		</select><i></i>
+	</div>
+</div>
+<!-- ------------------------------------------------------------------------- -->
+<div id="contenido" class="contenido">
+	<div id="Cnt-Img" class="Cnt-Img"><i></i><i></i><i></i></div>
+	<div id="titulo" class="titulo"><span class="texto">INGRESO POR PESO</span></div>
+	<div id="subtitulo1" class="subtitulo-1"><span class="texto">Peso</span></div>
+	<div id="subtitulo2" class="subtitulo-2"><span class="texto">Tipo de Monedas</span></div>
+	<div id="Cnt-Input1" class="Cnt-Input-1">
+		<input type="number" id="Input1" class="Input-1 texto" placeholder="0" onchange="cal()" onkeyup="cal()">
+	</div>
+	<div id="Cnt-Select1" class="Cnt-Select-1">
+		<select id="Select1" class="Select-1 texto" onchange="cal()">
+			<option value="0.7">$1</option>
+			<option value="2.2">$5</option>
+			<option value="3.5">$10</option>
+			<option value="6.988">$50</option>
+			<option value="8.9554">$100 Grande</option>
+			<option value="7.56">$100 Chica</option>
+			<option value="6.505">$500</option>
+		</select>
+		<i></i>
+	</div>
+	<div id="subtitulo3" class="subtitulo-3"><span class="texto">Total</span></div>
+	<div id="Cnt-Input2" class="Cnt-Input-2">
+		<input type="text" id="Input2" class="Input-2 texto" value="$0" readonly>
+	</div>
+</div>
+<script src="rscConv/resources/js/themes.js"></script>
+<script>
+function cal() {
+	var a = parseInt(document.getElementById("Input1").value),
+		b = document.getElementById("Select1"),
+		i = b.selectedIndex,
+		c = parseFloat(b.value),
+		d = parseInt(b.options[i].text.replace(/[^0-9]/g, "")),
+		resp = 0;
+	if(isNaN(a)){a=0}
+	resp = Math.round(a / c) * d;
+	document.getElementById("Input2").value = "$" + resp ;
+}
+function changetheme() {
+	var urlcod = document.getElementById("Select2").value;
+	document.getElementById("csstheme").href="rscConv/resources/css/"+ urlcod +".css";
+}
+</script>
+
+</body>
+</html>

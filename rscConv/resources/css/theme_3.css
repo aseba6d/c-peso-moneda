@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+.Bg-Deg {
+	background-color: #ed7660;
+	background-image: repeating-linear-gradient(-45deg, #ed7660 10%, #ed7660 20%, #ef816a 20%, #ef816a 23%);
+}
+.texto2 {color: white;}
+.contenido {
+    border-color: #000 !important;
+    background-color: #E12E2E;
+    box-shadow: 0px 0px 1px 1px #000;
+    background-image: linear-gradient(#E12E2E, #e75454 20%, #e75454 45%, #000 45%, #000 55%, #fff 55%, #DFDFDF);
+}
+.titulo {
+	background-color: #CCC;
+	box-shadow:0px 0px 10px 2px #fff;
+	border-color: #fff !important;
+	text-shadow: 0px 0px 2px white;
+}
+[class|="subtitulo"] {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+[class|="Cnt-Select"] i{
+	border-left-color:#d10000 !important;
+	border-bottom-color:#d10000 !important;
+}
+[class|="Cnt-Select"]:hover i {
+	border-left-color: indianred !important;
+    border-bottom-color: indianred !important;
+}
+.Cnt-Theme [class|="Cnt-Select"] i{
+	border-left-color:#CCCCCC !important;
+	border-bottom-color:#CCCCCC !important;
+}
+.Cnt-Theme [class|="Cnt-Select"]:hover i {
+	border-left-color: white !important;
+    border-bottom-color: white !important;
+}
+.Input-1, .Input-2, .Select-1 {
+	background-color: rgba(255,255,255,1.00);
+	border-color: #CCC !important;
+	box-shadow:5px 7px 10px 7px #000;
+	text-shadow: 0px 0px 2px #FFF;
+}
+#Input1::placeholder {
+	color: #CCCCCC;
+	text-shadow: 0px 0px 2px #000;
+}
+#Input2:read-only {
+	background-color: #e75454;
+}
+.Select-1:hover{
+	background-color:rgba(231,231,231,1.00);
+}
+ .Select-2 {
+	 background-color: #9e0b0b;
+	 border-color: black !important;
+	 color: white;
+}
+ .Select-2:hover {
+	 background: #e75454;
+}
+/* imagenes -------------- */
+.Img-L {
+	background-image: url("../img/Theme-3/pokemon_yamper_2x.png"), url("../img/Theme-3/pkm.png");
+	background-size: 200px, contain;
+	background-repeat: no-repeat;
+	background-position:left bottom , left top;
+}
+.Img-R {
+	background-image: url("../img/Theme-3/pokemon_pikachu_2x.png");
+	background-size:175px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	
+}
+.Img-B {
+	background-image: url("../img/Theme-3/pokemon_SV.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.Img-T {
+	background-image: url("../img/Theme-3/pokeball.png"), url("../img/Theme-3/pokemon_eevee_2x.png");
+	background-size: 50px, 150px;
+	background-repeat: no-repeat;
+	background-position:  105px bottom,left bottom;
+	height: calc(50% - 150px) !important;
+}

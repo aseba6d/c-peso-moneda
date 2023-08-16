@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+.texto, .texto2 {
+	font-family: Arial, "sans-serif";
+    text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+}
+.texto {font-size: 35px;}
+.texto2 {font-size: 14px;}
+#contenido {
+	position:absolute;
+	width: 698px;
+	height: 298px;
+	top: calc(50% - 150px);
+	left: calc(50% - 350px);
+	z-index: 1;
+	border: 1px solid;
+	border-radius: 50px;
+	text-align: center;
+}
+#titulo {
+	display: block;
+	clear: both;
+    margin: 18px 168px 8px;
+	width: 360px;
+	height: 40px;
+	border: solid 1px;
+	padding: 5px 0px;
+	border-radius: 12px;
+}
+#subtitulo1, #subtitulo2 {
+	display: block;
+	float:left;
+	width: 349px; 
+	height: 45px;
+}
+#subtitulo3 {
+	display: block;
+	clear: both;
+	width: 698px; 
+	height: 45px;
+	padding-top: 10px;
+}
+#Cnt-Input1, #Cnt-Select1 {
+	display: block;
+	float:left;
+	width: 349px;
+	height: 50px;
+	position: relative;
+	text-align: center;
+}
+#Cnt-Select1 i{
+	position: absolute;
+	right: 48px;
+	top: 10px;
+	width: 12px;
+	height: 12px;
+	border-left:4px solid;
+	border-bottom:4px solid;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+#Cnt-Select1:hover i {
+	margin-top: 5px;
+}
+#Cnt-Select2:hover i {
+	margin-top: 3px;
+}
+#Cnt-Input2 {
+	display: block;
+	clear: both;
+	width: 698px;
+	height: 50px;	
+}
+#Input1, #Input2, #Select1, #Select2 {
+	display: inline-block;
+	outline: none;
+    border: 1px solid;
+    border-radius: 12px;
+    position: relative;
+	appearance:none;
+	-webkit-appearance: none;
+	width: 270px;
+	padding: inherit;
+}
+#Input1, #Input2 {height: 43px;}
+#Select1 {height: 45px; cursor: pointer;}
+#Select2 {width: 170px !important;height: 20px; cursor: pointer;}
+#Cnt-Select2 i{
+    position: absolute;
+    right: 7px;
+    top: 22px;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg); /* Giramos el cuadrado */
+    transition: all 0.25s ease;
+}
+#Cnt-Select2 {
+    width: 170px;
+	height: auto;
+}
+#Cnt-Theme {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	width: 170px;
+	height: 40px;
+	z-index: 3;
+	text-align: center;
+}
+/* imagenes -------------- */
+#Bg-Deg, #Bg-Deg i, #Bg-Img, #Bg-Img i, #Cnt-Img, #Cnt-Img i {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+#Bg_Deg {
+	z-index: 0;
+}
+#Bg_Img {
+	z-index: 1;
+}
+#Img-L, #Img-R, #Img-L i , #Img-R i {
+	position: absolute;
+	top: 0px;
+	width: 330px;
+	height: 100%;
+}
+#Img-T, #Img-B, #Img-T i, #Img-B i {
+	position: absolute;
+	width: 700px;
+	height: 158px;
+	left: calc(50% - 350px);
+}
+#Img-L {left: 0px;}
+#Img-R {right: 0px;}
+#Img-T {top: 0px;}
+#Img-B {bottom: 0px;}

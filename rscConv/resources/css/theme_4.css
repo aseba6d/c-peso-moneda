@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+.Bg-Deg {
+	background-color: #000;
+	background: linear-gradient(70deg, #000 40%, #ebf8e1 50%, #F2F2F2 60%);
+}
+.texto2 {color: black;}
+.contenido {
+	border-color: #fff !important;
+	background-color: #4E4E4E;
+	box-shadow: 0px 0px 20px 10px #fff;
+	background-image:radial-gradient(#4E4E4E, #000);
+}
+.titulo {
+	background-color: #CCC;
+	box-shadow:0px 0px 10px 2px #fff;
+	border-color: #fff !important;
+	text-shadow: 0px 0px 2px white;
+}
+[class|="subtitulo"] {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+[class|="Cnt-Select"] i,[class|="Cnt-Select"]:hover i {
+	border-left-color: black !important;
+    border-bottom-color: black !important;
+}
+.Input-1, .Input-2, .Select-1 {
+	background-color: rgba(255,255,255,1.00);
+	border-color: #CCC !important;
+	box-shadow:5px 7px 10px 7px #000;
+	text-shadow: 0px 0px 2px #FFF;
+}
+#Input1::placeholder {
+	color: #CCCCCC;
+	text-shadow: 0px 0px 2px White;
+}
+#Input2:read-only {
+	background-color: #ebf8e1;
+}
+.Select-1:hover, .Select-2:hover {
+	background-color:rgba(231,231,231,1.00);
+}
+ .Select-2 {
+	 background-color: #ccc;
+	 border-color: black  !important;
+	 color: black;
+}
+/* imagenes -------------- */
+.Img-L {
+	background-image: url("../img/Theme-4/BcCv2.png"), url("../img/Theme-4/BcCv1.png");
+	background-size: 150px, contain;
+	background-repeat: no-repeat;
+	background-position: left top, left bottom;
+}
+.Img-R {
+	background-image: url("../img/Theme-4/BcCv4.png"), url("../img/Theme-4/BcCv3.png");
+	background-size:150px, contain;
+	background-repeat: no-repeat;
+	background-position: right 40px ,left bottom;
+}
+.Img-T {
+	background-image: url("../img/Theme-4/BcCv0.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.Img-B {
+	background-image: url("../img/Theme-4/BcCv5.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

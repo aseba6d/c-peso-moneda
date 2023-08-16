@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+.Bg-Deg {
+	background-color: #ebebeb;
+}
+.contenido {
+	border-color: #ff9e1e !important;
+	background-color: #ffbf6a;
+	background-image:radial-gradient(#fff865, #ffbf6a);
+	box-shadow: 0px 0px 20px 10px #eab062;
+}
+.titulo {
+	background-color: #0df89e;
+	box-shadow:0px 0px 10px 2px #0dbc79;
+	border-color: #0dbc79;
+	text-shadow: 0px 0px 2px white;
+	color: #2C8121;
+}
+[class|="subtitulo"] {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+[class|="Cnt-Select"] i{
+	border-left-color: white !important;
+    border-bottom-color: white !important;
+}
+[class|="Cnt-Select"]:hover i {
+	border-left-color: indianred !important;
+    border-bottom-color: indianred !important;
+}
+.Input-1, .Input-2, .Select-1 {
+	background-color: #4dcaff;
+	border-color: #9a9eff !important;
+	box-shadow:5px 7px 10px 7px #eab062;
+	text-shadow: 0px 0px 2px #FFF;
+}
+#Input1::placeholder {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+#Input2:read-only {
+	background-color: #9a9eff;
+	border-color: #D0D2F8;
+	box-shadow:5px 7px 10px 7px #eab062;
+}
+ .Select-2 {
+	 background-color: #9a9eff;
+	 color: white;
+}
