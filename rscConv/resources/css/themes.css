@@ -128,13 +128,13 @@
 #Img-L, #Img-R, #Img-L i , #Img-R i {
 	position: absolute;
 	top: 0px;
-	width: 330px;
+	width: calc(50% - 350px);
 	height: 100%;
 }
 #Img-T, #Img-B, #Img-T i, #Img-B i {
 	position: absolute;
 	width: 700px;
-	height: 158px;
+	height: calc(50% - 150px);
 	left: calc(50% - 350px);
 }
 #Img-L {left: 0px;}
