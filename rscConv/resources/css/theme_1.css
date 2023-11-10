@@ -51,3 +51,15 @@
 	 background-color: #2d67a0;
 	 color: white;
 }
+#Img-L {
+	background-image: url(../img/Theme-0/640x360_12_2.png);
+	background-size: 100% auto;
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+#Img-R {
+	background-image: url(../img/Theme-0/Teleton_10y11_Nov_H.png);
+	background-size: 65% auto;
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
