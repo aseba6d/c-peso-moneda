@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* ---Configuracion Inicial-------------------------------------------------- */
+:root {
+    --var-fondo-color: #ebebeb;
+    --grid-fondo-color: url(../../resources/img/theme0-navidad/fondo-navidad.png) left top/100% 100% no-repeat;
+    --grid-content-background: url(../../resources/img/theme0-navidad/pngegg.png) left bottom/120px no-repeat, url(../../resources/img/theme0-navidad/7409.jpg) left top/contain repeat;
+    --grid-content-border-color: #0dbc79;
+    --grid-content-box-shadow: 0px 0px 20px 10px #0dbc79;
+
+    --Items-Grid-background-color:rgba(255, 255, 255, 0.5);
+    --Items-Grid-color: white;
+    --Items-Grid-text-shadow: 0px 0px 2px red;
+    --Items-Grid-box-shadow: 5px 5px 8px 5px #0dbc79;
+
+    --Items-background-color:rgba(13, 248, 157, 0.3);
+    --Items-2-background-color:rgba(43, 255, 0, 0.3);
+    --Items-Background-color-Active:#2C8121;
+    --Items-Background-color-Hover: rgba(0, 0, 0, 0.1);
+    --Items-Option-background-color:#0df89e;
+    --Items-Box-Option-background-color:#0dbc79;
+    --Items-Select-Background-color-Hover:rgba(13, 248, 157, 0.5);
+    --Items-color-Hover:red;
+
+
+    /* ---------------------------------------------------------------------- */
+}
+
+/* -------------------------------------------------------------------------- */
+#Fieldset-Content {
+    animation-name: luces;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+@keyframes luces {
+    0%   {box-shadow:0px 0px 20px 10px red;}
+    25%  {box-shadow:0px 0px 20px 10px yellow;}
+    50%  {box-shadow:0px 0px 20px 10px blue;}
+    75%  {box-shadow:0px 0px 20px 10px green;}
+    100% {box-shadow:0px 0px 20px 10px white;}
+  }
