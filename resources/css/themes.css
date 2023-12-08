@@ -22,46 +22,24 @@ body {
     grid-template-rows: var(--grid-fondo-template-rows, minmax(150px, 1fr) auto minmax(150px, 1fr));
     grid-template-areas:var(--grid-fondo-template-areas, "Side-1 Side-2 Side-3" "Side-1 Contenido Side-3" "Side-1 Side-4 Side-3");
 }
-#Section-Grid1{ 
-    grid-area: var(--section-grid-1-area, Header);
-    display:var(--section-grid-1-display, none);
-    z-index: var(--section-grid-1-z-index, 0);
-}
-#Section-Grid2{ 
-    grid-area: var(--section-grid-2-area, Side-2);
-    display:var(--section-grid-2-display, block);
-    z-index: var(--section-grid-2-z-index, 0);
-}
-#Section-Grid3{ 
-    grid-area: var(--section-grid-3-area, Side-1);
-    display:var(--section-grid-3-display, block);
-    z-index: var(--section-grid-3-z-index, 0);
-}
-#Section-Grid4{ 
-    grid-area: var(--section-grid-4-area, Contenido);
-    display:var(--section-grid-4-display, block);
-    z-index: var(--section-grid-4-z-index, 0);
-}
-#Section-Grid5{ 
-    grid-area: var(--section-grid-5-area, Side-3);
-    display:var(--section-grid-5-display, block);
-    z-index: var(--section-grid-5-z-index, 0);
-}
-#Section-Grid6{ 
-    grid-area: var(--section-grid-6-area, Side-4);
-    display:var(--section-grid-6-display, block);
-    z-index: var(--section-grid-6-z-index, 0);
-}
-#Section-Grid7{ 
-    grid-area: var(--section-grid-7-area, Menu-1);
-    display:var(--section-grid-7-display, none);
-    z-index: var(--section-grid-7-z-index, 0);
-}
-#Section-Grid8{ 
-    grid-area: var(--section-grid-8-area, Footer);
+#Section-Grid1{ grid-area: var(--section-grid-1-area, Header);}
+#Section-Grid2{ grid-area: var(--section-grid-2-area, Side-2);}
+#Section-Grid3{ grid-area: var(--section-grid-3-area, Side-1);}
+#Section-Grid4{ grid-area: var(--section-grid-4-area, Contenido);}
+#Section-Grid5{ grid-area: var(--section-grid-5-area, Side-3);}
+#Section-Grid6{ grid-area: var(--section-grid-6-area, Side-4);}
+#Section-Grid7{ grid-area: var(--section-grid-7-area, Menu-1);}
+#Section-Grid8{ grid-area: var(--section-grid-8-area, Footer);}
+#Section-Grid1, #Section-Grid7, #Section-Grid8 {
     display:var(--section-grid-8-display, none);
     z-index: var(--section-grid-8-z-index, 0);
 }
+#Section-Grid2, #Section-Grid3, #Section-Grid4,
+#Section-Grid5, #Section-Grid6 {
+    display:var(--section-grid-8-display, block);
+    z-index: var(--section-grid-8-z-index, 0);
+}
+
 /* -------------------------------------------------------------------------- */
 #Fieldset-Content {
     display: grid;
@@ -276,15 +254,8 @@ body {
     -o-border-radius: var( --Items-border-radius-LB, 0 0 0 11px);
 }
 /* -------------------------------------------------------------------------- */
-#Select-Icon{
-    text-align: right;
-}
-#Select {
-    text-align: center;
-}
-#Select-Arrow{
-    text-align: center;
-}
+#Select-Icon{text-align: right;}
+#Select, #Select-Arrow {text-align: center;}
 #Arrow{
     font-size: 0.6em;
     vertical-align:middle;
@@ -349,7 +320,7 @@ body {
 .radio-off{display: none;}
 .Option{
     padding: 3px;
-    background-color:var(--Items-Option-background-color, #4dcaff);
+    background:var(--Items-Option-background-color, #4dcaff);
     text-align: center;
     color: var(--Items-Grid-color, white);
     text-shadow: 0px 0px 2px black;
@@ -361,3 +332,25 @@ body {
     background-color:var(--Items-Background-color-Hover, rgba(0, 0, 0, 0.1));
 }
 /* -------------------------------------------------------------------------- */
+#Box-VisualMoneda{
+    position: absolute;
+    left: 255px;
+    top: -52px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1px;
+    background:var(--Items-Box-Option-background-color, #9a9eff);
+    border-radius: var(--Box-Items-border-radius, 12px);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+#VisualMoneda{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 0;
+    background:var(--Items-Option-background-color, #4dcaff);
+    line-height: 0;
+    border-radius: var( --Items-border-radius, 11px);
+}
