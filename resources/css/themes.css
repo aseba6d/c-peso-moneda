@@ -299,7 +299,7 @@ body {
     color:var(--Items-color-Hover,#0dbc79);
 }
 #Box-Select:hover > .Items {
-    background: var(--Items-Background-color-Active,rgb(38, 128, 237));
+    background: var(--Items-Select-Background-color-Hover,rgb(38, 128, 237));
 }
 .small-sup {
     vertical-align:top;
@@ -340,7 +340,7 @@ body {
     flex-direction: column;
     padding: 1px;
     gap: 1px;
-    background:var(--Items-Grid-background-color, #9a9eff);
+    background:var(--Items-Box-Option-background-color, #9a9eff);
     border-radius: var(--Box-Items-border-radius, 12px);
 }
 #Box-Option > label::before{content: "$";}
@@ -349,7 +349,7 @@ body {
 .radio-off{display: none;}
 .Option{
     padding: 3px;
-    background-color:var(--Items-background-color, #4dcaff);
+    background-color:var(--Items-Option-background-color, #4dcaff);
     text-align: center;
     color: var(--Items-Grid-color, white);
     text-shadow: 0px 0px 2px black;
