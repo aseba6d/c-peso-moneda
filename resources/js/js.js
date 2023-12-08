@@ -3,8 +3,7 @@ BoxOption = document.getElementById("Option-Box"),
 BoxVisualMonedaImg = document.getElementById("Box-VisualMoneda");
 let InputMoneda = document.getElementById("Input-Text"),
 Resultado = document.getElementById("Answer-Text"),
-LabelOption = document.getElementById("Label-Option"),
-VisualMonedaImg = document.getElementById("VisualMoneda");
+LabelOption = document.getElementById("Label-Option");
 
 function cal() {
     let a = parseInt(InputGramos.value),
@@ -17,14 +16,6 @@ function cal() {
 function ButtonOnOff() {
     BoxOption.classList.toggle("Option-Off");
     BoxVisualMonedaImg.classList.toggle("Option-Off");
-}
-function VisualMoneda(d, f) {
-    let TextHtml = "";
-    const TagImg1 = '<img src="resources/img/monedas/$',
-    TagImg2 = '" width="75" height="75">';
-    TextHtml = TagImg1 + d + '-anverso' + f + '.png" alt="$' + d + f + TagImg2;
-    TextHtml += TagImg1 + d + '-reverso' + f + '.png" alt="$' + d + f + TagImg2;
-    VisualMonedaImg.innerHTML = TextHtml;
 }
 function OptionDatos(x, y) {
     InputMoneda.value = x.value;
