@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -32,96 +32,119 @@
         <!-- ---Contenido-------------------------------------------------------- -->
         <div id="Section-Grid4" class="Section-Grid">
             <!-- ---Contenido Grid----------------------------------------------- -->
-        <fieldset id="Fieldset-Content" class="">
-            <!-- -------------------------------------------------------- -->
-            <legend id="Legend-Content" class="">Ingrese el peso</legend>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-1" class="">
+            <fieldset id="Fieldset-Content" class="">
                 <!-- -------------------------------------------------------- -->
-                <div id="Box-Title2" class="Box-Title-Main">
-                    <span id="Title2" class="Title-Main">Ingrese el peso</span>
-                </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-2" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Box-Subtitles1" class="Box-Subtitles">
-                    <span id="Subtitles1" class="Subtitles">Peso:</span>
-                </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-3" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Box-Subtitles2" class="Box-Subtitles">
-                    <span id="Subtitles2" class="Subtitles">Denominación:</span>
-                </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-4" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Items-Box1" class="">
-                    <div id="Box-Input" class="Box-Items-Grid">
-                        <div id="Input" class="Items Radious-L">
-                            <input id="Input-Number" class="" type="number" min="0" max="999999" placeholder="0" value="" required>
-                        </div>
-                        <div id="Ipt-Txt" class="Items Radious-R">g</div> 
+                <legend id="Legend-Content" class="">Ingrese el peso</legend>
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-1" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Box-Title2" class="Box-Title-Main">
+                        <span id="Title2" class="Title-Main">Ingrese el peso</span>
                     </div>
+                    <!-- -------------------------------------------------------- -->
                 </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <div id="Box-Item-5" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Items-Box2" class="">
-                    <div id="Box-Select" class="Box-Items-Grid">
-                        <div id="Select-Icon" class="Items Radious-L">$</div>
-                        <div id="Select" class="Items">
-                            <span id="Label-Option">10</span></span>
-                        </div>
-                        <div id="Select-Arrow" class="Items Radious-R"><span id="Arrow">▼</span></div>
-                        <input id="Input-Text" class="" type="number" name="10" value="3.5">
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-2" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Box-Subtitles1" class="Box-Subtitles">
+                        <span id="Subtitles1" class="Subtitles">Peso:</span>
                     </div>
-                    <div id="Option-Box" class="Option-Off">
-                        <div id="Box-Option" class="Box-Option">
-                            <input type="radio" id="Radio1" class="radio-off" name="Moneda" value="3.5" checked>
-                            <label for="Radio1" class="Radious-T Option">10</label>
-                            <input type="radio" id="Radio2" class="radio-off" name="Moneda" value="6.988">
-                            <label for="Radio2" class="Option">50</label>
-                            <input type="radio" id="Radio3" class="radio-off" name="Moneda" value="7.56">
-                            <label for="Radio3" class="Option">100</label>
-                            <input type="radio" id="Radio4" class="radio-off" name="Moneda" value="8.9554">
-                            <label for="Radio4" class="Option">100<span class="small-sup"> (Antigua)</span></label>
-                            <input type="radio" id="Radio5" class="radio-off" name="Moneda" value="6.505">
-                            <label for="Radio5" class="Radious-B Option">500</label>
+                    <!-- -------------------------------------------------------- -->
+                </div>
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-3" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Box-Subtitles2" class="Box-Subtitles">
+                        <span id="Subtitles2" class="Subtitles">Denominación:</span>
+                    </div>
+                    <!-- -------------------------------------------------------- -->
+                </div>
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-4" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Items-Box1" class="">
+                        <div id="Box-Input" class="Box-Items-Grid">
+                            <div id="Input" class="Items Radious-L">
+                                <input id="Input-Number" class="" type="number" min="0" max="999999" placeholder="0"
+                                    value="" onkeyup="cal()" required>
+                            </div>
+                            <div id="Ipt-Txt" class="Items Radious-R">g</div>
                         </div>
                     </div>
+                    <!-- -------------------------------------------------------- -->
                 </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-6" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Box-Subtitles3" class="Box-Subtitles">
-                    <span id="Subtitles3" class="Subtitles">Total:</span>
-                </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-            <div id="Box-Item-7" class="">
-                <!-- -------------------------------------------------------- -->
-                <div id="Items-Box3" class="">
-                    <div id="Box-Answer" class="">
-                        <div id="Answer-Text" class="">0</div>
+                <div id="Box-Item-5" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Items-Box2" class="">
+                        <div id="Box-Select" class="Box-Items-Grid" onclick="ButtonOnOff()">
+                            <div id="Select-Icon" class="Items Radious-L">$</div>
+                            <div id="Select" class="Items">
+                                <span id="Label-Option">10</span></span>
+                            </div>
+                            <div id="Select-Arrow" class="Items Radious-R"><span id="Arrow">▼</span></div>
+                            <input id="Input-Text" class="" type="number" name="10" value="3.5" onchange="cal()"
+                                style="display: none;" readonly>
+                        </div>
+                        <div id="Option-Box" class="Option-Off">
+                            <div id="Box-Option" class="Box-Option">
+                                <input type="radio" id="Radio1" class="radio-off" name="Moneda" value="3.5"
+                                    onclick="OptionDatos(this, 10)" checked>
+                                <label for="Radio1" class="Radious-T Option" onmouseover="VisualMoneda(10, '')">
+                                    10
+                                </label>
+                                <input type="radio" id="Radio2" class="radio-off" name="Moneda" value="6.988"
+                                    onclick="OptionDatos(this, 50)">
+                                <label for="Radio2" class="Option" onmouseover="VisualMoneda(50, '')">
+                                    50
+                                </label>
+                                <input type="radio" id="Radio3" class="radio-off" name="Moneda" value="7.56"
+                                    onclick="OptionDatos(this, 100)">
+                                <label for="Radio3" class="Option" onmouseover="VisualMoneda(100, '')">
+                                    100
+                                </label>
+                                <input type="radio" id="Radio4" class="radio-off" name="Moneda" value="8.9554"
+                                    onclick="OptionDatos(this, 100)" >
+                                <label for="Radio4" class="Option"onmouseover="VisualMoneda(100, '-antigua')">
+                                    100<span class="small-sup"> (Antigua)</span>
+                                </label>
+                                <input type="radio" id="Radio5" class="radio-off" name="Moneda" value="6.505"
+                                    onclick="OptionDatos(this, 500)">
+                                <label for="Radio5" class="Radious-B Option" onmouseover="VisualMoneda(500, '')">
+                                    500
+                                </label>
+                            </div>
+                        </div>
+                        <div id="Box-VisualMoneda" class="Option-Off">
+                            <div id="VisualMoneda">
+                            <img src="resources/img/monedas/$10-anverso.png" alt="$10" width="75" height="75">
+                            <img src="resources/img/monedas/$10-reverso.png" alt="$10" width="75" height="75">
+                            </div>
+                        </div>
                     </div>
-        
+                    <!-- -------------------------------------------------------- -->
                 </div>
-                <!-- -------------------------------------------------------- -->
-            </div>
-            <!-- ------------------------------------------------------------ -->
-        </fieldset>
-        <!-- ---------------------------------------------------------------- -->
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-6" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Box-Subtitles3" class="Box-Subtitles">
+                        <span id="Subtitles3" class="Subtitles">Total:</span>
+                    </div>
+                    <!-- -------------------------------------------------------- -->
+                </div>
+                <!-- ------------------------------------------------------------ -->
+                <div id="Box-Item-7" class="">
+                    <!-- -------------------------------------------------------- -->
+                    <div id="Items-Box3" class="">
+                        <div id="Box-Answer" class="">
+                            <div id="Answer-Text" class="">0</div>
+                        </div>
+
+                    </div>
+                    <!-- -------------------------------------------------------- -->
+                </div>
+                <!-- ------------------------------------------------------------ -->
+            </fieldset>
+            <!-- ---------------------------------------------------------------- -->
         </div>
         <!-- -------------------------------------------------------------------- -->
         <!-- ---Side-3----------------------------------------------------------- -->
@@ -149,6 +172,4 @@
         <script src="resources/js/js.js"></script>
 </body>
 
-</html>
-</body>
 </html>
