@@ -15,7 +15,6 @@ function cal() {
 };
 function ButtonOnOff() {
     BoxOption.classList.toggle("Option-Off");
-    BoxVisualMonedaImg.classList.toggle("Option-Off");
 }
 function OptionDatos(x, y) {
     InputMoneda.value = x.value;
@@ -26,6 +25,5 @@ function OptionDatos(x, y) {
         LabelOption.innerHTML = y;
     }
     BoxOption.classList.add("Option-Off");
-    BoxVisualMonedaImg.classList.add("Option-Off");
     cal();
 }
