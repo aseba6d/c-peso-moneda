@@ -16,6 +16,9 @@ function cal() {
 function ButtonOnOff() {
     BoxOption.classList.toggle("Option-Off");
 }
+function ButtonOff() {
+    BoxOption.classList.add("Option-Off");
+}
 function OptionDatos(x, y) {
     InputMoneda.value = x.value;
     InputMoneda.name = y;
