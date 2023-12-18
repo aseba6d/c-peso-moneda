@@ -6,7 +6,7 @@ Resultado = document.getElementById("Answer-Text"),
 LabelOption = document.getElementById("Label-Option");
 
 function cal() {
-    let a = parseInt(InputGramos.value),
+    let a = parseFloat(InputGramos.value),
         b = parseFloat(InputMoneda.value),
         c = parseInt(InputMoneda.name);
 
