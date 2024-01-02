@@ -1,169 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteo de las monedas por gramos</title>
-    <link rel="stylesheet" href="resources/css/themes.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/theme0.css" type="text/css">
+    <title>Contador de monedas por peso</title>
+    <meta name="description" content="Contador de monedas por peso">
+    <meta name="author" content="asebabd">
+    <meta name="robots" content="noindex, nofollow , noimageindex, nopagereadaloud, notranslate">
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
+    <link rel="stylesheet" id="csstheme" href="resources/css/themes0.css" type="text/css">
 </head>
 
 <body>
-    <!-- ---Grid Fondo----------------------------------------------------------- -->
-    <div id="Container-Grid" class="">
-        <!-- ---Header----------------------------------------------------------- -->
-        <div id="Section-Grid1" class="Section-Grid">
-            <!-- ---Example Title Grid------------------------------------------- -->
-
-            <!-- ---------------------------------------------------------------- -->
+    <div id="Container_Grid" class="">
+        <div id="Section_Grid-Header" class="">
+            <div id="Items-Titles-1" class="">
+                <span class="Items_Texto-Titles-1">Contador de monedas por peso</span>
+            </div>
         </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Side-2----------------------------------------------------------- -->
-        <div id="Section-Grid2" class="Section-Grid">
-
-        </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Side-1----------------------------------------------------------- -->
-        <div id="Section-Grid3" class="Section-Grid">
-
-        </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Contenido-------------------------------------------------------- -->
-        <div id="Section-Grid4" class="Section-Grid">
-            <!-- ---Contenido Grid----------------------------------------------- -->
-            <fieldset id="Fieldset-Content" class="">
-                <!-- -------------------------------------------------------- -->
-                <legend id="Legend-Content" class="">Ingrese el peso</legend>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-1" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Box-Title2" class="Box-Title-Main">
-                        <span id="Title2" class="Title-Main">Ingrese el peso</span>
+        <div id="Section_Grid-Side_C-1" class=""></div>
+        <div id="Section_Grid-Side_C-2" class=""></div>
+        <div id="Section_Grid-Content" class="">
+            <!-- ------------------------------------------------------------------- -->
+            <div id="Section_Content" class="Radious-Content">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Box_Item-1" class="">
+                    <div id="Items-Titles-2" class="Radious-Items">
+                        <span class="Items_Texto-Titles-2">Contador de monedas por peso</span>
                     </div>
-                    <!-- -------------------------------------------------------- -->
                 </div>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-2" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Box-Subtitles1" class="Box-Subtitles">
-                        <span id="Subtitles1" class="Subtitles">Peso:</span>
-                    </div>
-                    <!-- -------------------------------------------------------- -->
-                </div>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-3" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Box-Subtitles2" class="Box-Subtitles">
-                        <span id="Subtitles2" class="Subtitles">Denominación:</span>
-                    </div>
-                    <!-- -------------------------------------------------------- -->
-                </div>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-4" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Items-Box1" class="">
-                        <div id="Box-Input" class="Box-Items-Grid">
-                            <div id="Input" class="Items Radious-L">
-                                <input id="Input-Number" class="" type="number" min="0" max="999999" placeholder="0"
-                                    value="" onkeyup="cal()" onfocus="ButtonOff()" required>
-                            </div>
-                            <div id="Ipt-Txt" class="Items Radious-R">g</div>
+                <div id="Box_Item-1" class="">
+                    <div id="Items_Box-Subtitles-1" class="">
+                        <div id="Items-Subtitles-1" class="">
+                            <span class="Items_Texto-Subtitles">Peso</span>
                         </div>
                     </div>
-                    <!-- -------------------------------------------------------- -->
-                </div>
-                <div id="Box-Item-5" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Items-Box2" class="">
-                        <div id="Box-Select" class="Box-Items-Grid" onclick="ButtonOnOff()">
-                            <div id="Select-Icon" class="Items Radious-L">$</div>
-                            <div id="Select" class="Items">
-                                <span id="Label-Option">10</span></span>
-                            </div>
-                            <div id="Select-Arrow" class="Items Radious-R"><span id="Arrow">▼</span></div>
-                            <input id="Input-Text" class="" type="number" name="10" value="3.5" onchange="cal()"
-                                style="display: none;" readonly>
+                    <div id="Items_Box-Input" class="Radious-Items">
+                        <div id="Items-Input" class="Radious-Items-Left">
+                            <input id="Input_Peso" class="Items_Texto-Input Radious-Items-Left" type="number" min="0"
+                                max="9999" step="3.5" placeholder="0" onkeyup="cal()" onfocus="CheckedOff()" />
+                            <label for="Input_Peso" id="Nota_Alerta" class="Radious-Items">
+                                <img src="resources/img/style/icon_Advert.png" alt="" class="Img_Icon" />
+                                <span class="Items_Texto-1">Valor entre 0 y 9999</span>
+                                <img src="resources/img/style/icon_Advert.png" alt="" class="Img_Icon" />
+                            </label>
                         </div>
-                        <div id="Option-Box" class="Option-Off">
-                            <div id="Box-Option" class="Box-Option">
-                                <input type="radio" id="Radio1" class="radio-off" name="Moneda" value="3.5"
-                                    onclick="OptionDatos(this, 10)" checked>
-                                <label for="Radio1" class="Radious-T Option">
-                                    10
-                                </label>
-                                <input type="radio" id="Radio2" class="radio-off" name="Moneda" value="6.988"
-                                    onclick="OptionDatos(this, 50)">
-                                <label for="Radio2" class="Option">
-                                    50
-                                </label>
-                                <input type="radio" id="Radio3" class="radio-off" name="Moneda" value="7.56"
-                                    onclick="OptionDatos(this, 100)">
-                                <label for="Radio3" class="Option">
-                                    100
-                                </label>
-                                <input type="radio" id="Radio4" class="radio-off" name="Moneda" value="8.9554"
-                                    onclick="OptionDatos(this, 100)" >
-                                <label for="Radio4" class="Option">
-                                    100<span class="small-sup"> (Antigua)</span>
-                                </label>
-                                <input type="radio" id="Radio5" class="radio-off" name="Moneda" value="6.505"
-                                    onclick="OptionDatos(this, 500)">
-                                <label for="Radio5" class="Radious-B Option">
-                                    500
-                                </label>
-                            </div>
+                        <div class="Separador"></div>
+                        <div id="Items-Unidad" class="Radious-Items-Right">
+                            <span class="Items_Texto">g</span>
                         </div>
                     </div>
-                    <!-- -------------------------------------------------------- -->
                 </div>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-6" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Box-Subtitles3" class="Box-Subtitles">
-                        <span id="Subtitles3" class="Subtitles">Total:</span>
-                    </div>
-                    <!-- -------------------------------------------------------- -->
-                </div>
-                <!-- ------------------------------------------------------------ -->
-                <div id="Box-Item-7" class="">
-                    <!-- -------------------------------------------------------- -->
-                    <div id="Items-Box3" class="">
-                        <div id="Box-Answer" class="">
-                            <div id="Answer-Text" class="">0</div>
+                <div id="Box_Item-2" class="">
+                    <div id="Items_Box-Subtitles-2" class="">
+                        <div id="Items-Subtitles-2" class="">
+                            <span class="Items_Texto-Subtitles">Denominación</span>
                         </div>
-
                     </div>
-                    <!-- -------------------------------------------------------- -->
+                    <div id="Items_Box-Select-1" class="Radious-Items">
+                        <input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" checked />
+                        <label for="Checkbox_Menu-Denominacion" id="Items-Select-1" class="Radious-Items">
+                            <span id="Text_Select-1" class="Items_Texto">10</span>
+                        </label>
+                        <div id="Items_Box_Menu-Denominacion" class="Radious-Items">
+                            <input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10"
+                                onclick="Denominacion(this)" checked />
+                            <label for="Radio-1" id="Items_Menu-Denominacion-1" class="">
+                                <span class="Items_Texto">10</span>
+                            </label>
+                            <div class="Separador"></div>
+                            <input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50"
+                                onclick="Denominacion(this)" />
+                            <label for="Radio-2" id="Items_Menu-Denominacion-2" class="">
+                                <span class="Items_Texto">50</span>
+                            </label>
+                            <div class="Separador"></div>
+                            <input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100"
+                                onclick="Denominacion(this)" />
+                            <label for="Radio-3" id="Items_Menu-Denominacion-3" class="">
+                                <span class="Items_Texto">100</span>
+                            </label>
+                            <div class="Separador"></div>
+                            <input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100"
+                                onclick="Denominacion(this)" />
+                            <label for="Radio-4" id="Items_Menu-Denominacion-4" class="">
+                                <span class="Items_Texto">100
+                                    <span class="small-sup"> (Antigua)</span>
+                                </span>
+                            </label>
+                            <div class="Separador"></div>
+                            <input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500"
+                                onclick="Denominacion(this)" />
+                            <label for="Radio-5" id="Items_Menu-Denominacion-5" class="">
+                                <span class="Items_Texto">500</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <!-- ------------------------------------------------------------ -->
-            </fieldset>
-            <!-- ---------------------------------------------------------------- -->
+                <div id="Box_Item-3" class="">
+                    <div id="Items_Box-Subtitles-3" class="">
+                        <div id="Items-Subtitles-3" class="Radious-Items">
+                            <span class="Items_Texto-Subtitles">Total</span>
+                        </div>
+                    </div>
+                    <div id="Items_Box-Answer" class="Radious-Items">
+                        <div id="Items-Answer-1" class="Radious-Items-Top">
+                            <span id="Answer-1" class="Items_Texto-Answer">10 X 0</span>
+                        </div>
+                        <div class="Separador1"></div>
+                        <div id="Items-Answer-2" class="Radious-Items-Bottom">
+                            <span id="Answer-2" class="Items_Texto">0</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <!-- ------------------------------------------------------------------- -->
         </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Side-3----------------------------------------------------------- -->
-        <div id="Section-Grid5" class="Section-Grid">
-
+        <div id="Section_Grid-Side_R-1" class=""></div>
+        <div id="Section_Grid-Side_R-2" class=""></div>
+    </div>
+    <div id="Box_Menu-Themes" class="">
+        <div id="Items_Box-Subtitles-4" class="">
+            <div id="Items-Subtitles-4" class="">
+                <span class="Items_Texto-1">Temas:</span>
+            </div>
         </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Side-4----------------------------------------------------------- -->
-        <div id="Sectinm-Grid6" class="Section-Grid">
-
+        <div id="Select-2" class="Radious-Items">
+            <input type="checkbox" id="Checkbox-Themes" value="0" data-value="" title="Predeterminado" checked />
+            <label for="Checkbox-Themes" id="Items-Select-2" class="Radious-Items">
+                <span id="Text_Select-2" class="Items_Texto-Themes">Predeterminado</span>
+            </label>
+            <div id="Menu-Themes" class="Radious-Items">
+                <input type="radio" id="Themes-1" name="Temas" value="0" data-value="" title="Predeterminado" onclick="Themes(this)"
+                    checked />
+                <label for="Themes-1" id="Items_Themes-1" class="Radious-Items-Top">
+                    <span class="Items_Texto-Themes">Predeterminado</span>
+                </label>
+                <div class="Separador2"></div>
+                <input type="radio" id="Themes-2" name="Temas" value="1"  data-value="" title="Blue" onclick="Themes(this)" />
+                <label for="Themes-2" id="Items_Themes-2" class="Radious-Items-Bottom">
+                    <span class="Items_Texto-Themes">Blue</span>
+                </label>
+                <!-- <div class="Separador2"></div>
+                <input type="radio" id="Themes-3" name="Temas" value="2"  data-value="" title="Pokemón" onclick="Themes(this)" />
+                <label for="Themes-3" id="Items_Themes-3" class="">
+                    <span class="Items_Texto-Themes">Pokemón</span>
+                </label>
+                <div class="Separador2"></div>
+                <input type="radio" id="Themes-4" name="Temas" value="3"  data-value="" title="Slam Dunk" onclick="Themes(this)" />
+                <label for="Themes-4" id="Items_Themes-4" class="">
+                    <span class="Items_Texto-Themes">Slam Dunk</span>
+                </label>
+                <div class="Separador2"></div>
+                <input type="radio" id="Themes-5" name="Temas" value="4"  data-value="" title="Hello Kitty" onclick="Themes(this)" />
+                <label for="Themes-5" id="Items_Themes-5" class="Radious-Items-Bottom">
+                    <span class="Items_Texto-Themes">Hello Kitty</span> 
+                </label>-->
+            </div>
         </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---nav-------------------------------------------------------------- -->
-        <div id="Section-Grid7" class="Section-Grid">
-
-        </div>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- ---Footer----------------------------------------------------------- -->
-        <div id="Section-Grid8" class="Section-Grid">
-            <!-- ---Example Title Grid------------------------------------------- -->
-
-            <!-- ---------------------------------------------------------------- -->
-        </div>
-        <!-- -------------------------------------------------------------------- -->
-        <script src="resources/js/js.js"></script>
+    </div>
+    <script src="resources/js/js.js"></script>
 </body>
 
 </html>

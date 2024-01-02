@@ -1,0 +1,20 @@
+.Svg {
+    width: 32px;
+    height: 32px;
+    background-color: black;
+}
+
+.Svg .Svg-Line {
+    stroke: white;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-opacity: 1;
+}
+
+.Svg .Svg-Rect {
+    fill: transparent;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 5;
+    stroke-opacity: 1;
+}

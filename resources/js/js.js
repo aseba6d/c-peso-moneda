@@ -1,32 +1,44 @@
-const InputGramos = document.getElementById("Input-Number"),
-BoxOption = document.getElementById("Option-Box"),
-BoxVisualMonedaImg = document.getElementById("Box-VisualMoneda");
-let InputMoneda = document.getElementById("Input-Text"),
-Resultado = document.getElementById("Answer-Text"),
-LabelOption = document.getElementById("Label-Option");
+let InputGramos = document.getElementById("Input_Peso"),
+    DenominacionMonedas = document.getElementById("Checkbox_Menu-Denominacion"),
+    DenominacionMonedasLabel = document.getElementById("Text_Select-1"),
+    Resultado = document.getElementById("Answer-2"),
+    Cantidad = document.getElementById("Answer-1"),
+    TemasOk = document.getElementById("Checkbox-Themes"),
+    TemasOkLabel = document.getElementById("Text_Select-2");
 
 function cal() {
     let a = parseFloat(InputGramos.value),
-        b = parseFloat(InputMoneda.value),
-        c = parseInt(InputMoneda.name);
+        b = parseFloat(DenominacionMonedas.value),
+        c = parseInt(DenominacionMonedas.title),
+        d = 0;
 
     if (isNaN(a)) { a = 0 }
-    Resultado.innerHTML = Math.round(a / b) * c;
-};
-function ButtonOnOff() {
-    BoxOption.classList.toggle("Option-Off");
+    d = Math.round(a / b);
+    Cantidad.innerHTML = c + ' x ' + d;
+    Resultado.innerHTML = d * c;
 }
-function ButtonOff() {
-    BoxOption.classList.add("Option-Off");
-}
-function OptionDatos(x, y) {
-    InputMoneda.value = x.value;
-    InputMoneda.name = y;
-    if (y == 100 && x.value == 8.9554) {
-        LabelOption.innerHTML = y + '<span class="small-sup"> (Antigua)</span>';
+function Denominacion(y) {
+    DenominacionMonedas.value = y.value;
+    InputGramos.step =  y.value;
+    DenominacionMonedas.title = y.title;
+    if (8.9554 == y.value) {
+        DenominacionMonedasLabel.innerHTML = y.title + '<span class="small-sup"> (Antigua)</span>';
     } else {
-        LabelOption.innerHTML = y;
+        DenominacionMonedasLabel.innerHTML = y.title;
     }
-    BoxOption.classList.add("Option-Off");
     cal();
+    CheckedOff();
+}
+function CheckedOff() {
+    DenominacionMonedas.checked = true;
+    UnidadPeso.checked = true;
+    TemasOk.checked = true;
+}
+function Themes(z) {
+    TemasOk.value = z.value;
+    TemasOk.dataset.value = z.dataset.value;
+    TemasOk.title =  z.title;
+    TemasOkLabel.innerHTML = z.title;
+    document.getElementById("csstheme").href="resources/css/themes"+ TemasOk.value + TemasOk.dataset.value +".css";
+    TemasOk.checked = true;
 }
