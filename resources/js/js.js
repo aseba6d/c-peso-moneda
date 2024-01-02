@@ -33,7 +33,6 @@ function CheckedOff() {
     DenominacionMonedas.checked = true;
     UnidadPeso.checked = true;
     TemasOk.checked = true;
-    TemasOk.checked = true;
 }
 function Themes(z) {
     TemasOk.value = z.value;
