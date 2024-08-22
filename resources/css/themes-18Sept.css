@@ -17,15 +17,15 @@
     grid-template-rows: min-content minmax(190px, 1fr) 260px minmax(190px, 1fr);
 }
 #Section_Grid-Side_C-1 {
-    background-image:url(../img/theme-18Sept/guaso.png);
+    background-image:url(../img/theme-18Sept/guasa2.png);
     background-position: center bottom;
-    background-size:auto;
+    background-size:400px;
     background-repeat: no-repeat;
 }
 #Section_Grid-Side_C-2 {
-    background-image:url(../img/theme-18Sept/guasa.png);
+    background-image:url(../img/theme-18Sept/guaso2.png);
     background-position: center bottom;
-    background-size:auto;
+    background-size:400px;
     background-repeat: no-repeat;
 }
 #Section_Content {
