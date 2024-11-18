@@ -358,6 +358,7 @@ input[type="checkbox"] {
   display: block;
   width: 200px;
   height: fit-content;
+  cursor: pointer;
   border: 2px solid;
   border-color: darkgrey;
   background-color: lightgrey;
