@@ -8,121 +8,143 @@
     <meta name="description" content="Contador de monedas por peso">
     <meta name="author" content="asebabd">
     <meta name="robots" content="noindex, nofollow , noimageindex, nopagereadaloud, notranslate">
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
-    <link rel="stylesheet" id="csstheme" href="resources/css/themes0.css" type="text/css">
+	<link rel="stylesheet" href="css/small.css" type="text/css">
+	<link rel="stylesheet" href="css/medium.css" type="text/css">
+    <link rel="stylesheet" href="css/large.css" type="text/css">
+    <link rel="stylesheet" id="csstheme" href="css/style.css" type="text/css">
 </head>
 
 <body>
-    <div id="Container_Grid" class="">
-        <div id="Section_Grid-Header" class="">
-            <div id="Items-Titles-1" class="">
-                <span class="Items_Texto-Titles-1">Contador de monedas por peso</span>
-            </div>
-        </div>
-        <div id="Section_Grid-Side_C-1" class=""></div>
-        <div id="Section_Grid-Side_C-2" class=""></div>
-        <div id="Section_Grid-Content" class="">
+	<div id="Container_Grid" class="">
+        <!-- ------------------------------------------------------------------- -->
+        <div id="Section_Grid-Content" class="Radious-Content">
             <!-- ------------------------------------------------------------------- -->
-            <div id="Section_Content" class="Radious-Content">
+            <div id="Box_Item-Header" class="">
                 <!-- ------------------------------------------------------------------- -->
-                <div id="Box_Item-1" class="">
-                    <div id="Items-Titles-2" class="Radious-Items">
-                        <span class="Items_Texto-Titles-2">Contador de monedas por peso</span>
-                    </div>
-                </div>
-                <div id="Box_Item-1" class="">
-                    <div id="Items_Box-Subtitles-1" class="">
-                        <div id="Items-Subtitles-1" class="">
-                            <span class="Items_Texto-Subtitles">Peso</span>
-                        </div>
-                    </div>
-                    <div id="Items_Box-Input" class="Radious-Items">
-                        <div id="Items-Input" class="Radious-Items-Left">
-                            <input id="Input_Peso" class="Items_Texto-Input Radious-Items-Left" type="number" min="0"
-                                max="9999" step="3.5" placeholder="0" onkeyup="cal()" onfocus="CheckedOff()" />
-                            <label for="Input_Peso" id="Nota_Alerta" class="Radious-Items">
-                                <img src="resources/img/style/icon_Advert.png" alt="" class="Img_Icon" />
-                                <span class="Items_Texto-1">Valor entre 0 y 9999</span>
-                                <img src="resources/img/style/icon_Advert.png" alt="" class="Img_Icon" />
-                            </label>
-                        </div>
-                        <div class="Separador"></div>
-                        <div id="Items-Unidad" class="Radious-Items-Right">
-                            <span class="Items_Texto">g</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="Box_Item-2" class="">
-                    <div id="Items_Box-Subtitles-2" class="">
-                        <div id="Items-Subtitles-2" class="">
-                            <span class="Items_Texto-Subtitles">Denominación</span>
-                        </div>
-                    </div>
-                    <div id="Items_Box-Select-1" class="Radious-Items">
-                        <input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" checked />
-                        <label for="Checkbox_Menu-Denominacion" id="Items-Select-1" class="Radious-Items">
-                            <span id="Text_Select-1" class="Items_Texto">10</span>
-                        </label>
-                        <div id="Items_Box_Menu-Denominacion" class="Radious-Items">
-                            <input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10"
-                                onclick="Denominacion(this)" checked />
-                            <label for="Radio-1" id="Items_Menu-Denominacion-1" class="">
-                                <span class="Items_Texto">10</span>
-                            </label>
-                            <div class="Separador"></div>
-                            <input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50"
-                                onclick="Denominacion(this)" />
-                            <label for="Radio-2" id="Items_Menu-Denominacion-2" class="">
-                                <span class="Items_Texto">50</span>
-                            </label>
-                            <div class="Separador"></div>
-                            <input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100"
-                                onclick="Denominacion(this)" />
-                            <label for="Radio-3" id="Items_Menu-Denominacion-3" class="">
-                                <span class="Items_Texto">100</span>
-                            </label>
-                            <div class="Separador"></div>
-                            <input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100"
-                                onclick="Denominacion(this)" />
-                            <label for="Radio-4" id="Items_Menu-Denominacion-4" class="">
-                                <span class="Items_Texto">100
-                                    <span class="small-sup"> (Antigua)</span>
-                                </span>
-                            </label>
-                            <div class="Separador"></div>
-                            <input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500"
-                                onclick="Denominacion(this)" />
-                            <label for="Radio-5" id="Items_Menu-Denominacion-5" class="">
-                                <span class="Items_Texto">500</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div id="Box_Item-3" class="">
-                    <div id="Items_Box-Subtitles-3" class="">
-                        <div id="Items-Subtitles-3" class="Radious-Items">
-                            <span class="Items_Texto-Subtitles">Total</span>
-                        </div>
-                    </div>
-                    <div id="Items_Box-Answer" class="Radious-Items">
-                        <div id="Items-Answer-1" class="Radious-Items-Top">
-                            <span id="Answer-1" class="Items_Texto-Answer">10 X 0</span>
-                        </div>
-                        <div class="Separador1"></div>
-                        <div id="Items-Answer-2" class="Radious-Items-Bottom">
-                            <span id="Answer-2" class="Items_Texto">0</span>
-                        </div>
-                    </div>
-                </div>
+                <div id="Items_Titles" class="Radious-Items">
+					<span class="Text_Titles">Contador de monedas por peso</span>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-1" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Texto-1" class="">
+					<span class="Subtitles-1">Peso:</span>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-2" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Texto-2" class="">
+					<span class="Subtitles-2">Denominacíon:</span>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-3" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Box-Input" class="Radious-Items">
+					<div id="Items-Input" class="">
+						<input id="Input_Peso" class="Texto_Items-Input" type="number" min="0" max="9999" step="3.5"
+							placeholder="0" />
+					</div>
+					<input type="checkbox" id="Input_Unidad" disabled />
+					<label id="Items-Unidad" for="Input_Unidad" class="">
+						<span class="Texto_Items-Input">g</span>
+					</label>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-4" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Box-Select" class="Radious-Items">
+					<input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" />
+					<label for="Checkbox_Menu-Denominacion" id="Items-Select" class="Texto_Items-Select">
+						<span id="Select" class="Texto_Items-Select">10</span>
+					</label>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-5" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Texto-3" class="">
+					<span class="Subtitles-3">Total:</span>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-6" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <div id="Items_Box-Answer" class="Radious-Items">
+					<div id="Items-Answer-1" class="">
+						<span id="Answer-1" class="Texto_Items-Answer-1">10 X 0</span>
+					</div>
+					<div id="Items-Answer-2" class="">
+						<span id="Answer-2" class="Texto_Items-Answer-2">0</span>
+					</div>
+				</div>
+                <!-- ------------------------------------------------------------------- -->
+            </div>
+            <div id="Box_Item-Footer" class="">
+                <!-- ------------------------------------------------------------------- -->
+                <span class="Prueba_Footer">footer</span>
                 <!-- ------------------------------------------------------------------- -->
             </div>
             <!-- ------------------------------------------------------------------- -->
         </div>
-        <div id="Section_Grid-Side_R-1" class=""></div>
-        <div id="Section_Grid-Side_R-2" class=""></div>
+        <!-- ------------------------------------------------------------------- -->
     </div>
+	 <div id="Denominacion_Modal" class="modal">
+		<div id="Denominacion_Modal-Content" class="modal-content Radious-Content">
+			<div id="Denominacion_Header" class="modal-titles">
+				<span id="Header_Denominacion" class="modal-header">Denominación:</span>
+				<span id="Close_Denominacion" class="modal-close">&times;</span>
+			</div>
+			<div id="Items_Denominacion" class="modal-items">
+				<input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10" checked />
+				<label for="Radio-1" class="Box_Denominacion Radious-Items">
+					<div id="Denominacion-1" class="">
+						<span class="Texto_Radio">10</span>
+					</div>
+					<img id="Moneda-A-1" src="img/monedas/$10-anverso.png" alt="">
+					<img id="Moneda-I-1" src="img/monedas/$10-reverso.png" alt="">
+				</label>
+				<input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50" />
+				<label for="Radio-2" class="Box_Denominacion Radious-Items">
+					<div id="Denominacion-2" class="">
+						<span class="Texto_Radio">50</span>
+					</div>
+					<img id="Moneda-A-2" src="img/monedas/$50-anverso.png" alt="">
+					<img id="Moneda-I-2" src="img/monedas/$50-reverso.png" alt="">
+				</label>
+				<input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100" />
+				<label for="Radio-3" class="Box_Denominacion Radious-Items">
+					<div id="Denominacion-3" class="">
+						<span class="Texto_Radio">100</span>
+					</div>
+					<img id="Moneda-A-3" src="img/monedas/$100-anverso.png" alt="">
+					<img id="Moneda-I-3" src="img/monedas/$100-reverso.png" alt="">
+				</label>
+				<input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100" />
+				<label for="Radio-4" class="Box_Denominacion Radious-Items">
+					<div id="Denominacion-4" class="">
+						<span class="Texto_Radio">100<span class="small-sup"> (Antigua)</span></span>
+					</div>
+					<img id="Moneda-A-4" src="img/monedas/$100-anverso-antigua.png" alt="">
+					<img id="Moneda-I-4" src="img/monedas/$100-reverso-antigua.png" alt="">
+				</label>
+				<input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500" />
+				<label for="Radio-5" class="Box_Denominacion Radious-Items">
+					<div id="Denominacion-5" class="">
+						<span class="Texto_Radio">500</span>
+					</div>
+					<img id="Moneda-A-5" src="img/monedas/$500-anverso.png" alt="">
+					<img id="Moneda-I-5" src="img/monedas/$500-reverso.png" alt="">
+				</label>
+			</div>
+		</div>
 
-    <script src="resources/js/js.js"></script>
+	</div>
+</div>
+<script src="js/js.js"></script>
+<script src="js/theme.js"></script>
 </body>
-
 </html>
