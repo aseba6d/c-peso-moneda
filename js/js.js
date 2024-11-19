@@ -47,8 +47,8 @@ function cal() {
         b = DenominacionMonedas.value,
         c = DenominacionMonedas.title,
         d = 0;
-    if (x.value.length > 9) {
-        x.value = x.value.slice(0, 9);
+    if (x.value.length > x.maxLength) {
+        x.value = x.value.slice(0, x.maxLength);
     }
     a = x.value;
     if (isNaN(a)) { a = 0 }
