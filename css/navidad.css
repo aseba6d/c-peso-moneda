@@ -11,7 +11,7 @@ body {
 
 /* ------------------------------------------------------------------- */
 
-#Container_Grid {
+.container {
     background: transparent;
     background-image:url(../img/navidad/fondo-navidad2.png);
     background-position: center top;
@@ -19,8 +19,7 @@ body {
 }
 
 /* ------------------------------------------------------------------- */
-#Section_Grid-Content {
-    box-shadow: 0px 0px 20px 10px rgba(190, 190, 190, 0.6);
+[class|=Box] {
     border-color: black;
     background-color: rgba(255, 255, 255, 0.8);
 }

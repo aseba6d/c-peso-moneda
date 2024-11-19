@@ -11,16 +11,9 @@ body {
 
 /* ------------------------------------------------------------------- */
 
-#Container_Grid {
-    background: transparent;
-}
-
-/* ------------------------------------------------------------------- */
-#Section_Grid-Content {
-    box-shadow: 0px 0px 20px 10px rgb(190, 190, 190);
+[class|=Box] {
     border-color: black;
     background-color: rgb(216, 216, 216);
-    background-image: radial-gradient(white, transparent);
 }
 
 /* ------------------------------------------------------------------- */
@@ -82,21 +75,11 @@ body {
     border-left-color: var(--border-color);
 }
 
-/*#Items-Unidad:hover,
-#Input_Peso:hover {
-  background-color: rgba(0, 0, 0, 0.15);
-}*/
-
 /* ------------------------------------------------------------------- */
 
 #Items-Select::after {
     color: inherit;
 }
-
-/*#Items-Select:hover,,
-#Items-Selec:focus { {
-  background-color: rgba(0, 0, 0, 0.05);
-}*/
 
 #Items-Select:hover::after,
 #Items-Select:focus::after {

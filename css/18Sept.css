@@ -11,7 +11,7 @@ body {
 
 /* ------------------------------------------------------------------- */
 
-#Container_Grid {
+.container {
     background: transparent;
     background-image:url(../img/18Sept/guasa2.png), url(../img/18Sept/guaso2.png), url(../img/18Sept/18_fondo.jpg);
     background-position:left bottom, right bottom, center top;
@@ -20,8 +20,7 @@ body {
 }
 
 /* ------------------------------------------------------------------- */
-#Section_Grid-Content {
-    box-shadow: 0px 0px 20px 10px rgba(190, 190, 190, 0.6);
+[class|=Box] {
     border-color: black;
     background-color: rgba(255, 255, 255, 0.8);
 }

@@ -47,6 +47,9 @@ function cal() {
         b = DenominacionMonedas.value,
         c = DenominacionMonedas.title,
         d = 0;
+    if (x.value >= parseInt(x.max)) {
+        x.value = parseInt(x.max);
+    }
     if (x.value.length > x.maxLength) {
         x.value = x.value.slice(0, x.maxLength);
     }
