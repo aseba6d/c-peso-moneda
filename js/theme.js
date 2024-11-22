@@ -1,5 +1,5 @@
-const fecha = new Date(),
-    urlTheme = document.getElementById("csstheme");
+const fecha = new Date();
+const urlTheme = document.getElementById("csstheme");
 let datostheme = [
     {
         name: "Fiesta Patrias",
@@ -22,7 +22,7 @@ function changetheme() {
         yz = new Date(`${fecha.getFullYear()}/${temas.fin.mes}/${temas.fin.dia} ${temas.fin.hora}`);
         if ((xy <= fecha) && (yz >= fecha)) {
             urlTheme.href = temas.file;
-        } 
+        }
     });
 }
 window.addEventListener('load', changetheme);
