@@ -22,13 +22,15 @@ span.addEventListener('click', () => {
     Denominacion();
 });
 
-window.addEventListener('click', e => {
-    if (e.target == modal) {
+window.addEventListener('click', closemodal);
+window.addEventListener('keydown', closemodal);
+function closemodal(e) {
+    if (e.target === modal || e.keyCode === 27) {
         modal.style.display = "none";
         DenominacionMonedas.checked = false;
     }
     Denominacion();
-});
+}
 function Denominacion() {
     const y = document.querySelector('input[name="Moneda"]:checked');
     DenominacionMonedas.value = y.value;
