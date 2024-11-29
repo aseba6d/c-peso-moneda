@@ -28,8 +28,8 @@ function closemodal(e) {
     if (e.target === modal || e.keyCode === 27) {
         modal.style.display = "none";
         DenominacionMonedas.checked = false;
+        Denominacion();
     }
-    Denominacion();
 }
 function Denominacion() {
     const y = document.querySelector('input[name="Moneda"]:checked');
