@@ -4,11 +4,11 @@ let InputGramos = document.getElementById("Input_Peso"),
     Resultado = document.getElementById("Answer-2"),
     Cantidad = document.getElementById("Answer-1"),
     modal = document.getElementById("Denominacion_Modal"),
-    span = document.getElementById("Close_Denominacion");
+    span = document.getElementById("Close_Denominacion"),
+    Monedas = document.querySelectorAll('input[name=Moneda]'),
+    Moneda = document.querySelector('input[name=Moneda]:checked');
 
 InputGramos.addEventListener('input', cal);
-DenominacionMonedas.addEventListener('input', Denominacion);
-DenominacionMonedas.addEventListener('input', cal);
 DenominacionMonedas.addEventListener('click', () => {
     if (DenominacionMonedas.checked == true) {
         modal.style.display = "grid";
@@ -16,6 +16,15 @@ DenominacionMonedas.addEventListener('click', () => {
         modal.style.display = "none";
     }
 });
+
+Monedas.forEach(rb=>rb.addEventListener("change", function() {
+    rb.checked = true;
+    Moneda = rb ;
+    modal.style.display = "none";
+    DenominacionMonedas.checked = false;
+    Denominacion();
+}));
+
 span.addEventListener('click', () => {
     modal.style.display = "none";
     DenominacionMonedas.checked = false;
@@ -32,14 +41,13 @@ function closemodal(e) {
     }
 }
 function Denominacion() {
-    const y = document.querySelector('input[name="Moneda"]:checked');
-    DenominacionMonedas.value = y.value;
-    InputGramos.step = y.value;
-    DenominacionMonedas.title = y.title;
-    if (8.9554 == y.value) {
-        DenominacionMonedasLabel.innerHTML = y.title + '<span class="small-sup"> (Antigua)</span>';
+    DenominacionMonedas.value = Moneda.value;
+    InputGramos.step = Moneda.value;
+    DenominacionMonedas.title = Moneda.title;
+    if (8.9554 == Moneda.value) {
+        DenominacionMonedasLabel.innerHTML = Moneda.title + '<span class="small-sup"> (Antigua)</span>';
     } else {
-        DenominacionMonedasLabel.innerHTML = y.title;
+        DenominacionMonedasLabel.innerHTML = Moneda.title;
     }
     cal();
 }
