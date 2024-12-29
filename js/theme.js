@@ -2,16 +2,22 @@ const fecha = new Date();
 const urlTheme = document.getElementById("csstheme");
 let datostheme = [
     {
+        name: "asebabd",
+        file: "css/asebabd.css",
+        incio: { dia: 1, mes: 1, year: 2025, hora: '00:00:00' },
+        fin: { dia: 31, mes: 12, year: 2025, hora: '23:59:59' }
+    },
+    {
         name: "Fiesta Patrias",
         file: "css/18Sept.css",
         incio: { dia: 1, mes: 9, year: 2025, hora: '00:00:00' },
-        fin: { dia: 30, mes: 9, year: 2025, hora: '24:00:00' }
+        fin: { dia: 30, mes: 9, year: 2025, hora: '23:59:59' }
     },
     {
         name: "Navidad",
         file: "css/navidad.css",
         incio: { dia: 1, mes: 12, year: 2025, hora: '00:00:00' },
-        fin: { dia: 31, mes: 12, year: 2025, hora: '24:00:00' }
+        fin: { dia: 31, mes: 12, year: 2025, hora: '23:59:59' }
     }
 ];
 

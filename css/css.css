@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* ------------------------------------------------------------------- */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +12,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #ebebeb;
 }
 
 input[type="number"],
@@ -44,8 +42,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-/* ------------------------------------------------------------------- */
-
 .container {
   display: grid;
   width: 100vw;
@@ -59,9 +55,7 @@ input[type="checkbox"] {
   background-color: transparent;
 }
 
-/* ------------------------------------------------------------------- */
-
-[class|=Box] {
+[class|="Box"] {
   display: block;
   width: 570px;
   height: fit-content;
@@ -72,39 +66,35 @@ input[type="checkbox"] {
   border-style: solid;
   border-color: black;
   background-color: rgba(0, 0, 0, 0.05);
+
+  &[class$="Header"] {
+    padding-top: 15px;
+    border-bottom-width: 0px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  &[class$="Main"] {
+    border-top-width: 0px;
+    /*border-bottom-width: 0px; sin footer */
+    padding-bottom: 15px;
+    /* sin footer */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+  }
+
+  &[class$="Footer"] {
+    display: none;
+    /* sin footer */
+    padding-bottom: 15px;
+    border-top-width: 0px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+  }
 }
 
-.Box-Header {
-  padding-top: 15px;
-  border-bottom-width: 0px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-
-}
-
-.Box-Main {
-  border-top-width: 0px;
-  /*border-bottom-width: 0px; sin footer */
-  padding-bottom: 15px;
-  /* sin footer */
-  border-bottom-left-radius: 50px;
-  /* sin footer */
-  border-bottom-right-radius: 50px;
-  /* sin footer */
-
-}
-
-.Box-Footer {
-  display: none;
-  /* sin footer */
-  padding-bottom: 15px;
-  border-top-width: 0px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-
-}
-
-/* ------------------------------------------------------------------- */
 #Content_Main {
   display: grid;
   place-content: center;
@@ -118,33 +108,31 @@ input[type="checkbox"] {
     'A1 A2' 'A3 A4'
     '. .' '. .'
     'A5 A5' 'A6 A6';
-}
 
-#Box_Item-1 {
-  grid-area: A1;
-}
+  & #Box_Item-1 {
+    grid-area: A1;
+  }
 
-#Box_Item-2 {
-  grid-area: A2;
-}
+  & #Box_Item-2 {
+    grid-area: A2;
+  }
 
-#Box_Item-3 {
-  grid-area: A3;
-}
+  & #Box_Item-3 {
+    grid-area: A3;
+  }
 
-#Box_Item-4 {
-  grid-area: A4;
-}
+  & #Box_Item-4 {
+    grid-area: A4;
+  }
 
-#Box_Item-5 {
-  grid-area: A5;
-}
+  & #Box_Item-5 {
+    grid-area: A5;
+  }
 
-#Box_Item-6 {
-  grid-area: A6;
+  & #Box_Item-6 {
+    grid-area: A6;
+  }
 }
-
-/* ------------------------------------------------------------------- */
 
 #Items_Titles {
   display: inline-block;
@@ -160,43 +148,45 @@ input[type="checkbox"] {
   border-top-right-radius: 12px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+
+  & .Text_Titles {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: inherit;
+  }
 }
 
-.Text_Titles {
-  font-size: 2.8rem;
-  font-weight: bold;
-  font-family: inherit;
-}
-
-/* ------------------------------------------------------------------- */
 [id|="Items_Texto"] {
   display: block;
   width: 250px;
   height: fit-content;
   padding: 0px;
   text-align: center;
-}
 
-[class|="Subtitles"] {
-  font-size: 2.8rem;
-  font-weight: bold;
-  font-family: inherit;
+  & [class|="Subtitles"] {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: inherit;
+  }
 }
-
-/* ------------------------------------------------------------------- */
 
 [class|="Texto_Items"] {
   font-size: 2.8rem;
   font-weight: bold;
   font-family: inherit;
+
+  &[class$="Answer-1"] {
+    font-size: 1em;
+  }
+  &[class*="Answer"]::before {
+    content:"$";
+  }
 }
 
 .small-sup {
   vertical-align: top;
   font-size: 0.6em;
 }
-
-/* ------------------------------------------------------------------- */
 
 [id|="Items_Box"] {
   position: relative;
@@ -213,37 +203,77 @@ input[type="checkbox"] {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-}
+  &:is(:hover, :focus) {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
 
-[id|="Items_Box"]:hover,
-[id|="Items_Box"]:focus {
-  background-color: rgba(0, 0, 0, 0.15);
+  &[id$="Answer"] {
+    flex-direction: column;
+    --border-color: darkgrey;
+    border-color: var(--border-color);
+  }
+
 }
 
 [id|="Items"] {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
-}
 
-/* ------------------------------------------------------------------- */
+  #Items_Box-Input & {
+    --border-color: darkgrey;
+  }
 
-#Items_Box-Input [id|="Items"] {
-  --border-color: darkgrey;
-  ;
-}
+  &[id$="Input"] {
+    border-right: 1px solid;
+    border-right-color: var(--border-color);
+  }
 
-#Items-Input {
-  border-right: 1px solid;
-  border-right-color: var(--border-color);
+  &[id$="Select"] {
+    padding: 4px;
+
+    &::before {
+      content: "$";
+      display: block;
+      position: absolute;
+    }
+
+    &::after {
+      content: "▼";
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 0px;
+      width: 32px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &[id*="Answer"] {
+    background-color: lightgrey;
+    padding: 4px;
+
+    &[id$="1"] {
+      text-align: left;
+      font-size: 1.7rem;
+      border-bottom: 1px solid;
+      border-bottom-color: var(--border-color);
+    }
+
+    &[id$="2"] {
+      font-size: 2.8rem;
+      border-top: 1px solid;
+      border-top-color: var(--border-color);
+    }
+  }
 }
 
 #Input_Peso {
   padding: 4px;
-}
 
-#Input_Peso::placeholder {
-  color: grey;
+  &::placeholder {
+    color: grey;
+  }
 }
 
 #Items-Unidad {
@@ -254,63 +284,6 @@ input[type="checkbox"] {
   border-left: 1px solid;
   border-left-color: var(--border-color);
 }
-
-/* ------------------------------------------------------------------- */
-
-#Items-Select {
-  padding: 4px;
-}
-
-#Items-Select::before {
-  content: "$";
-  display: block;
-  position: absolute;
-}
-
-#Items-Select::after {
-  content: "▼";
-  display: block;
-  position: absolute;
-  top: 12px;
-  right: 0px;
-  width: 32px;
-  font-size: 1.6rem;
-}
-
-/* ------------------------------------------------------------------- */
-
-#Items_Box-Answer {
-  flex-direction: column;
-  --border-color: darkgrey;
-  border-color: var(--border-color);
-}
-
-[id|="Items-Answer"] {
-  background-color: lightgrey;
-  padding: 4px;
-}
-
-#Items-Answer-1 {
-  text-align: left;
-  font-size: 1.7rem;
-  border-bottom: 1px solid;
-  border-bottom-color: var(--border-color);
-}
-
-#Items-Answer-2 {
-  border-top: 1px solid;
-  border-top-color: var(--border-color);
-}
-
-.Texto_Items-Answer-1 {
-  font-size: 1em;
-}
-
-[id|="Answer"]::before {
-  content: "$";
-}
-
-/* ------------------------------------------------------------------- */
 
 .modal {
   display: none;
@@ -335,13 +308,14 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: row;
   border-bottom: 3px solid;
-}
+  background-color: aqua;
 
-.modal-titles>span {
-  display: block;
-  font-size: 2.8rem;
-  padding: 5px;
-  font-weight: bolder;
+  &>span {
+    display: block;
+    font-size: 2.8rem;
+    padding: 5px;
+    font-weight: bolder;
+  }
 }
 
 .modal-header {
@@ -364,8 +338,6 @@ input[type="checkbox"] {
   align-items: center;
 }
 
-/* ------------------------------------------------------------------- */
-
 #Denominacion_Modal-Content {
   width: 100%;
   min-width: 300px;
@@ -376,8 +348,6 @@ input[type="checkbox"] {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-
-/* ------------------------------------------------------------------- */
 
 #Denominacion_Header {
   background-color: lightgrey;
@@ -391,23 +361,20 @@ input[type="checkbox"] {
   text-align: left;
   flex-basis: 45px;
   background-color: white;
+
+  &:is(:hover, :focus) {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-left-color: black;
+    background-color: black;
+  }
 }
 
-#Close_Denominacion:hover,
-#Close_Denominacion:focus {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  border-left-color: black;
-  background-color: black;
-}
-
-/* ------------------------------------------------------------------- */
 #Items_Denominacion {
   padding: 20px;
 }
 
-/* ------------------------------------------------------------------- */
 .Box_Denominacion {
   display: block;
   width: 200px;
@@ -421,20 +388,18 @@ input[type="checkbox"] {
   border-top-right-radius: 12px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+
+  [id|="Radio"]:checked+& {
+    background-color: white;
+    border-color: lightgrey;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+& {
+    background-color: darkgray;
+    border-color: black;
+  }
 }
 
-[id|="Radio"]:checked+.Box_Denominacion {
-  background-color: white;
-  border-color: lightgrey;
-}
-
-[id|="Radio"]:hover+.Box_Denominacion,
-[id|="Radio"]:focus+.Box_Denominacion {
-  background-color: darkgray;
-  border-color: black;
-}
-
-/* ------------------------------------------------------------------- */
 [id|="Denominacion"] {
   width: 100%;
   height: fit-content;
@@ -443,45 +408,39 @@ input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid;
   border-bottom-color: darkgrey;
+
+
+  [id|="Radio"]:checked+.Box_Denominacion & {
+    border-bottom-color: lightgrey;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+    border-bottom-color: black;
+  }
 }
 
-[id|="Radio"]:checked+.Box_Denominacion [id|="Denominacion"] {
-  border-bottom-color: lightgrey;
-}
-
-[id|="Radio"]:hover+.Box_Denominacion [id|="Denominacion"],
-[id|="Radio"]:focus+.Box_Denominacion [id|="Denominacion"] {
-  border-bottom-color: black;
-}
-
-/* ------------------------------------------------------------------- */
 .Texto_Radio {
-  font-size: 28px;
+  font-size: 2.8rem;
   font-family: inherit;
   font-weight: bold;
   color: black;
 
+  &::before {
+    content: "$";
+  }
+
+  [id|="Radio"]:checked+.Box_Denominacion & {
+    color: black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+    color: white;
+  }
 }
 
-.Texto_Radio::before {
-  content: "$";
-}
-
-[id|="Radio"]:checked+.Box_Denominacion .Texto_Radio {
-  color: black;
-}
-
-[id|="Radio"]:hover+.Box_Denominacion .Texto_Radio,
-[id|="Radio"]:focus+.Box_Denominacion .Texto_Radio {
-  color: white;
-}
-
-/* ------------------------------------------------------------------- */
 [id|="Moneda"] {
   aspect-ratio: 1 / 1;
   width: 49%;
   display: inline;
   padding: 5px;
 }
-
-/* ------------------------------------------------------------------- */
