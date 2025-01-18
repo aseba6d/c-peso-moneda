@@ -1,174 +1,172 @@
 @charset "utf-8";
 
 * {
-    --font-family: Arial;
+  --font-family: Arial;
 }
 
 body {
-    background: #ebebeb;
+  background: #ebebeb;
 }
 
 .container {
-    background: transparent;
+  background: transparent;
 }
 
-[class|=Box] {
-    border-color: black;
-    background-color: rgba(255, 255, 255, 0.8);
-}
+[class|="Box"] {
+  border-color: #0dbc79;
+  background-color: rgba(255, 255, 255, 0.8);
 
-#Items_Titles {
+  &[class$="Header"],
+  &[class$="Footer"] {
     background-color: #7af0c3;
-    border-color: #0dbc79;
+  }
 }
-
-.Text_Titles {
-    color: #2c8121;
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
-    -webkit-text-stroke-color: rgb(13, 188, 121);
-    -webkit-text-stroke-width: 0.5px;
+#Items_Titles {
+  color: #2c8121;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(13, 188, 121);
+  -webkit-text-stroke-width: 0.5px;
 }
-
-[class|="Subtitles"] {
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 1px white;
+[id|="Subtitles"] {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 1px white;
 }
 
 [class|="Texto_Items"] {
-    color: midnightblue;
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  color: midnightblue;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
 }
 
 [id|="Items_Box"] {
-    background-color: lightskyblue;
-    border-color: cornflowerblue;
+  background-color: lightskyblue;
+  border-color: cornflowerblue;
 
-    &:is(:hover, :focus) {
-        background-color: #4dcaff;
-    }
+  &:is(:hover, :focus) {
+    background-color: #4dcaff;
+  }
 }
 
 [id|="Items"] {
-    #Items_Box-Input & {
-        --border-color: cornflowerblue;
+  #Items_Box-Input & {
+    --border-color: cornflowerblue;
+  }
+
+  &[id$="Input"] {
+    border-right-color: var(--border-color);
+  }
+
+  &[id$="Unidad"] {
+    border-left-color: var(--border-color);
+  }
+
+  &[id$="Select"] {
+    &::after {
+      color: inherit;
     }
 
-    &[id$="Input"] {
-        border-right-color: var(--border-color);
+    &:is(:hover, :focus)::after {
+      color: darkred;
+    }
+  }
+
+  &[id*="Answer"] {
+    background-color: #a7aaf9;
+
+    &[id$="1"] {
+      border-bottom-color: var(--border-color);
     }
 
-    &[id$="Unidad"] {
-        border-left-color: var(--border-color);
+    &[id$="2"] {
+      border-top-color: var(--border-color);
     }
-
-    &[id$="Select"] {
-        &::after {
-            color: inherit;
-        }
-
-        &:is(:hover, :focus)::after {
-            color: darkred;
-        }
-    }
-
-    &[id*="Answer"] {
-        background-color: #a7aaf9;
-
-        &[id$="1"] {
-            border-bottom-color: var(--border-color);
-        }
-
-        &[id$="2"] {
-            border-top-color: var(--border-color);
-        }
-    }
+  }
 }
 
 #Input_Peso::placeholder {
-    color: rgb(128, 128, 128);
-    text-shadow: 0 0 2px white;
+  color: rgb(128, 128, 128);
+  text-shadow: 0 0 2px white;
 }
 
 #Items_Box-Answer {
-    --border-color: #898eef;
-    border-color: var(--border-color);
+  --border-color: #898eef;
+  border-color: var(--border-color);
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #Denominacion_Modal-Content {
-    border-color: #0dbc79;
-    background-color: #93adba;
-    background-image: radial-gradient(#bdd8df, transparent);
+  border-color: #0dbc79;
+  background-color: #93adba;
+  background-image: radial-gradient(#bdd8df, transparent);
 }
 
 #Denominacion_Header {
-    background-color: #0df89e;
-    box-shadow: inset 0px 0px 20px #0dbc79;
-    border-bottom-color: #0dbc79;
+  background-color: #0df89e;
+  box-shadow: inset 0px 0px 20px #0dbc79;
+  border-bottom-color: #0dbc79;
 }
 
 #Header_Denominacion {
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
-    color: #1a6410;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  color: #1a6410;
 }
 
 #Close_Denominacion {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #2c8121;
-    border-left-color: #0dbc79;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2c8121;
+  border-left-color: #0dbc79;
 
-    &:is(:hover, :focus) {
-        color: rgb(255, 255, 255);
-        background-color: rgba(0, 0, 0, 0.5);
-        border-left-color: #0dbc79;
-    }
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left-color: #0dbc79;
+  }
 }
 
 .Box_Denominacion {
-    background-color: #ffcb85;
-    border-color: indianred;
-    box-shadow: 0px 0px 5px 2px #e28450;
+  background-color: #ffcb85;
+  border-color: indianred;
+  box-shadow: 0px 0px 5px 2px #e28450;
 
-    [id|="Radio"]:checked+& {
-        background-color: #9a9eff;
-        border-color: darkorchid;
-        box-shadow: 0px 0px 5px 2px #8b6fd1;
-    }
+  [id|="Radio"]:checked + & {
+    background-color: #9a9eff;
+    border-color: darkorchid;
+    box-shadow: 0px 0px 5px 2px #8b6fd1;
+  }
 
-    [id|="Radio"]:is(:hover, :focus)+& {
-        background-color: #ebebeb;
-        border-color: #93adba;
-        box-shadow: 0px 0px 5px 2px #8da2b5;
-    }
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #ebebeb;
+    border-color: #93adba;
+    box-shadow: 0px 0px 5px 2px #8da2b5;
+  }
 }
 
 [id|="Denominacion"] {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-bottom-color: indianred;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: indianred;
 
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        border-bottom-color: #8b6fd1;
-    }
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    border-bottom-color: #8b6fd1;
+  }
 
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        border-bottom-color: #93adba;
-    }
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    border-bottom-color: #93adba;
+  }
 }
 
 .Texto_Radio {
-    color: black;
+  color: black;
+  text-shadow: 0px 0px 1px white;
+
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: rgb(0, 0, 0);
     text-shadow: 0px 0px 1px white;
-
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        color: white;
-        text-shadow: 0px 0px 2px black;
-    }
-
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        color: rgb(0, 0, 0);
-        text-shadow: 0px 0px 1px white;
-    }
+  }
 }

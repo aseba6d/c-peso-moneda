@@ -15,110 +15,110 @@
 </head>
 
 <body>
-	<div class="container">
-		<header id="Header" class="Box-Header">
-			<h1 id="Items_Titles" class="">
-				<span class="Text_Titles">Contador de monedas por peso</span>
-			</h1>
-		</header>
-		<main id="Content_Main" class="Box-Main">
-			<section id="Box_Item-1" class="">
-				<h2 id="Items_Texto-1" class="">
-					<span class="Subtitles-1">Peso:</span>
-				</h2>
-			</section>
-			<section id="Box_Item-2" class="">
-				<h2 id="Items_Texto-2" class="">
-					<span class="Subtitles-2">Denominacíon:</span>
-				</h2>
-			</section>
-			<section id="Box_Item-3" class="">
-				<div id="Items_Box-Input" class="">
-					<div id="Items-Input" class="">
-						<input id="Input_Peso" class="Texto_Items-Input" type="number" min="0" max="99999" step="3.5"
-							maxlength="9" placeholder="0" />
-					</div>
-					<div id="Items-Unidad" for="Input_Unidad" class="">
-						<span class="Texto_Items-Input">g</span>
-					</div>
-				</div>
-			</section>
-			<section id="Box_Item-4" class="">
-				<div id="Items_Box-Select" class="">
-					<input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" />
-					<label for="Checkbox_Menu-Denominacion" id="Items-Select" class="Texto_Items-Select">
-						<span id="Select" class="Texto_Items-Select">10</span>
-					</label>
-				</div>
-			</section>
-			<section id="Box_Item-5" class="">
-				<h2 id="Items_Texto-3" class="">
-					<span class="Subtitles-3">Total:</span>
-				</h2>
-			</section>
-			<section id="Box_Item-6" class="">
-				<div id="Items_Box-Answer" class="">
-					<div id="Items-Answer-1" class="">
-						<span id="Answer-1" class="Texto_Items-Answer-1">10 x 0</span>
-					</div>
-					<div id="Items-Answer-2" class="">
-						<span id="Answer-2" class="Texto_Items-Answer-2">0</span>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer id="Footer" class="Box-Footer">
-		</footer>
-	</div>
-	<div id="Denominacion_Modal" class="modal">
-		<div id="Denominacion_Modal-Content" class="modal-content">
-			<section id="Denominacion_Header" class="modal-titles">
-				<span id="Header_Denominacion" class="modal-header">Denominación:</span>
-				<span id="Close_Denominacion" class="modal-close">&times;</span>
-			</section>
-			<section id="Items_Denominacion" class="modal-items">
-				<input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10" checked />
-				<label for="Radio-1" class="Box_Denominacion">
-					<div id="Denominacion-1" class="">
-						<span class="Texto_Radio">10</span>
-					</div>
-					<img id="Moneda-A-1" src="img/monedas/$10-anverso.png" alt="">
-					<img id="Moneda-I-1" src="img/monedas/$10-reverso.png" alt="">
-				</label>
-				<input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50" />
-				<label for="Radio-2" class="Box_Denominacion">
-					<div id="Denominacion-2" class="">
-						<span class="Texto_Radio">50</span>
-					</div>
-					<img id="Moneda-A-2" src="img/monedas/$50-anverso.png" alt="">
-					<img id="Moneda-I-2" src="img/monedas/$50-reverso.png" alt="">
-				</label>
-				<input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100" />
-				<label for="Radio-3" class="Box_Denominacion">
-					<div id="Denominacion-3" class="">
-						<span class="Texto_Radio">100</span>
-					</div>
-					<img id="Moneda-A-3" src="img/monedas/$100-anverso.png" alt="">
-					<img id="Moneda-I-3" src="img/monedas/$100-reverso.png" alt="">
-				</label>
-				<input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100" />
-				<label for="Radio-4" class="Box_Denominacion">
-					<div id="Denominacion-4" class="">
-						<span class="Texto_Radio">100<span class="small-sup"> (Antigua)</span></span>
-					</div>
-					<img id="Moneda-A-4" src="img/monedas/$100-anverso-antigua.png" alt="">
-					<img id="Moneda-I-4" src="img/monedas/$100-reverso-antigua.png" alt="">
-				</label>
-				<input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500" />
-				<label for="Radio-5" class="Box_Denominacion">
-					<div id="Denominacion-5" class="">
-						<span class="Texto_Radio">500</span>
-					</div>
-					<img id="Moneda-A-5" src="img/monedas/$500-anverso.png" alt="">
-					<img id="Moneda-I-5" src="img/monedas/$500-reverso.png" alt="">
-				</label>
-			</section>
-		</div>
-	</div>
-</body>
+        <div class="container">
+            <header id="Header" class="Box-Header">
+                <h1 id="Items_Titles" class="">Contador de monedas por peso</h1>
+            </header>
+            <main id="Content_Main" class="Box-Main">
+                <section id="Box_Item-1" class="">
+                    <fieldset>
+                        <legend id="Subtitles-1" class="">
+                            Peso:
+                        </legend>
+                        <div id="Items_Box-Input" class="">
+                            <div id="Items-Input" class="">
+                                <input id="Input_Peso" class="Texto_Items-Input" type="number" min="0" max="99999"
+                                    step="3.5" maxlength="9" placeholder="0" />
+                            </div>
+                            <div id="Items-Unidad" for="Input_Unidad" class="">
+                                <span class="Texto_Items-Input">g</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <section id="Box_Item-2" class="">
+                    <fieldset>
+                        <legend id="Subtitles-2" class="">
+                            Denominacíon:
+                        </legend>
+                        <div id="Items_Box-Select" class="">
+                            <input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" />
+                            <label for="Checkbox_Menu-Denominacion" id="Items-Select" class="Texto_Items-Select">
+                                <span id="Select" class="Texto_Items-Select">10</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </section>
+                <section id="Box_Item-3" class="">
+                    <fieldset>
+                        <legend id="Subtitles-3" class="">
+                            Total:
+                        </legend>
+                        <div id="Items_Box-Answer" class="">
+                            <div id="Items-Answer-1" class="">
+                                <span id="Answer-1" class="Texto_Items-Answer-1">10 x 0</span>
+                            </div>
+                            <div id="Items-Answer-2" class="">
+                                <span id="Answer-2" class="Texto_Items-Answer-2">0</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+            </main>
+            <footer id="Footer" class="Box-Footer">
+                &nbsp;
+            </footer>
+        </div>
+        <div id="Denominacion_Modal" class="modal">
+            <div id="Denominacion_Modal-Content" class="modal-content">
+                <section id="Denominacion_Header" class="modal-titles">
+                    <span id="Header_Denominacion" class="modal-header">Denominación:</span>
+                    <span id="Close_Denominacion" class="modal-close">&times;</span>
+                </section>
+                <section id="Items_Denominacion" class="modal-items">
+                    <input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10" checked />
+                    <label for="Radio-1" class="Box_Denominacion">
+                        <div id="Denominacion-1" class="">
+                            <span class="Texto_Radio">10</span>
+                        </div>
+                        <img id="Moneda-A-1" src="img/monedas/$10-anverso.png" alt="">
+                        <img id="Moneda-I-1" src="img/monedas/$10-reverso.png" alt="">
+                    </label>
+                    <input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50" />
+                    <label for="Radio-2" class="Box_Denominacion">
+                        <div id="Denominacion-2" class="">
+                            <span class="Texto_Radio">50</span>
+                        </div>
+                        <img id="Moneda-A-2" src="img/monedas/$50-anverso.png" alt="">
+                        <img id="Moneda-I-2" src="img/monedas/$50-reverso.png" alt="">
+                    </label>
+                    <input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100" />
+                    <label for="Radio-3" class="Box_Denominacion">
+                        <div id="Denominacion-3" class="">
+                            <span class="Texto_Radio">100</span>
+                        </div>
+                        <img id="Moneda-A-3" src="img/monedas/$100-anverso.png" alt="">
+                        <img id="Moneda-I-3" src="img/monedas/$100-reverso.png" alt="">
+                    </label>
+                    <input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100" />
+                    <label for="Radio-4" class="Box_Denominacion">
+                        <div id="Denominacion-4" class="">
+                            <span class="Texto_Radio">100<span class="small-sup"> (Antigua)</span></span>
+                        </div>
+                        <img id="Moneda-A-4" src="img/monedas/$100-anverso-antigua.png" alt="">
+                        <img id="Moneda-I-4" src="img/monedas/$100-reverso-antigua.png" alt="">
+                    </label>
+                    <input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500" />
+                    <label for="Radio-5" class="Box_Denominacion">
+                        <div id="Denominacion-5" class="">
+                            <span class="Texto_Radio">500</span>
+                        </div>
+                        <img id="Moneda-A-5" src="img/monedas/$500-anverso.png" alt="">
+                        <img id="Moneda-I-5" src="img/monedas/$500-reverso.png" alt="">
+                    </label>
+                </section>
+            </div>
+        </div>
+    </body>
+
 </html>

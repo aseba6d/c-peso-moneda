@@ -7,12 +7,8 @@
 }
 
 html {
-  font-size: 10px;
-  font-family: var(--font-family, Arial);
-}
-
-body {
-  background-color: #ebebeb;
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
 }
 
 input[type="number"],
@@ -59,8 +55,6 @@ input[type="checkbox"] {
   display: block;
   width: 570px;
   height: fit-content;
-  text-align: center;
-  padding: 10px;
   overflow: hidden;
   border-width: 3px;
   border-style: solid;
@@ -68,30 +62,24 @@ input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.05);
 
   &[class$="Header"] {
-    padding-top: 15px;
-    border-bottom-width: 0px;
+    height: 50px;
+    padding: 10px 0px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    background-color: lightgrey;
   }
 
   &[class$="Main"] {
     border-top-width: 0px;
-    /*border-bottom-width: 0px; sin footer */
-    padding-bottom: 15px;
-    /* sin footer */
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-
+    border-bottom-width: 0px;
   }
 
   &[class$="Footer"] {
-    display: none;
-    /* sin footer */
-    padding-bottom: 15px;
-    border-top-width: 0px;
+    height: 50px;
+    padding: 10px 0px;
+    background-color: lightgrey;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
   }
 }
 
@@ -99,15 +87,14 @@ input[type="checkbox"] {
   display: grid;
   place-content: center;
   place-items: center;
+  padding: 5px 10px 15px;
   row-gap: 5px;
   column-gap: 44px;
-  padding-top: 0px;
   grid-template-columns: repeat(2, 250px);
-  grid-template-rows: repeat(6, fit-content);
+  grid-template-rows: repeat(2, min-content);
   grid-template-areas:
-    'A1 A2' 'A3 A4'
-    '. .' '. .'
-    'A5 A5' 'A6 A6';
+    "A1 A2"
+    "A3 A3";
 
   & #Box_Item-1 {
     grid-area: A1;
@@ -120,54 +107,27 @@ input[type="checkbox"] {
   & #Box_Item-3 {
     grid-area: A3;
   }
-
-  & #Box_Item-4 {
-    grid-area: A4;
-  }
-
-  & #Box_Item-5 {
-    grid-area: A5;
-  }
-
-  & #Box_Item-6 {
-    grid-area: A6;
-  }
 }
 
 #Items_Titles {
-  display: inline-block;
-  width: fit-content;
-  height: fit-content;
-  padding: 1px 4px;
-  border: 2px solid;
   text-align: center;
-  background-color: lightgrey;
-  border-color: darkgrey;
   overflow: hidden;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-
-  & .Text_Titles {
-    font-size: 2.8rem;
-    font-weight: bold;
-    font-family: inherit;
-  }
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: inherit;
 }
 
-[id|="Items_Texto"] {
-  display: block;
-  width: 250px;
-  height: fit-content;
+fieldset {
+  border: 0px solid;
+  margin: 0px;
   padding: 0px;
-  text-align: center;
+}
 
-  & [class|="Subtitles"] {
-    font-size: 2.8rem;
-    font-weight: bold;
-    font-family: inherit;
-  }
+[id|="Subtitles"] {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: inherit;
 }
 
 [class|="Texto_Items"] {
@@ -178,8 +138,9 @@ input[type="checkbox"] {
   &[class$="Answer-1"] {
     font-size: 1em;
   }
+
   &[class*="Answer"]::before {
-    content:"$";
+    content: "$";
   }
 }
 
@@ -212,7 +173,6 @@ input[type="checkbox"] {
     --border-color: darkgrey;
     border-color: var(--border-color);
   }
-
 }
 
 [id|="Items"] {
@@ -310,7 +270,7 @@ input[type="checkbox"] {
   border-bottom: 3px solid;
   background-color: aqua;
 
-  &>span {
+  & > span {
     display: block;
     font-size: 2.8rem;
     padding: 5px;
@@ -389,12 +349,12 @@ input[type="checkbox"] {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  [id|="Radio"]:checked+& {
+  [id|="Radio"]:checked + & {
     background-color: white;
     border-color: lightgrey;
   }
 
-  [id|="Radio"]:is(:hover, :focus)+& {
+  [id|="Radio"]:is(:hover, :focus) + & {
     background-color: darkgray;
     border-color: black;
   }
@@ -409,12 +369,11 @@ input[type="checkbox"] {
   border-bottom: 2px solid;
   border-bottom-color: darkgrey;
 
-
-  [id|="Radio"]:checked+.Box_Denominacion & {
+  [id|="Radio"]:checked + .Box_Denominacion & {
     border-bottom-color: lightgrey;
   }
 
-  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
     border-bottom-color: black;
   }
 }
@@ -429,11 +388,11 @@ input[type="checkbox"] {
     content: "$";
   }
 
-  [id|="Radio"]:checked+.Box_Denominacion & {
+  [id|="Radio"]:checked + .Box_Denominacion & {
     color: black;
   }
 
-  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
     color: white;
   }
 }

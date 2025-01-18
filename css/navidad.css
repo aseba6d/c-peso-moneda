@@ -16,21 +16,21 @@ body {
 }
 
 [class|=Box] {
-    border-color: black;
+    border-color: rgba(251, 191, 26, 1);
     background-color: rgba(255, 255, 255, 0.8);
+
+    &[class$="Header"],
+  &[class$="Footer"] {
+    background-color: rgb(251, 231, 175);
+  }
 }
 
 #Items_Titles {
-    background-color: rgb(251, 231, 175);
-    border-color: rgba(251, 191, 26, 1);
-}
-
-.Text_Titles {
     color: rgb(127, 104, 0);
     text-shadow: 0px 0px 2px rgba(251, 191, 26, 1);
 }
 
-[class|="Subtitles"] {
+[id|="Subtitles"] {
     color: rgb(0, 0, 0);
     text-shadow: 0px 0px 1px white;
 }

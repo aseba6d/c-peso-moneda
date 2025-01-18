@@ -1,181 +1,187 @@
 @charset "utf-8";
 
 * {
-    --font-family: Arial;
+  --font-family: Arial;
 }
 
 body {
-    background: #ebebeb;
+  background: #ebebeb;
 }
 
 .container {
-    background: transparent;
-    background-image: url(../img/18Sept/guasa2.png), url(../img/18Sept/guaso2.png), url(../img/18Sept/18_fondo.jpg);
-    background-position: left bottom, right bottom, center top;
-    background-size: 50vh, 50vh, cover;
-    background-repeat: no-repeat, no-repeat;
+  background: transparent;
+  background-image: url(../img/18Sept/guasa2.png), url(../img/18Sept/guaso2.png),
+    url(../img/18Sept/18_fondo.jpg);
+  background-position: left bottom, right bottom, center top;
+  background-size: 50vh, 50vh, cover;
+  background-repeat: no-repeat, no-repeat;
 }
 
-[class|=Box] {
-    border-color: black;
-    background-color: rgba(255, 255, 255, 0.8);
+[class|="Box"] {
+  border-color: lightskyblue;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &[class$="Header"] {
+    background-color: midnightblue;
+  }
+
+  &[class$="Footer"] {
+    background-color:indianred;
+    border-color: red;
+    border-top-width: 0px;
+  }
 }
 
 #Items_Titles {
-    background-color: midnightblue;
-    border-color: lightskyblue;
+  color: #ffffff;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 
-.Text_Titles {
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
-
-[class|="Subtitles"] {
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 1px lightskyblue;
+[id|="Subtitles"] {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 1px lightskyblue;
 }
 
 [class|="Texto_Items"] {
-    color: midnightblue;
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  color: midnightblue;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
 }
 
 [id|="Items_Box"] {
-    background-color: lightskyblue;
-    border-color: cornflowerblue;
+  background-color: lightskyblue;
+  border-color: cornflowerblue;
 
-    &:is(:hover, :focus) {
-        background-color: #4dcaff;
-    }
+  &:is(:hover, :focus) {
+    background-color: #4dcaff;
+  }
 }
 
 [id|="Items"] {
-    #Items_Box-Input & {
-        --border-color: cornflowerblue;
+  #Items_Box-Input & {
+    --border-color: cornflowerblue;
+  }
+
+  &[id$="Input"] {
+    border-right-color: var(--border-color);
+  }
+
+  &[id$="Unidad"] {
+    border-left-color: var(--border-color);
+  }
+
+  &[id$="Select"] {
+    &::after {
+      color: inherit;
     }
 
-    &[id$="Input"] {
-        border-right-color: var(--border-color);
+    &:is(:hover, :focus)::after {
+      color: rgb(127, 104, 0);
+    }
+  }
+
+  &[id*="Answer"] {
+    background-color: lightcoral;
+
+    &[id$="1"] {
+      border-bottom-color: var(--border-color);
     }
 
-    &[id$="Unidad"] {
-        border-left-color: var(--border-color);
+    &[id$="2"] {
+      border-top-color: var(--border-color);
     }
-
-    &[id$="Select"] {
-        &::after {
-            color: inherit;
-        }
-
-        &:is(:hover, :focus)::after {
-            color: rgb(127, 104, 0);
-        }
-    }
-
-    &[id*="Answer"] {
-        background-color: lightcoral;
-
-        &[id$="1"] {
-            border-bottom-color: var(--border-color);
-        }
-
-        &[id$="2"] {
-            border-top-color: var(--border-color);
-        }
-    }
+  }
 }
 
 #Input_Peso::placeholder {
-    color: rgb(128, 128, 128);
-    text-shadow: 0 0 2px white;
+  color: rgb(128, 128, 128);
+  text-shadow: 0 0 2px white;
 }
 
 #Items_Box-Answer {
-    --border-color: red;
-    border-color: var(--border-color);
+  --border-color: red;
+  border-color: var(--border-color);
 }
 
 [class|="Texto_Items-Answer"] {
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #Denominacion_Modal-Content {
-    border-color: skyblue;
-    background-color: white;
-    box-shadow: 0px 0px 20px 10px cornflowerblue;
+  border-color: skyblue;
+  background-color: white;
+  box-shadow: 0px 0px 20px 10px cornflowerblue;
 }
 
 #Denominacion_Header {
-    background-color: lightskyblue;
-    box-shadow: inset 0px 0px 20px cornflowerblue;
-    border-bottom-color: skyblue
+  background-color: lightskyblue;
+  box-shadow: inset 0px 0px 20px cornflowerblue;
+  border-bottom-color: skyblue;
 }
 
 #Header_Denominacion {
-    text-shadow: 0px 0px 2px cornflowerblue;
-    color: midnightblue;
+  text-shadow: 0px 0px 2px cornflowerblue;
+  color: midnightblue;
 }
 
 #Close_Denominacion {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: midnightblue;
-    border-left-color: skyblue;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: midnightblue;
+  border-left-color: skyblue;
 
-    &:is(:hover, :focus) {
-        color: rgb(255, 255, 255);
-        background-color: rgba(0, 0, 0, 0.5);
-        border-left-color: skyblue;
-    }
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left-color: skyblue;
+  }
 }
 
 .Box_Denominacion {
-    background-color: lightcoral;
-    border-color: indianred;
-    box-shadow: 0px 0px 5px 2px red;
+  background-color: lightcoral;
+  border-color: indianred;
+  box-shadow: 0px 0px 5px 2px red;
 
-    [id|="Radio"]:checked+& {
-        background-color: cornflowerblue;
-        border-color: blue;
-        box-shadow: 0px 0px 5px 2px lightblue;
-    }
+  [id|="Radio"]:checked + & {
+    background-color: cornflowerblue;
+    border-color: blue;
+    box-shadow: 0px 0px 5px 2px lightblue;
+  }
 
-    [id|="Radio"]:is(:hover, :focus)+& {
-        background-color: #ebebeb;
-        border-color: #93adba;
-        box-shadow: 0px 0px 5px 2px #8da2b5;
-    }
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #ebebeb;
+    border-color: #93adba;
+    box-shadow: 0px 0px 5px 2px #8da2b5;
+  }
 }
 
 [id|="Denominacion"] {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-bottom-color: indianred;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: indianred;
 
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        border-bottom-color: blue;
-    }
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    border-bottom-color: blue;
+  }
 
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        border-bottom-color: #93adba;
-    }
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    border-bottom-color: #93adba;
+  }
 }
 
 .Texto_Radio {
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 1px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 1px rgb(0, 0, 0);
 
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        color: white;
-        text-shadow: 0px 0px 2px black;
-    }
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
 
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        color: rgb(0, 0, 0);
-        text-shadow: 0px 0px 1px rgb(255, 255, 255);
-    }
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 1px rgb(255, 255, 255);
+  }
 }
