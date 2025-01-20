@@ -47,11 +47,11 @@
   box-shadow: 0px 0px 5px 2px #e28450;
 
   [id|="Radio"]:checked + & {
-    box-shadow: 0px 0px 5px 2px #8b6fd1;
+    box-shadow: 0px 0px 5px 2px #8da2b5;
   }
 
   [id|="Radio"]:is(:hover, :focus) + & {
-    box-shadow: 0px 0px 5px 2px #8da2b5;
+    box-shadow: 0px 0px 5px 2px #8b6fd1;
   }
 }
 

@@ -374,13 +374,13 @@ fieldset {
   border-bottom-right-radius: 12px;
 
   [id|="Radio"]:checked + & {
-    background-color: #9a9eff;
-    border-color: darkorchid;
+    background-color: #ebebeb;
+    border-color: #93adba;
   }
 
   [id|="Radio"]:is(:hover, :focus) + & {
-    background-color: #ebebeb;
-    border-color: #93adba;
+    background-color: #9a9eff;
+    border-color: darkorchid;
   }
 }
 
