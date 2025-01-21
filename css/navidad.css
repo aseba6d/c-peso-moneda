@@ -20,9 +20,9 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 
     &[class$="Header"],
-  &[class$="Footer"] {
-    background-color: rgb(251, 231, 175);
-  }
+    &[class$="Footer"] {
+        background-color: rgb(251, 231, 175);
+    }
 }
 
 #Items_Titles {
@@ -30,42 +30,10 @@ body {
     text-shadow: 0px 0px 2px rgba(251, 191, 26, 1);
 }
 
-[id|="Subtitles"] {
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 1px white;
-}
-
-[class|="Texto_Items"] {
-    color: midnightblue;
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
-}
-
-[id|="Items_Box"] {
-    background-color: lightskyblue;
-    border-color: cornflowerblue;
-
-    &:is(:hover, :focus) {
-        background-color: #4dcaff;
-    }
-}
 
 [id|="Items"] {
-    #Items_Box-Input & {
-        --border-color: cornflowerblue;
-    }
-
-    &[id$="Input"] {
-        border-right-color: var(--border-color);
-    }
-
-    &[id$="Unidad"] {
-        border-left-color: var(--border-color);
-    }
 
     &[id$="Select"] {
-        &::after {
-            color: inherit;
-        }
 
         &:is(:hover, :focus)::after {
             color: rgb(127, 104, 0);
@@ -74,20 +42,7 @@ body {
 
     &[id*="Answer"] {
         background-color: rgb(251, 231, 175);
-
-        &[id$="1"] {
-            border-bottom-color: var(--border-color);
-        }
-
-        &[id$="2"] {
-            border-top-color: var(--border-color);
-        }
     }
-}
-
-#Input_Peso::placeholder {
-    color: rgb(128, 128, 128);
-    text-shadow: 0 0 2px white;
 }
 
 #Items_Box-Answer {
@@ -95,9 +50,6 @@ body {
     border-color: var(--border-color);
 }
 
-.modal {
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
 #Denominacion_Modal-Content {
     width: 65%;
@@ -133,48 +85,13 @@ body {
 }
 
 .Box_Denominacion {
-    background-color: #ffcb85;
-    border-color: indianred;
     box-shadow: 0px 0px 5px 2px #e28450;
 
-
     [id|="Radio"]:checked+& {
-        background-color: #9a9eff;
-        border-color: darkorchid;
         box-shadow: 0px 0px 5px 2px #8b6fd1;
     }
 
     [id|="Radio"]:is(:hover, :focus)+& {
-        background-color: #ebebeb;
-        border-color: #93adba;
         box-shadow: 0px 0px 5px 2px #8da2b5;
-    }
-}
-
-[id|="Denominacion"] {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-bottom-color: indianred;
-
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        border-bottom-color: #8b6fd1;
-    }
-
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        border-bottom-color: #93adba;
-    }
-}
-
-.Texto_Radio {
-    color: black;
-    text-shadow: 0px 0px 1px white;
-
-    [id|="Radio"]:checked+.Box_Denominacion & {
-        color: white;
-        text-shadow: 0px 0px 2px black;
-    }
-
-    [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-        color: rgb(0, 0, 0);
-        text-shadow: 0px 0px 1px white;
     }
 }

@@ -25,6 +25,12 @@ let datostheme = [
         incio: { dia: 1, mes: 12, hora: '00:00:00' },
         fin: { dia: 31, mes: 12, hora: '23:59:59' },
         urlCodigo: 2
+    },
+    {
+        name: "Hello Kitty",
+        file: "css/theme-3.css",
+        type: 'Url',
+        urlCodigo: 3
     }
 ];
 
