@@ -31,6 +31,12 @@ let datostheme = [
         file: "css/theme-3.css",
         type: 'Url',
         urlCodigo: 3
+    },
+    {
+        name: "Pokémon",
+        file: "css/theme-4.css",
+        type: 'Url',
+        urlCodigo: 4
     }
 ];
 

@@ -184,21 +184,3 @@ body {
 		color: white;
 	}
 }
-
-/* imagenes -------------- */
-
-.Img-T {
-	background-image: url("../img/theme-3/HK02.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	height: 200px !important;
-	top: calc(50% - 250px) !important;
-	z-index: 2 !important;
-	/*background-color: aqua;*/
-	width: 200px !important;
-	left: calc(50% - 400px) !important;
-	-ms-transform: rotate(-20deg);
-	-webkit-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-}

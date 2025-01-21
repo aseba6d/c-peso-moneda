@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+* {
+	--font-family: Arial;
+}
+
+body {
+	background: #ebebeb;
+}
+.container {
+	background-color: #ed7660;
+	background-image: url("../img/theme-4/pokeball.webp"),
+	url("../img/theme-4/pokemon_eevee_2x.webp"),
+		url("../img/theme-4/pokemon_pikachu_2x.webp"),
+		url("../img/theme-4/pokemon_SV.webp"),
+		url("../img/theme-4/pkm.webp"),
+		repeating-linear-gradient(-45deg, #ed7660 10%, #ed7660 20%, #ef816a 20%, #ef816a 23%);
+	background-size: 50px,  auto 250px , auto 250px, auto 200px, 300px, cover;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: 130px bottom, left bottom , right bottom, center bottom, left top, left top;
+
+
+}
+#Content_Main {
+	padding: 15px 20px 20px;
+	row-gap: 65px;
+	column-gap: 50px;
+}
+[class|=Box] {
+	border-color: rgb(0, 0, 0);
+	background-color: #E12E2E;
+	width: 600px;
+
+	&[class$="Header"] {
+		display: none;
+	}
+
+	&[class$="Main"]::before {
+		content: "";
+		display: block;
+		position: absolute;
+		background-image: url("../img/theme-4/pokemon_yamper_2x.webp");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		height: 150px;
+		top: calc(50% - 280px);
+		width: 150px;
+		left: calc(50% - 250px);
+	}
+
+	&[class$="Main"] {
+		border-top-width: 3px;
+		border-bottom-width: 3px;
+		padding-bottom: 15px;
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+		background-image: linear-gradient(#E12E2E, #e75454 20%, #e75454 45%, #000 45%, #000 55%, #fff 55%, #DFDFDF);
+	}
+
+	&[class$="Footer"] {
+		display: none;
+	}
+}
+
+[id|="Subtitles"] {
+	color: white;
+	text-shadow: 0px 0px 2px black;
+
+	&[id$="3"] {
+		color: black;
+	text-shadow: 0px 0px 2px white;
+	  }
+}
+
+[class|="Texto_Items"] {
+	color: black;
+	text-shadow: 0px 0px 2px white;
+
+	&[class*="Answer"] {
+		color: white;
+	text-shadow: 0px 0px 2px black;
+	  }
+}
+
+[id|="Items_Box"] {
+	--background-color: white;
+	--border-color: black;
+	background-color: var(--background-color);
+	border-color: var(--border-color);
+
+	&:is(:hover, :focus) {
+		background-color: #ebebeb;
+	}
+}
+
+[id|="Items"] {
+	#Items_Box-Input & {
+		--border-color: black;
+	}
+
+	&[id$="Select"] {
+		&:is(:hover, :focus)::after {
+			color: indianred;
+		}
+	}
+
+	&[id*="Answer"] {
+		--border-color: black;
+		background-color: #e75454;
+	}
+}
+
+#Input_Peso {
+	&::placeholder {
+		color: #CCC;
+		text-shadow: 0px 0px 2px black;
+	}
+}
+
+#Items_Box-Answer {
+	--border-color: black;
+	border-color: var(--border-color);
+}
+
+#Denominacion_Modal-Content {
+	border-color: black;
+	background-color: #E12E2E;
+	background-image: linear-gradient(#E12E2E, #e75454 20%, #e75454 45%, #000 45%, #000 55%, #fff 55%, #DFDFDF);;
+}
+
+#Denominacion_Header {
+	background-color: #E12E2E;
+	border-bottom-color: black;
+}
+
+#Header_Denominacion {
+	text-shadow: 0px 0px 2px black;
+	color: white;
+}
+
+#Close_Denominacion {
+	text-shadow: 0px 0px 2px white;
+	color: black;
+	border-left-color: black;
+
+	&:is(:hover, :focus) {
+		color: white;
+		border-left-color: black;
+	}
+}
+
+.Box_Denominacion {
+	border-color: black;
+	background-color: #ebebeb;
+
+	[id|="Radio"]:checked+& {
+		background-color: #e75454;
+		border-color: black;
+	}
+
+	[id|="Radio"]:is(:hover, :focus)+& {
+		background-color: #E12E2E;
+		border-color: black;
+	}
+}
+
+[id|="Denominacion"] {
+	border-bottom-color: black;
+
+	[id|="Radio"]:checked+.Box_Denominacion & {
+		border-bottom-color: black;
+	}
+
+	[id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+		border-bottom-color: black;
+	}
+}
+
+.Texto_Radio {
+	color: black;
+
+	[id|="Radio"]:checked+.Box_Denominacion & {
+		color: black;
+	}
+
+	[id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+		color: white;
+	}
+}
