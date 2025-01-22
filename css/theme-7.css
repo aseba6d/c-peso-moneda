@@ -1,75 +1,55 @@
 @charset "utf-8";
-/* CSS Document */
-.Bg-Deg {
-	background-color: #ebebeb;
+
+* {
+	--font-family: Arial;
 }
-.contenido {
-	border-color: #8da2b5 !important;
+
+body {
 	background-color: #93adba;
-	background-image:radial-gradient(#bdd8df, #93adba);
-	box-shadow: 0px 0px 20px 10px #8da2b5;
 }
-.titulo {
-	background-color: #0df89e;
-	box-shadow:0px 0px 10px 2px #0dbc79;
-	border-color: #0dbc79;
-	text-shadow: 0px 0px 2px white;
-	color: #2C8121;
+
+.container {
+	background-image:  url("../img/theme-7/inu03.png"),
+	url("../img/theme-7/inu04.png"),
+	url("../img/theme-7/inu01.png"),
+	url("../img/theme-7/inulogo.png"),
+		url("../img/theme-7/inu00.png"),
+		radial-gradient(#bdd8df, #93adba);
+	background-size: auto 250px,  auto 200px , contain, auto 120px, contain, cover;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position:left 50px bottom , left 40% bottom , right bottom, center top 20px, left top, left top;
+
+
 }
-[class|="subtitulo"] {
-	color: white;
-	text-shadow: 0px 0px 2px #000;
+[id|="Items_Box"] {
+	--background-color: #ffcb85;
+	--border-color: #e28450;
+	background-color: var(--background-color);
+	border-color: var(--border-color);
+
+	&:is(:hover, :focus) {
+		background-color: #ffcb85;
+	}
 }
-[class|="Cnt-Select"] i{
-	border-left-color: white !important;
-    border-bottom-color: white !important;
+
+[id|="Items"] {
+	#Items_Box-Input & {
+		--border-color: #e28450;
+	}
+
+	&[id$="Select"] {
+		&:is(:hover, :focus)::after {
+			color: red;
+		}
+	}
+
+	&[id*="Answer"] {
+		--border-color: #e28450;
+		background-color: var(--background-color);
+	}
 }
-[class|="Cnt-Select"]:hover i {
-	border-left-color: indianred !important;
-    border-bottom-color: indianred !important;
-}
-.Input-1, .Input-2, .Select-1 {
-	background-color: #ffcb85;
-	border-color: #e28450 !important;
-	box-shadow:5px 7px 10px 7px #e28450;
-	text-shadow: 0px 0px 2px #FFF;
-}
-#Input1::placeholder {
-	color: white;
-	text-shadow: 0px 0px 2px #000;
-}
-#Input2:read-only {
-	background-color: #ffcb85;
-	border-color: #e28450;
-	box-shadow:5px 7px 10px 7px #e28450;
-}
- .Select-2 {
-	 background-color: #9a9eff;
-	 color: white;
-}
-.Img-L {
-	background-image: url("../img/Theme-8/inu00.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left top;
-	width: 100% !important;
-	height: 100% !important;
-}
-.Img-R {
-	background-image: url("../img/Theme-8/inu01.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-}
-.Img-T {
-	background-image: url("../img/Theme-8/inulogo.png");
-	background-size: auto 100px;
-	background-repeat: no-repeat;
-	background-position:center center;
-}
-.Img-B {
-	background-image: url("../img/Theme-8/inu03.png"), url("../img/Theme-8/inu04.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left center, right center;
+
+#Items_Box-Answer {
+	--border-color: #e28450;
+	border-color: var(--border-color);
 }

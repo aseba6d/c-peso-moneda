@@ -394,11 +394,11 @@ fieldset {
   background-color: rgba(0, 0, 0, 0.1);
 
   [id|="Radio"]:checked + .Box_Denominacion & {
-    border-bottom-color: #8b6fd1;
+    border-bottom-color: #93adba;
   }
 
   [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
-    border-bottom-color: #93adba;
+    border-bottom-color: darkorchid;
   }
 }
 

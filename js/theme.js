@@ -1,7 +1,7 @@
 const fecha = new Date();
 const urlTheme = document.getElementById("csstheme");
 const urlParams = new URLSearchParams(window.location.search);
-let urlVar = urlParams.get("t");
+let urlVar = urlParams.get("tema");
 if(urlVar === null) { urlVar = 0};
 let datostheme = [
     {
