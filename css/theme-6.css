@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+.Bg-Deg {
+	background-color: #175cbc;
+	background: linear-gradient(45deg, #175cbc 40%, #f2852f 60%);
+	
+}
+.texto2 {color: white;}
+.contenido {
+	border-color: #ea7b08 !important;
+	background-color: #ef8100;
+	box-shadow: 0px 0px 20px 10px #ffe30d;
+	background-image:radial-gradient(#ffe30d 50%, #ef8100);
+	filter: brightness(90%) contrast(95%) saturate(100%);
+	border-radius: 150px !important;
+}
+.titulo {
+	background-color: #1f4077;
+	box-shadow:0px 0px 10px 2px #f39b0f;
+	border-color: #ea7b08 !important;
+	text-shadow: 0px 0px 2px #9e0b0b;
+	color: white !important;
+}
+[class|="subtitulo"] {
+	color: #9e0b0b;
+	text-shadow: 0px 0px 2px #ffe30d;
+}
+.subtitulo-3 {color: white; text-shadow: 0px 0px 2px #000;}
+[class|="Cnt-Select"] i,[class|="Cnt-Select"]:hover i {
+	border-left-color: white !important;
+    border-bottom-color: white !important;
+}
+.Input-1, .Input-2, .Select-1 {
+	background-color: #ea7b08;
+	border-color: #9e0b0b !important;
+	box-shadow:5px 7px 10px 7px #f39b0f;
+	text-shadow: 0px 0px 2px #9e0b0b;
+	color: white;
+}
+#Input1::placeholder {
+	color: #ffe30d;
+	text-shadow: 0px 0px 2px #9e0b0b;
+}
+#Input2:read-only {
+	background-color: #FFEC5D;
+	color:#9e0b0b;
+	text-shadow: 0px 0px 2px #ffe30d !important;
+}
+.Select-1:hover {
+	background-color:#FF8900;
+}
+ .Select-2 {
+	 background-color: #9e0b0b;
+	 border-color: #ea7204 !important;
+	 color: white;
+}
+.Select-2:hover {
+	background-color:#ef8100;
+}
+/* imagenes -------------- */
+.Bg-Img {
+	background: url("../img/Theme-5/pxfuel.jpg");
+	background-repeat:no-repeat;
+	background-size: 100%;
+	background-position:left top;
+	background-attachment: fixed;
+	
+}
+.Img-L {
+	background-image: url("../img/Theme-5/goku.png");
+	background-size: 300px auto;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.Img-R {
+	background-image: url("../img/Theme-5/kid_goku.png"), url("../img/Theme-5/dragonballZ.png");
+	background-size: auto 300px, contain;
+	background-repeat: no-repeat;
+	background-position: center, right bottom;
+}
+.Img-T {
+	background-image: url("../img/Theme-5/ball4.png"), url("../img/Theme-5/ball2.png"), url("../img/Theme-5/ball6.png");
+	background-size: 120px;
+	background-repeat: no-repeat;
+	background-position:left center, center center, right center;
+}
+.Img-B {
+	background-image: url("../img/Theme-5/ball3.png"), url("../img/Theme-5/ball7.png"), url("../img/Theme-5/ball5.png");
+	background-size: 120px;
+	background-repeat: no-repeat;
+	background-position: left center, center center, right center;
+}
+.Cnt-Img{
+	background-image: url("../img/Theme-5/estrella.png");
+	background-size: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}

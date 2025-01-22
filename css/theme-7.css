@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+.Bg-Deg {
+	background-color: #ebebeb;
+}
+.contenido {
+	border-color: #8da2b5 !important;
+	background-color: #93adba;
+	background-image:radial-gradient(#bdd8df, #93adba);
+	box-shadow: 0px 0px 20px 10px #8da2b5;
+}
+.titulo {
+	background-color: #0df89e;
+	box-shadow:0px 0px 10px 2px #0dbc79;
+	border-color: #0dbc79;
+	text-shadow: 0px 0px 2px white;
+	color: #2C8121;
+}
+[class|="subtitulo"] {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+[class|="Cnt-Select"] i{
+	border-left-color: white !important;
+    border-bottom-color: white !important;
+}
+[class|="Cnt-Select"]:hover i {
+	border-left-color: indianred !important;
+    border-bottom-color: indianred !important;
+}
+.Input-1, .Input-2, .Select-1 {
+	background-color: #ffcb85;
+	border-color: #e28450 !important;
+	box-shadow:5px 7px 10px 7px #e28450;
+	text-shadow: 0px 0px 2px #FFF;
+}
+#Input1::placeholder {
+	color: white;
+	text-shadow: 0px 0px 2px #000;
+}
+#Input2:read-only {
+	background-color: #ffcb85;
+	border-color: #e28450;
+	box-shadow:5px 7px 10px 7px #e28450;
+}
+ .Select-2 {
+	 background-color: #9a9eff;
+	 color: white;
+}
+.Img-L {
+	background-image: url("../img/Theme-8/inu00.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 100% !important;
+	height: 100% !important;
+}
+.Img-R {
+	background-image: url("../img/Theme-8/inu01.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.Img-T {
+	background-image: url("../img/Theme-8/inulogo.png");
+	background-size: auto 100px;
+	background-repeat: no-repeat;
+	background-position:center center;
+}
+.Img-B {
+	background-image: url("../img/Theme-8/inu03.png"), url("../img/Theme-8/inu04.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center, right center;
+}
