@@ -12,25 +12,34 @@ body {
 	background-image: url("../img/theme-5/slamdunk.png"),
 		url("../img/theme-5/shohoku.png"),
 		url("../img/theme-5/shohoku2.png"),
-		url("../img/theme-5/ball2.png"),
 		url("../img/theme-5/cancha_estadio.jpg");
-	background-size: 25%, 27%, 25%, 100px, cover, cover;
-	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-	background-position: center 10px, left bottom, right bottom, center bottom, left top, left top;
-
-
+	background-size: 25%, 27%, 25%, cover;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: right 10px top 10px, left bottom, right bottom, left top;
+	align-content: stretch;
+	justify-content: center;
+	align-items: end;
 }
+
 #Content_Main {
-	padding: 15px 20px 20px;
-	row-gap: 65px;
-	column-gap: 50px;
+	padding: 15px;
+	row-gap: 20px;
+	grid-template-rows: repeat(3, min-content);
+	grid-template-areas:
+		"A0 A0"
+		"A1 A2"
+		"A3 A3";
+
+	& #Box_Item-0 {
+		display: block;
+	}
 }
 
 [class|=Box] {
-	border-color: #ea7b08;
+	border-color: black;
 	background-color: #ef8100;
 	width: 600px;
-	box-shadow: 0px 0px 20px 10px #ffe30d;
+	height: 600px;
 
 	&[class$="Header"] {
 		display: none;
@@ -40,12 +49,12 @@ body {
 		border-top-width: 3px;
 		border-bottom-width: 3px;
 		padding-bottom: 15px;
-		border-top-left-radius: 50px;
-		border-top-right-radius: 50px;
-		border-bottom-left-radius: 50px;
-		border-bottom-right-radius: 50px;
+		border-top-left-radius: 50%;
+		border-top-right-radius: 50%;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
 		background-image: url("../img/theme-5/ball-textura.png"), url("../img/theme-5/ball1.png"), radial-gradient(#ffe30d, #F85400);
-		background-size: auto, 750px;
+		background-size: auto, cover;
 		background-repeat: repeat, no-repeat;
 		background-position: center, center;
 	}
@@ -61,17 +70,18 @@ body {
 
 	&[id$="3"] {
 		color: white;
-	text-shadow: 0px 0px 2px black;
-	  }
+		text-shadow: 0px 0px 2px black;
+	}
 }
+
 [class|="Texto_Items"] {
 	color: white;
 	text-shadow: 0px 0px 2px black;
 
 	&[class*="Answer"] {
 		color: #9e0b0b;
-	text-shadow: 0px 0px 2px #ffe30d;
-	  }
+		text-shadow: 0px 0px 2px #ffe30d;
+	}
 }
 
 [id|="Items_Box"] {
@@ -82,6 +92,16 @@ body {
 
 	&:is(:hover, :focus) {
 		background-color: #ea7b08;
+	}
+
+	&[id$="Header"] {
+		border-color: #ea7b08;
+		background-color: #9e0b0b;
+		color: white;
+	}
+
+	&[id$="Header"]::after {
+		content: "Contador de monedas por peso";
 	}
 }
 
@@ -119,10 +139,12 @@ body {
 	background-color: #E12E2E;
 	background-image: radial-gradient(#f39b0f, transparent);
 }
+
 #Denominacion_Header {
 	background-color: #9e0b0b;
 	border-bottom-color: #9e0b0b;
 }
+
 #Header_Denominacion {
 	text-shadow: 0px 0px 2px black;
 	color: white;
@@ -138,6 +160,7 @@ body {
 		border-left-color: #9e0b0b;
 	}
 }
+
 .Box_Denominacion {
 
 	[id|="Radio"]:checked+& {
@@ -150,6 +173,7 @@ body {
 		border-color: black;
 	}
 }
+
 [id|="Denominacion"] {
 
 	[id|="Radio"]:checked+.Box_Denominacion & {

@@ -41,6 +41,7 @@ input[type="checkbox"] {
 body {
   background: #ebebeb;
 }
+
 .container {
   display: grid;
   width: 100vw;
@@ -96,8 +97,14 @@ body {
   grid-template-columns: repeat(2, 250px);
   grid-template-rows: repeat(2, min-content);
   grid-template-areas:
+    /* "A0 A0" */
     "A1 A2"
     "A3 A3";
+
+  & #Box_Item-0 {
+    display: none;
+    grid-area: A0;
+  }
 
   & #Box_Item-1 {
     grid-area: A1;
@@ -176,9 +183,24 @@ fieldset {
     background-color: #4dcaff;
   }
 
+  &[id$="Header"] {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: inherit;
+    width: fit-content;
+    height: fit-content;
+    padding: 1px 10px 3px;
+    border-color: #0dbc79;
+    background-color: #7af0c3;
+  }
+
+  &[id$="Header"]::after {
+    content: "";
+  }
+
   &[id$="Answer"] {
     flex-direction: column;
-    --border-color: cornflowerblue;
+    --border-color: #898eef;
     border-color: var(--border-color);
   }
 }
@@ -246,7 +268,7 @@ fieldset {
 
   &::placeholder {
     color: rgb(128, 128, 128);
-  text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white;
   }
 }
 
@@ -259,10 +281,6 @@ fieldset {
   border-left-color: var(--border-color);
 }
 
-#Items_Box-Answer {
-  --border-color: #898eef;
-  border-color: var(--border-color);
-}
 .modal {
   display: none;
   position: fixed;
@@ -288,7 +306,7 @@ fieldset {
   flex-direction: row;
   border-bottom: 3px solid;
 
-  & > span {
+  &>span {
     display: block;
     font-size: 2.8rem;
     padding: 5px;
@@ -373,12 +391,12 @@ fieldset {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  [id|="Radio"]:checked + & {
+  [id|="Radio"]:checked+& {
     background-color: #ebebeb;
     border-color: #93adba;
   }
 
-  [id|="Radio"]:is(:hover, :focus) + & {
+  [id|="Radio"]:is(:hover, :focus)+& {
     background-color: #9a9eff;
     border-color: darkorchid;
   }
@@ -393,11 +411,11 @@ fieldset {
   border-bottom-color: indianred;
   background-color: rgba(0, 0, 0, 0.1);
 
-  [id|="Radio"]:checked + .Box_Denominacion & {
+  [id|="Radio"]:checked+.Box_Denominacion & {
     border-bottom-color: #93adba;
   }
 
-  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
     border-bottom-color: darkorchid;
   }
 }
@@ -412,11 +430,11 @@ fieldset {
     content: "$";
   }
 
-  [id|="Radio"]:checked + .Box_Denominacion & {
+  [id|="Radio"]:checked+.Box_Denominacion & {
     color: white;
   }
 
-  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
     color: black;
   }
 }
