@@ -86,3 +86,5 @@ if ((urlVar2 === '' || urlVar2 === null) && urlVar3 !== '' && FechaCdg !== undef
 } else {
     urlTheme.href = datostheme[DefCdg].file;
 }
+/* function changetheme() {};
+window.addEventListener('load', changetheme); */
