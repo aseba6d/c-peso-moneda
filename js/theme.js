@@ -1,8 +1,10 @@
 const fecha = new Date();
 const urlTheme = document.getElementById("csstheme");
 const urlParams = new URLSearchParams(window.location.search);
-let urlVar = urlParams.get("tema");
-if(urlVar === null) { urlVar = 0};
+let urlVar1 = urlParams.get("tema");
+let urlVar2 = urlParams.get("on");
+let urlVar3 = urlParams.get("off");
+let FechaCdg, DefCdg, UrlCdg, FechaOnOff;
 let datostheme = [
     {
         name: "asebabd",
@@ -15,8 +17,8 @@ let datostheme = [
         name: "Fiesta Patrias",
         file: "css/18Sept.css",
         type: 'fecha',
-        incio: { dia: 1, mes: 9, hora: '00:00:00' },
-        fin: { dia: 30, mes: 9, hora: '23:59:59' },
+        incio: { dia: 1, mes: 9 },
+        fin: { dia: 30, mes: 9 },
         urlCodigo: 1,
         default: false
     },
@@ -24,8 +26,8 @@ let datostheme = [
         name: "Navidad",
         file: "css/navidad.css",
         type: 'fecha',
-        incio: { dia: 1, mes: 12, hora: '00:00:00' },
-        fin: { dia: 31, mes: 12, hora: '23:59:59' },
+        incio: { dia: 1, mes: 12 },
+        fin: { dia: 31, mes: 12 },
         urlCodigo: 2,
         default: false
     },
@@ -65,20 +67,22 @@ let datostheme = [
         default: false
     }
 ];
-
-function changetheme() {
-    urlTheme.href = datostheme[0].file;
-    datostheme.forEach(temas => {
-        if ((parseInt(urlVar) === temas.urlCodigo) && (parseInt(urlVar) < datostheme.length)) {
-                urlTheme.href = temas.file;
-        } 
-        if (temas.type === 'fecha') {
-            let xy = new Date(`${fecha.getFullYear()}/${temas.incio.mes}/${temas.incio.dia} ${temas.incio.hora}`);
-            let yz = new Date(`${fecha.getFullYear()}/${temas.fin.mes}/${temas.fin.dia} ${temas.fin.hora}`);
-            if ((xy <= fecha) && (yz >= fecha)) {
-                urlTheme.href = temas.file;
-            }
+datostheme.forEach(temas => {
+    if (temas.type === 'Url' && temas.default === true) {
+        DefCdg = temas.urlCodigo;
+    }
+    if (temas.type === 'fecha') {
+        let xy = new Date(`${fecha.getFullYear()}/${temas.incio.mes}/${temas.incio.dia} 00:00:00`);
+        let yz = new Date(`${fecha.getFullYear()}/${temas.fin.mes}/${temas.fin.dia} 23:59:59`);
+        if (xy <= fecha && yz >= fecha) {
+            FechaCdg = temas.urlCodigo;
         }
-    });
+    }
+});
+if ((urlVar2 === '' || urlVar2 === null) && urlVar3 !== '' && FechaCdg !== undefined) {
+    urlTheme.href = datostheme[FechaCdg].file;
+} else if (parseInt(urlVar1) < datostheme.length && (urlVar1 !== null || urlVar1 !== '')) {
+    urlTheme.href = datostheme[parseInt(urlVar1)].file;
+} else {
+    urlTheme.href = datostheme[DefCdg].file;
 }
-window.addEventListener('load', changetheme);
