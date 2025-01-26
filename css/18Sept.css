@@ -1,14 +1,6 @@
 @charset "utf-8";
 
-* {
-  --font-family: Arial;
-}
-
-body {
-  background: #ebebeb;
-}
-
-.container {
+#contenedor {
   background: transparent;
   background-image: url(../img/18Sept/guasa2.png), url(../img/18Sept/guaso2.png),
     url(../img/18Sept/18_fondo.jpg);
@@ -17,24 +9,26 @@ body {
   background-repeat: no-repeat, no-repeat;
 }
 
-[class|="Box"] {
+header {
   border-color: lightskyblue;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: midnightblue;
+  border-bottom: 0px;
 
-  &[class$="Header"] {
-    background-color: midnightblue;
-  }
-
-  &[class$="Footer"] {
-    background-color:indianred;
-    border-color: red;
-    border-top-width: 0px;
+  & > h1 {
+    color: #ffffff;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
   }
 }
 
-#Items_Titles {
-  color: #ffffff;
-  text-shadow: 0px 0px 2px rgb(0, 0, 0);
+footer {
+  border-color: red;
+  border-top: 0px;
+  background-color: indianred;
+}
+
+#Content_Main {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: lightskyblue;
 }
 
 [id|="Subtitles"] {
@@ -42,73 +36,19 @@ body {
   text-shadow: 0px 0px 1px lightskyblue;
 }
 
-[class|="Texto_Items"] {
-  color: midnightblue;
-  text-shadow: 0px 0px 2px rgb(255, 255, 255);
-}
-
-[id|="Items_Box"] {
-  background-color: lightskyblue;
-  border-color: cornflowerblue;
-
-  &:is(:hover, :focus) {
-    background-color: #4dcaff;
-  }
-}
-
-[id|="Items"] {
-  #Items_Box-Input & {
-    --border-color: cornflowerblue;
-  }
-
-  &[id$="Input"] {
-    border-right-color: var(--border-color);
-  }
-
-  &[id$="Unidad"] {
-    border-left-color: var(--border-color);
-  }
-
-  &[id$="Select"] {
-    &::after {
-      color: inherit;
-    }
-
-    &:is(:hover, :focus)::after {
-      color: rgb(127, 104, 0);
-    }
-  }
-
-  &[id*="Answer"] {
-    background-color: lightcoral;
-
-    &[id$="1"] {
-      border-bottom-color: var(--border-color);
-    }
-
-    &[id$="2"] {
-      border-top-color: var(--border-color);
-    }
-  }
-}
-
-#Input_Peso::placeholder {
-  color: rgb(128, 128, 128);
-  text-shadow: 0 0 2px white;
-}
-
 #Items_Box-Answer {
-  --border-color: red;
-  border-color: var(--border-color);
-}
+  background-color: lightcoral;
+  border-color: red;
 
-[class|="Texto_Items-Answer"] {
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
+  & .Texto_Items-Answer-1 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.4);
+  & .Texto_Items-Answer-2 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
 }
 
 #Denominacion_Modal-Content {
@@ -153,27 +93,14 @@ body {
 
   [id|="Radio"]:is(:hover, :focus) + & {
     background-color: #ebebeb;
-    border-color: #93adba;
+    border-color: #657e96;
     box-shadow: 0px 0px 5px 2px #8da2b5;
   }
 }
 
-[id|="Denominacion"] {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-bottom-color: indianred;
-
-  [id|="Radio"]:checked + .Box_Denominacion & {
-    border-bottom-color: blue;
-  }
-
-  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
-    border-bottom-color: #93adba;
-  }
-}
-
 .Texto_Radio {
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 1px rgb(0, 0, 0);
+  color: white;
+  text-shadow: 0px 0px 1px black;
 
   [id|="Radio"]:checked + .Box_Denominacion & {
     color: white;
@@ -181,7 +108,7 @@ body {
   }
 
   [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 1px rgb(255, 255, 255);
+    color: black;
+    text-shadow: 0px 0px 1px white;
   }
 }

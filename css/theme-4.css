@@ -1,52 +1,82 @@
 @charset "utf-8";
 
 * {
-	--font-family: Arial;
+  --font-family: Arial;
 }
 
 body {
-	background: #ebebeb;
+  background: #ebebeb;
 }
 
-.container {
-	background-color: #ed7660;
-	background-image: url("../img/theme-4/pokeball.webp"),
-		url("../img/theme-4/pokemon_eevee_2x.webp"),
-		url("../img/theme-4/pokemon_pikachu_2x.webp"),
-		url("../img/theme-4/pokemon_SV.webp"),
-		url("../img/theme-4/pkm.webp"),
-		repeating-linear-gradient(-45deg, #ed7660 10%, #ed7660 20%, #ef816a 20%, #ef816a 23%);
-	background-size: 50px, auto 250px, auto 250px, auto 200px, 300px, cover;
-	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-	background-position: 130px bottom, left bottom, right bottom, center bottom, left top, left top;
+#contenedor {
+  background-color: #ed7660;
+  background-image: url("../img/theme-4/pokeball.webp"),
+    url("../img/theme-4/pokemon_eevee_2x.webp"),
+    url("../img/theme-4/pokemon_pikachu_2x.webp"),
+    url("../img/theme-4/pokemon_SV.webp"), url("../img/theme-4/pkm.webp"),
+    repeating-linear-gradient(
+      -45deg,
+      #ed7660 10%,
+      #ed7660 20%,
+      #ef816a 20%,
+      #ef816a 23%
+    );
+  background-size: 50px, auto 250px, auto 250px, auto 200px, 300px, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
+  background-position: 130px bottom, left bottom, right bottom, center bottom,
+    left top, left top;
+}
 
-
+header,
+footer {
+  display: none;
 }
 
 #Content_Main {
-	padding: 15px;
-	row-gap: 10px;
-	grid-template-rows: repeat(3, min-content);
-	grid-template-areas:
-		"A0 A0"
-		"A1 A2"
-		"A3 A3";
-
-	& #Box_Item-0 {
-		display: block;
-	}
+  width: 600px;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-color: black;
+  background-image: radial-gradient(
+      white 15px,
+      #ccc 15px,
+      #ccc 17px,
+      white 17px,
+      white 21px,
+      black 21px,
+      black 33px,
+      transparent 33px
+    ),
+    linear-gradient(
+      #e12e2e,
+      #e75454 20%,
+      #e75454 45%,
+      #000 45%,
+      #000 55%,
+      #fff 55%,
+      #dfdfdf
+    );
+  background-size: 600px 600px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  padding: 2px 15px 15px;
 }
 
-[class|=Box] {
-	border-color: rgb(0, 0, 0);
-	background-color: #E12E2E;
-	width: 600px;
+.Box-Main {
+	row-gap: 12px;
+	column-gap: 54px;
+	grid-template-rows: repeat(3, min-content);
+	grid-template-areas:
+	  "A0 A0"
+	  "A1 A2"
+	  "A3 A3";
 
-	&[class$="Header"] {
-		display: none;
-	}
-
-	&[class$="Main"]::before {
+	  &::before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -55,158 +85,171 @@ body {
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		height: 150px;
-		top: calc(50% - 270px);
+		top: calc(50% - 280px);
 		width: 150px;
 		left: calc(50% - 250px);
-	}
-
-	&[class$="Main"] {
-		border-top-width: 3px;
-		border-bottom-width: 3px;
-		padding-bottom: 15px;
-		border-top-left-radius: 50px;
-		border-top-right-radius: 50px;
-		border-bottom-left-radius: 50px;
-		border-bottom-right-radius: 50px;
-		background-image: linear-gradient(#E12E2E, #e75454 20%, #e75454 45%, #000 45%, #000 55%, #fff 55%, #DFDFDF);
-	}
-
-	&[class$="Footer"] {
-		display: none;
-	}
+	  }
 }
+
+#Box_Item-0 {
+	display: block;
+  }
+
+
+  #Box_Item-1,
+  #Box_Item-2 {
+	margin-top: -10px;
+  }
+
+  #Box_Item-3 {
+	margin-top: 30px;
+  }
 
 [id|="Subtitles"] {
-	color: white;
-	text-shadow: 0px 0px 2px black;
+  color: white;
+  text-shadow: 0px 0px 2px black;
 
-	&[id$="3"] {
-		color: black;
-		text-shadow: 0px 0px 2px white;
-	}
+  &[id$="3"] {
+    margin-left: 20px;
+    color: black;
+    text-shadow: 0px 0px 2px white;
+  }
 }
 
-[class|="Texto_Items"] {
-	color: black;
-	text-shadow: 0px 0px 2px white;
-
-	&[class*="Answer"] {
-		color: white;
-		text-shadow: 0px 0px 2px black;
-	}
+#Items_Box-Header {
+  border: 0;
+  padding: 5px;
+  background-color: transparent;
+  color: black;
 }
 
-[id|="Items_Box"] {
-	--background-color: white;
-	--border-color: black;
-	background-color: var(--background-color);
-	border-color: var(--border-color);
+#Items_Box-Input {
+  background-color: #e75454;
+  border-color: black;
 
-	&:is(:hover, :focus) {
-		background-color: #ebebeb;
-	}
+  &:is(:hover, :focus) {
+    background-color: #cc3e3e;
+  }
 
-	&[id$="Header"] {
-		border-color: inherit;
-		background-color: white;
-	}
+  & #Input_Peso {
+    &::placeholder {
+      color: #ccc;
+      text-shadow: 0 0 2px black;
+    }
+  }
 
-	&[id$="Header"]::after {
-		content: "Contador de monedas por peso";
-	}
-
-	&[id$="Answer"] {
-		--border-color: black;
-		border-color: var(--border-color);
-	}
+  & .Texto_Items-Input {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
 }
 
-[id|="Items"] {
-	#Items_Box-Input & {
-		--border-color: black;
-	}
+#Items_Box-Select {
+  background-color: #e75454;
+  border-color: black;
 
-	&[id$="Select"] {
-		&:is(:hover, :focus)::after {
-			color: indianred;
-		}
-	}
+  &:is(:hover, :focus) {
+    background-color: #cc3e3e;
+  }
 
-	&[id*="Answer"] {
-		--border-color: black;
-		background-color: #e75454;
-	}
+  & #Items-Select {
+    &:is(:hover, :focus)::after {
+      color: darkred;
+    }
+  }
+
+  & .Texto_Items-Select {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
 }
 
-#Input_Peso {
-	&::placeholder {
-		color: #CCC;
-		text-shadow: 0px 0px 2px black;
-	}
+#Items_Box-Answer {
+  background-color: white;
+  border-color: black;
+
+  & .Texto_Items-Answer-1 {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
 }
 
 #Denominacion_Modal-Content {
-	border-color: black;
-	background-color: #E12E2E;
-	background-image: linear-gradient(#E12E2E, #e75454 20%, #e75454 45%, #000 45%, #000 55%, #fff 55%, #DFDFDF);
+  border-color: black;
+  background-color: #e12e2e;
+  background-image: radial-gradient(
+      white 15px,
+      #ccc 15px,
+      #ccc 17px,
+      white 17px,
+      white 21px,
+      black 21px,
+      black 33px,
+      transparent 33px
+    ),
+    linear-gradient(
+      #e12e2e,
+      #e75454 20%,
+      #e75454 45%,
+      #000 45%,
+      #000 55%,
+      #fff 55%,
+      #dfdfdf
+    );
+  background-size: 600px 600px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
 }
 
 #Denominacion_Header {
-	background-color: #E12E2E;
-	border-bottom-color: black;
+  background-color: #e12e2e;
+  border-bottom-color: black;
 }
 
 #Header_Denominacion {
-	text-shadow: 0px 0px 2px black;
-	color: white;
+  text-shadow: 0px 0px 2px black;
+  color: white;
 }
 
 #Close_Denominacion {
-	text-shadow: 0px 0px 2px white;
-	color: black;
-	border-left-color: black;
+  text-shadow: 0px 0px 2px white;
+  color: black;
+  border-left-color: black;
 
-	&:is(:hover, :focus) {
-		color: white;
-		border-left-color: black;
-	}
+  &:is(:hover, :focus) {
+    color: white;
+    border-left-color: black;
+  }
 }
 
 .Box_Denominacion {
-	border-color: black;
-	background-color: #ebebeb;
+  border-color: black;
+  background-color: #ebebeb;
 
-	[id|="Radio"]:checked+& {
-		background-color: #e75454;
-		border-color: black;
-	}
+  [id|="Radio"]:checked + & {
+    background-color: #e75454;
+    border-color: black;
+  }
 
-	[id|="Radio"]:is(:hover, :focus)+& {
-		background-color: #E12E2E;
-		border-color: black;
-	}
-}
-
-[id|="Denominacion"] {
-	border-bottom-color: black;
-
-	[id|="Radio"]:checked+.Box_Denominacion & {
-		border-bottom-color: black;
-	}
-
-	[id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-		border-bottom-color: black;
-	}
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #e12e2e;
+    border-color: black;
+  }
 }
 
 .Texto_Radio {
-	color: black;
+  color: black;
 
-	[id|="Radio"]:checked+.Box_Denominacion & {
-		color: black;
-	}
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: black;
+  }
 
-	[id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-		color: white;
-	}
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: white;
+  }
 }

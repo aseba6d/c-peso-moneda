@@ -4,11 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  --font-family: Arial, sans-serif;
 }
 
 html {
   font-size: 62.5%;
-  font-family: Arial, sans-serif;
 }
 
 input[type="number"],
@@ -42,67 +42,85 @@ body {
   background: #ebebeb;
 }
 
-.container {
-  display: grid;
+#contenedor {
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0px;
   top: 0px;
   z-index: 0;
+  background-color: transparent;
+}
+
+.container {
+  display: grid;
   place-content: center;
   place-items: start;
   background-color: transparent;
 }
 
-[class|="Box"] {
+header {
   display: block;
   width: 570px;
   height: fit-content;
   overflow: hidden;
   border-width: 3px;
   border-style: solid;
+  padding: 4px 0px 6px;
   border-color: #0dbc79;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #7af0c3;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 
-  &[class$="Header"] {
-    height: 50px;
-    padding: 10px 0px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    background-color: #7af0c3;
+  & > h1 {
+    text-align: center;
+    overflow: hidden;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: var(--font-family, Arial);
+    color: #2c8121;
   }
+}
 
-  &[class$="Main"] {
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-  }
-
-  &[class$="Footer"] {
-    height: 50px;
-    padding: 10px 0px;
-    background-color: #7af0c3;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
+footer {
+  display: block;
+  width: 570px;
+  height: 47px;
+  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
+  padding: 10px 0px;
+  border-color: #0dbc79;
+  background-color: #7af0c3;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 #Content_Main {
   display: grid;
+  width: 570px;
+  height: fit-content;
+  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #0dbc79;
+  padding: 5px 10px 15px;
+}
+
+.Box-Main {
+  display: grid;
   place-content: center;
   place-items: center;
-  padding: 5px 10px 15px;
   row-gap: 5px;
   column-gap: 44px;
   grid-template-columns: repeat(2, 250px);
   grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-    /* "A0 A0" */
-    "A1 A2"
-    "A3 A3";
+  grid-template-areas: "A1 A2" "A3 A3";
 
   & #Box_Item-0 {
-    display: none;
     grid-area: A0;
   }
 
@@ -119,52 +137,112 @@ body {
   }
 }
 
-#Items_Titles {
-  text-align: center;
-  overflow: hidden;
-  font-size: 2.8rem;
-  font-weight: bold;
-  font-family: inherit;
-  color: #2c8121;
+#Box_Item-0 {
+  display: none;
 }
 
-fieldset {
+.Fieldset_Items {
+  display: block;
   border: 0px solid;
   margin: 0px;
+  padding: 0px;
+  width: fit-content;
+}
+
+.Legend_Items {
+  margin: 0 auto;
   padding: 0px;
 }
 
 [id|="Subtitles"] {
-  text-align: center;
   font-size: 2.8rem;
   font-weight: bold;
-  font-family: inherit;
-  color: rgb(0, 0, 0);
+  font-family: var(--font-family, Arial);
+  color: black;
   text-shadow: 0px 0px 1px white;
+  text-align: center;
 }
 
-[class|="Texto_Items"] {
+#Items_Box-Header {
+  display: block;
+  width: fit-content;
+  height: fit-content;
   font-size: 2.8rem;
   font-weight: bold;
-  font-family: inherit;
-  color: midnightblue;
-  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  font-family: var(--font-family, Arial);
+  padding: 1px 10px 3px;
+  border: 2px solid;
+  overflow: hidden;
+  border-color: #0dbc79;
+  background-color: #7af0c3;
+  color: #2c8121;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 
-  &[class$="Answer-1"] {
-    font-size: 1em;
-  }
-
-  &[class*="Answer"]::before {
-    content: "$";
+  &::after {
+    content: "Contador de monedas por peso";
   }
 }
 
-.small-sup {
-  vertical-align: top;
-  font-size: 0.6em;
+#Items_Box-Input {
+  position: relative;
+  text-align: center;
+  flex-direction: row;
+  width: 250px;
+  display: flex;
+  border: 2px solid;
+  background-color: lightskyblue;
+  --border-color: cornflowerblue;
+  border-color: var(--border-color);
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  &:is(:hover, :focus) {
+    background-color: #4dcaff;
+  }
+
+  & #Items-Input {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-right: 1px solid;
+    border-right-color: inherit;
+  }
+
+  & #Input_Peso {
+    padding: 4px;
+
+    &::placeholder {
+      color: rgb(128, 128, 128);
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  & #Items-Unidad {
+    padding: 4px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 34px;
+    border-left: 1px solid;
+    border-left-color: inherit;
+  }
+
+  & .Texto_Items-Input {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: var(--font-family, Arial);
+    color: midnightblue;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  }
 }
 
-[id|="Items_Box"] {
+#Items_Box-Select {
   position: relative;
   text-align: center;
   flex-direction: row;
@@ -183,43 +261,12 @@ fieldset {
     background-color: #4dcaff;
   }
 
-  &[id$="Header"] {
-    font-size: 2.8rem;
-    font-weight: bold;
-    font-family: inherit;
-    width: fit-content;
-    height: fit-content;
-    padding: 1px 10px 3px;
-    border-color: #0dbc79;
-    background-color: #7af0c3;
-  }
-
-  &[id$="Header"]::after {
-    content: "";
-  }
-
-  &[id$="Answer"] {
-    flex-direction: column;
-    --border-color: #898eef;
-    border-color: var(--border-color);
-  }
-}
-
-[id|="Items"] {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-
-  #Items_Box-Input & {
-    --border-color: cornflowerblue;
-  }
-
-  &[id$="Input"] {
+  & #Items-Select {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
     border-right: 1px solid;
-    border-right-color: var(--border-color);
-  }
-
-  &[id$="Select"] {
+    border-right-color: inherit;
     padding: 4px;
 
     &::before {
@@ -244,56 +291,87 @@ fieldset {
     }
   }
 
-  &[id*="Answer"] {
-    background-color: #a7aaf9;
+  & .Texto_Items-Select {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: var(--font-family, Arial);
+    color: midnightblue;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+
+    & .small-sup {
+      vertical-align: top;
+      font-size: 0.6em;
+    }
+  }
+}
+
+#Items_Box-Answer {
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  width: 250px;
+  display: flex;
+  border: 2px solid;
+  background-color: #a7aaf9;
+  border-color: #898eef;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  & #Items-Answer-1 {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-bottom: 1px solid;
+    border-color: inherit;
+    background-color: transparent;
     padding: 4px;
+    text-align: left;
+  }
 
-    &[id$="1"] {
-      text-align: left;
-      font-size: 1.7rem;
-      border-bottom: 1px solid;
-      border-bottom-color: var(--border-color);
-    }
+  & #Items-Answer-2 {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-top: 1px solid;
+    border-color: inherit;
+    background-color: transparent;
+    padding: 4px;
+    text-align: center;
+  }
 
-    &[id$="2"] {
-      font-size: 2.8rem;
-      border-top: 1px solid;
-      border-top-color: var(--border-color);
+  & .Texto_Items-Answer-1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: var(--font-family, Arial);
+    color: midnightblue;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+
+    &::before {
+      content: "$";
     }
   }
-}
 
-#Input_Peso {
-  padding: 4px;
+  & .Texto_Items-Answer-2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: var(--font-family, Arial);
+    color: midnightblue;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
 
-  &::placeholder {
-    color: rgb(128, 128, 128);
-    text-shadow: 0 0 2px white;
+    &::before {
+      content: "$";
+    }
   }
-}
-
-#Items-Unidad {
-  padding: 4px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 34px;
-  border-left: 1px solid;
-  border-left-color: var(--border-color);
 }
 
 .modal {
   display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 20px;
   place-content: center;
   align-items: start;
   justify-items: center;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -306,7 +384,7 @@ fieldset {
   flex-direction: row;
   border-bottom: 3px solid;
 
-  &>span {
+  & > span {
     display: block;
     font-size: 2.8rem;
     padding: 5px;
@@ -334,6 +412,17 @@ fieldset {
   align-items: center;
 }
 
+#Denominacion_Modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  overflow: auto;
+}
+
 #Denominacion_Modal-Content {
   width: 100%;
   min-width: 300px;
@@ -353,11 +442,13 @@ fieldset {
 }
 
 #Header_Denominacion {
+  font-family: var(--font-family, Arial);
   text-align: center;
   color: #1a6410;
 }
 
 #Close_Denominacion {
+  font-family: var(--font-family, Arial);
   text-align: left;
   flex-basis: 45px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -392,13 +483,25 @@ fieldset {
   border-bottom-right-radius: 12px;
 
   [id|="Radio"]:checked+& {
+    background-color: #9a9eff;
+    border-color: darkorchid;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+& {
     background-color: #ebebeb;
     border-color: #93adba;
   }
 
-  [id|="Radio"]:is(:hover, :focus)+& {
-    background-color: #9a9eff;
-    border-color: darkorchid;
+  & [id|="Moneda"] {
+    aspect-ratio: 1 / 1;
+    width: 49%;
+    display: inline;
+    padding: 5px;
+  }
+
+  & .small-sup {
+    vertical-align: top;
+    font-size: 0.6em;
   }
 }
 
@@ -408,21 +511,21 @@ fieldset {
   padding: 4px;
   text-align: center;
   border-bottom: 2px solid;
-  border-bottom-color: indianred;
+  border-bottom-color: inherit;
   background-color: rgba(0, 0, 0, 0.1);
 
   [id|="Radio"]:checked+.Box_Denominacion & {
-    border-bottom-color: #93adba;
+    border-bottom-color: inherit;
   }
 
   [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-    border-bottom-color: darkorchid;
+    border-bottom-color: inherit
   }
 }
 
 .Texto_Radio {
   font-size: 2.8rem;
-  font-family: inherit;
+  font-family: var(--font-family, Arial);
   font-weight: bold;
   color: black;
 
@@ -431,17 +534,10 @@ fieldset {
   }
 
   [id|="Radio"]:checked+.Box_Denominacion & {
-    color: white;
+    color: white
   }
 
   [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
     color: black;
   }
-}
-
-[id|="Moneda"] {
-  aspect-ratio: 1 / 1;
-  width: 49%;
-  display: inline;
-  padding: 5px;
 }

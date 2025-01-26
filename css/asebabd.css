@@ -1,68 +1,18 @@
 @charset "utf-8";
 
-* {
-  --font-family: Arial;
-}
-
-.container {
+#contenedor {
   background: transparent;
   background-image: url(../img/asebabd/Screenshot2024662085038850.jpg);
   background-position: center top;
   background-size: cover;
 }
-
-[class|="Box"] {
-
-  &[class$="Main"] {
-    border-bottom-width: 3px;
-    padding-bottom: 15px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
-
-  &[class$="Footer"] {
-    display: none;
-  }
-}
-
-#Items_Titles {
-  text-shadow: 0px 0px 2px rgb(255, 255, 255);
-  -webkit-text-stroke-color: rgb(13, 188, 121);
-  -webkit-text-stroke-width: 0.5px;
+footer {
+  display: none;
 }
 
 #Content_Main {
-  padding: 15px 10px 20px;
-}
-
-#Denominacion_Header {
-  box-shadow: inset 0px 0px 20px #0dbc79;
-}
-
-#Header_Denominacion {
-  text-shadow: 0px 0px 2px rgb(255, 255, 255);
-}
-
-.Box_Denominacion {
-  box-shadow: 0px 0px 5px 2px #e28450;
-
-  [id|="Radio"]:checked + & {
-    box-shadow: 0px 0px 5px 2px #8da2b5;
-  }
-
-  [id|="Radio"]:is(:hover, :focus) + & {
-    box-shadow: 0px 0px 5px 2px #8b6fd1;
-  }
-}
-
-.Texto_Radio {
-  text-shadow: 0px 0px 1px white;
-
-  [id|="Radio"]:checked + .Box_Denominacion & {
-    text-shadow: 0px 0px 2px black;
-  }
-
-  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
-    text-shadow: 0px 0px 1px white;
-  }
+  padding: 10px 10px 20px;
+  border-bottom-width: 3px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }

@@ -1,43 +1,190 @@
 @charset "utf-8";
 
 * {
-	--font-family: Arial;
+  --font-family: Arial;
 }
 
 body {
-	background: #ebebeb;
+  background: #ebebeb;
 }
 
 .container {
-	background-image: url("../img/theme-6/goku.png"),
-		url("../img/theme-6/kid_goku.png"),
-		url("../img/theme-6/shohoku2.png"),
-		url("../img/theme-6/dragonballZ.png"),
-		url("../img/theme-6/pxfuel.jpg");
-	background-size: 22%, 17%, 25%, 27%, cover, cover;
-	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-	background-position: left 10px center, right 10px center, right bottom, right bottom, left top, left top;
+  background-image: url("../img/theme-6/goku.png"),
+    url("../img/theme-6/kid_goku.png"), url("../img/theme-6/shohoku2.png"),
+    url(../img/theme-6/ball5.png), url(../img/theme-6/ball2.png),
+    url(../img/theme-6/ball7.png), url(../img/theme-6/ball4.png),
+    url(../img/theme-6/ball1.png), url(../img/theme-6/ball3.png),
+    url(../img/theme-6/ball6.png),
+    url("../img/theme-6/dragonballZ.png"), url("../img/theme-6/fondo.jpg");
+  background-size: 22%, 17%, 25%, 8%,8%,8%,8%,8%,8%,8%,27%, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+  no-repeat, no-repeat;
+  background-position: left 10px center, right 10px center, right bottom,
+  left 23% top 2%, left 40% top 2%, right 40% top 2%,
+    right 23% top 2%, left 30% bottom 2%, center bottom 2% , right 30% bottom 2%,
+    right bottom, left top;
+}
 
+header,
+footer {
+  display: none;
+}
+
+#Content_Main {
+  width: 600px;
+  height: 300px;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  background-image: url(../img/theme-6/estrella.png),
+    radial-gradient(#ffe30d 50%, #ef8100);
+  background-size: 50px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top 110px, center;
+  padding: 15px 0 15px;
+  border-color: #ea7b08 !important;
+  background-color: #ef8100;
+  box-shadow: 0px 0px 20px 10px #ffe30d;
+  filter: brightness(90%) contrast(95%) saturate(100%);
+}
+
+.Box-Main {
+  row-gap: 5px;
+  column-gap: 60px;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas: "A0 A0" "A1 A2" "A3 A3";
+}
+
+#Box_Item-0 {
+  display: block;
+}
+
+[id|="Subtitles"] {
+  color: #9e0b0b;
+  text-shadow: 0px 0px 2px #ffe30d;
+}
+
+#Items_Box-Header {
+  background-color: #1f4077;
+  box-shadow: 0px 0px 10px 2px #f39b0f;
+  color: white;
+  border-color: #ea7b08;
+}
+
+#Items_Box-Input {
+  background-color: #ea7b08;
+  border-color: #9e0b0b;
+
+  &:is(:hover, :focus) {
+    background-color: #ff8900;
+  }
+
+  & #Input_Peso {
+    &::placeholder {
+      color: #ffe30d;
+      text-shadow: 0 0 2px #9e0b0b;
+    }
+  }
+
+  & .Texto_Items-Input {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+#Items_Box-Select {
+  background-color: #ea7b08;
+  border-color: #9e0b0b;
+
+  &:is(:hover, :focus) {
+    background-color: #ff8900;
+  }
+
+  & #Items-Select {
+    &:is(:hover, :focus)::after {
+      color: darkred;
+    }
+  }
+
+  & .Texto_Items-Select {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+#Items_Box-Answer {
+  background-color: #ffec5d;
+  border-color: #ea7b08;
+
+  & .Texto_Items-Answer-1 {
+    color: #9e0b0b;
+    text-shadow: 0px 0px 2px #ffe30d;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: #9e0b0b;
+    text-shadow: 0px 0px 2px #ffe30d;
+  }
+}
+#Denominacion_Modal{
+  background-color: rgb(0, 0, 0, 0.8);
+  background-image: url(../img/theme-6/shenlog.webp);
+  background-size: 22%;
+  background-repeat: no-repeat;
+  background-position: center top;
 
 }
-[class|=Box] {
-	/* &[class$="Main"] {
-		background-image: url(../img/theme-6/estrella.png);
-		background-size: 50px;
-		background-repeat: no-repeat;
-		background-position: center top 44px;
-	} */
-	
-	&[class$="Footer"] {
-		background-image: url(../img/theme-6/ball5.png), 
-		url(../img/theme-6/ball2.png),
-		url(../img/theme-6/ball7.png),
-		url(../img/theme-6/ball4.png),
-		url(../img/theme-6/ball1.png),
-		url(../img/theme-6/ball3.png),
-		url(../img/theme-6/ball6.png);
-		background-size: contain, contain, contain, contain, contain, contain, contain;
-		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-		background-position: left 50px bottom, left 120px bottom, left 190px bottom,center bottom, right 190px bottom, right 120px bottom, right 50px bottom;
-	}
+#Denominacion_Modal-Content {
+  border-color: #9e0b0b;
+  background-color: #e12e2e;
+  background-image: radial-gradient(#f39b0f, transparent);
+}
+
+#Denominacion_Header {
+  background-color: #9e0b0b;
+  border-bottom-color: #9e0b0b;
+}
+
+#Header_Denominacion {
+  text-shadow: 0px 0px 2px black;
+  color: white;
+}
+
+#Close_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: black;
+  border-left-color: #9e0b0b;
+
+  &:is(:hover, :focus) {
+    color: white;
+    border-left-color: #9e0b0b;
+  }
+}
+
+.Box_Denominacion {
+  [id|="Radio"]:checked + & {
+    background-color: #e75454;
+    border-color: black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #e12e2e;
+    border-color: black;
+  }
+}
+
+.Texto_Radio {
+  color: black;
+
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: white;
+  }
 }
