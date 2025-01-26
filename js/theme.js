@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(window.location.search);
 let urlVar1 = urlParams.get("tema");
 let urlVar2 = urlParams.get("on");
 let urlVar3 = urlParams.get("off");
-let FechaCdg, DefCdg, UrlCdg, FechaOnOff;
+let FechaCdg, DefCdg, UrlCdg;
 let datostheme = [
     {
         name: "asebabd",
