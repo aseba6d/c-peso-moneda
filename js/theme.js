@@ -74,6 +74,15 @@ let datostheme = [
         fin: { dia: 9, mes: 2 },
         urlCodigo: 8,
         default: false
+    },
+    {
+        name: "Sebastian",
+        file: "css/sebastian.css",
+        type: 'fecha',
+        incio: { dia: 31, mes: 1 },
+        fin: { dia: 31, mes: 1 },
+        urlCodigo: 9,
+        default: false
     }
 ];
 datostheme.forEach(temas => {

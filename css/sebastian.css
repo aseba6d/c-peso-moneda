@@ -2,12 +2,12 @@
 
 #contenedor {
   background: transparent;
-  background-image: url(../img/liliana/lily200.webp),
-    url(../img/liliana/lily210.webp),
-    url(../img/liliana/marco1.webp),
-    url(../img/liliana/marco2.webp),
-    url(../img/liliana/marco3.webp),
-    url(../img/liliana/marco4.webp),
+  background-image: url(../img/sebastian/seba200.webp),
+    url(../img/sebastian/marco1.webp),
+    url(../img/sebastian/marco2.webp),
+    url(../img/sebastian/marco3.webp),
+    url(../img/sebastian/marco4.webp),
+    url(../img/sebastian/marco5.webp),
     linear-gradient(135deg,
       transparent 0%,
       transparent 20%,
@@ -20,14 +20,14 @@
       transparent 80%,
       transparent 100%),
     linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
-  background-position: left center, right center, right 25% top, right 20% bottom, left 23% top 3px, left 23% bottom, left top, left top;
-  background-size: contain, contain, 17%, 17%, 15%, 16%, 50px 50px, 100%;
+  background-position:right 10px center, left center, left 20% top, left 20% bottom, right 23% top 3px, right 23% bottom, left top, left top;
+  background-size: contain, 17%, 16%, 16%, 17%, 17%, 50px 50px, 100%;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
 }
 
 header {
-  border-color: #85395a;
-  background-color: #85395a;
+  border-color: rgb(85, 124, 196);
+  background-color: rgb(85, 124, 196);
 
   &>h1 {
     color: white;
@@ -36,60 +36,20 @@ header {
 }
 
 footer {
-  border-color: #85395a;
-  background-color: #85395a;
-  background-image: url(../img/liliana/name.webp);
+  border-color: rgb(85, 124, 196);
+  background-color: rgb(85, 124, 196);
+  background-image: url(../img/sebastian/name.webp);
   background-position: right 20px center;
   background-repeat: no-repeat;
 }
 
 #Content_Main {
-  border-color: #85395a;
-}
-
-[id|="Subtitles"] {
-  color: #8c315c;
-  text-shadow: 0px 0px 2px #fff;
-}
-
-#Items_Box-Input {
-  background-color: #f97788;
-  border-color: #85395a;
-
-  &:is(:hover, :focus) {
-    background-color: #f97788;
-  }
-
-  & #Input_Peso {
-    &::placeholder {
-      color: #8c315c;
-      text-shadow: 0 0 2px white;
-    }
-  }
-
-  & .Texto_Items-Input {
-    color: white;
-    text-shadow: 0px 0px 1px black;
-  }
-}
-
-#Items_Box-Select {
-  background-color: #f97788;
-  border-color: #85395a;
-
-  &:is(:hover, :focus) {
-    background-color: #f896a3;
-  }
-
-  & .Texto_Items-Select {
-    color: white;
-    text-shadow: 0px 0px 1px black;
-  }
+  border-color: rgb(85, 124, 196);
 }
 
 #Items_Box-Answer {
-  background-color: #f97788;
-  border-color: #85395a;
+  background-color: rgb(85, 124, 196);
+  border-color: rgb(51, 80, 133);
 
   & .Texto_Items-Answer-1 {
     color: white;
@@ -104,7 +64,7 @@ footer {
 
 #Denominacion_Modal {
   background-color: rgb(0, 0, 0, 0.8);
-  background-image: url(../img/liliana/lily200a.webp);
+  background-image: url(../img/sebastian/seba200a.webp);
   background-size: 22%;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -139,21 +99,21 @@ footer {
 
 .Box_Denominacion {
   background-color: #ebebeb;
-  border-color: #85395a;
+  border-color: #8d9bc3;
 
   [id|="Radio"]:checked+& {
-    background-color: #85395a;
-    border-color: black;
+    background-color: rgb(85, 124, 196);
+    border-color: slateblue;
   }
 
   [id|="Radio"]:is(:hover, :focus)+& {
-    background-color: #f97788;
-    border-color: #85395a;
+    background-color: lightsteelblue;
+    border-color: rgb(85, 124, 196);
   }
 }
 
 .Texto_Radio {
-  color: #8c315c;
+  color: black;
   text-shadow: 0px 0px 1px white;
 
   [id|="Radio"]:checked+.Box_Denominacion & {
@@ -162,7 +122,7 @@ footer {
   }
 
   [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
-    color: white;
-    text-shadow: 0px 0px 1px black;
+    color: black;
+    text-shadow: 0px 0px 1px white;
   }
 }
