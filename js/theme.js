@@ -11,7 +11,7 @@ let datostheme = [
         file: "css/asebabd.css",
         type: 'Url',
         urlCodigo: 0,
-        default: true
+        default: false
     },
     {
         name: "Fiesta Patrias",
@@ -65,6 +65,13 @@ let datostheme = [
         type: 'Url',
         urlCodigo: 7,
         default: false
+    },
+    {
+        name: "Liliana",
+        file: "css/liliana.css",
+        type: 'Url',
+        urlCodigo: 8,
+        default: true
     }
 ];
 datostheme.forEach(temas => {
