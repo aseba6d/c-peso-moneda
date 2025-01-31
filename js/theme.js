@@ -53,12 +53,18 @@ let datostheme = [
         urlCodigo: 4
     },
     {
+        name: "Inuyasha",
+        file: "css/theme-7.css",
+        type: ['Url'],
+        urlCodigo: 5
+    },
+    {
         name: "Liliana",
         file: "css/liliana.css",
         type: ['default', 'fecha', 'Url'],
         incio: { dia: 29, mes: 1 },
         fin: { dia: 9, mes: 2 },
-        urlCodigo: 5
+        urlCodigo: 6
     },
     {
         name: "Sebastian",
@@ -66,12 +72,6 @@ let datostheme = [
         type: ['default', 'fecha', 'Url'],
         incio: { dia: 31, mes: 1 },
         fin: { dia: 31, mes: 1 },
-        urlCodigo: 6
-    },
-    {
-        name: "Inuyasha",
-        file: "css/theme-7.css",
-        type: ['Url'],
         urlCodigo: 7
     }
 ];
@@ -83,7 +83,7 @@ datostheme.forEach((temas, idx) => {
         let xy = new Date(`${fecha.getFullYear()}/${temas.incio.mes}/${temas.incio.dia} 00:00:00`);
         let yz = new Date(`${fecha.getFullYear()}/${temas.fin.mes}/${temas.fin.dia} 23:59:59`);
         if (xy <= fecha && yz >= fecha) {
-            FechaCdg = temas.urlCodigo;
+            FechaCdg = idx;
         }
     }
     if (temas.type.indexOf('Url') !== -1) {
