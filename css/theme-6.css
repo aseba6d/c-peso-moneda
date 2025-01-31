@@ -9,17 +9,17 @@ body {
 }
 
 .container {
-  background-image: url("../img/theme-6/goku.png"),
-    url("../img/theme-6/kid_goku.png"), url("../img/theme-6/shohoku2.png"),
+  background-image: url(../img/theme-6/goku.png),
+    url(../img/theme-6/kid_goku.png),
     url(../img/theme-6/ball5.png), url(../img/theme-6/ball2.png),
     url(../img/theme-6/ball7.png), url(../img/theme-6/ball4.png),
     url(../img/theme-6/ball1.png), url(../img/theme-6/ball3.png),
     url(../img/theme-6/ball6.png),
-    url("../img/theme-6/dragonballZ.png"), url("../img/theme-6/fondo.jpg");
-  background-size: 22%, 17%, 25%, 8%,8%,8%,8%,8%,8%,8%,27%, cover;
+    url(../img/theme-6/dragonballZ.png), url(../img/theme-6/fondo.jpg);
+  background-size: 22%, 17%, 8%,8%,8%,8%,8%,8%,8%,27%, cover;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-  no-repeat, no-repeat;
-  background-position: left 10px center, right 10px center, right bottom,
+  no-repeat;
+  background-position: left 10px center, right 10px center,
   left 23% top 2%, left 40% top 2%, right 40% top 2%,
     right 23% top 2%, left 30% bottom 2%, center bottom 2% , right 30% bottom 2%,
     right bottom, left top;

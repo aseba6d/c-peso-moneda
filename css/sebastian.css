@@ -20,8 +20,8 @@
       transparent 80%,
       transparent 100%),
     linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
-  background-position:right 10px center, left center, left 20% top, left 20% bottom, right 23% top 3px, right 23% bottom, left top, left top;
-  background-size: contain, 17%, 16%, 16%, 17%, 17%, 50px 50px, 100%;
+  background-position:right 10px center, left -10px center, left 23% top -6px, left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+  background-size: contain, 23%, 17%, 17%, 17%, 17%, 50px 50px, 100%;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
 }
 
