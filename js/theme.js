@@ -63,7 +63,7 @@ let datostheme = [
         file: "css/liliana.css",
         type: ['default', 'fecha', 'Url'],
         incio: { dia: 29, mes: 1 },
-        fin: { dia: 9, mes: 2 },
+        fin: { dia: 6, mes: 2 },
         urlCodigo: 6
     },
     {
@@ -73,6 +73,12 @@ let datostheme = [
         incio: { dia: 31, mes: 1 },
         fin: { dia: 31, mes: 1 },
         urlCodigo: 7
+    },
+    {
+        name: "Charlotte",
+        file: "css/charlotte.css",
+        type: ['default', 'Url'],
+        urlCodigo: 8
     }
 ];
 datostheme.forEach((temas, idx) => {
