@@ -2,12 +2,12 @@
 
 #contenedor {
   background: transparent;
-  background-image: url(../img/sebastian/seba200.webp),
-    url(../img/sebastian/marco1.webp),
-    url(../img/sebastian/marco2.webp),
-    url(../img/sebastian/marco3.webp),
-    url(../img/sebastian/marco4.webp),
-    url(../img/sebastian/marco5.webp),
+  background-image: url(../img/emily/emily1.webp),
+    url(../img/emily/marco1.webp),
+    url(../img/emily/marco2.webp),
+    url(../img/emily/marco3.webp),
+    url(../img/emily/marco4.webp),
+    url(../img/emily/marco5.webp),
     linear-gradient(135deg,
       transparent 0%,
       transparent 20%,
@@ -38,7 +38,7 @@ header {
 footer {
   border-color: #9C5B3F;
   background-color: #9C5B3F;
-  background-image: url(../img/sebastian/name.webp);
+  background-image: url(../img/emily/name.webp);
   background-position: right 20px center;
   background-repeat: no-repeat;
 }
@@ -106,10 +106,10 @@ footer {
 
 #Denominacion_Modal {
   background-color: rgb(0, 0, 0, 0.8);
-  background-image: url(../img/sebastian/seba200a.webp);
-  background-size: 22%;
+  background-image: url(../img/emily/emily2.webp);
+  background-size: 25%;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: left bottom;
 }
 
 #Denominacion_Modal-Content {

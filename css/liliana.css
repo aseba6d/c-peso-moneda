@@ -111,29 +111,29 @@ footer {
 }
 
 #Denominacion_Modal-Content {
-  border-color: #8d9bc3;
-  background-image: radial-gradient(white, #8d9bc3);
+  border-color: #85395a;
+  background-image: radial-gradient(white, #fdb2d3);
 }
 
 #Denominacion_Header {
-  background-color: #8d9bc3;
-  border-bottom-color: #8d9bc3;
+  border-color: #85395a;
+  background-color: #85395a;
 }
 
 #Header_Denominacion {
-  text-shadow: 0px 0px 2px white;
-  color: black;
+  text-shadow: 0px 0px 2px #85395a;
+  color: white;
 }
 
 #Close_Denominacion {
   text-shadow: 0px 0px 2px white;
   color: white;
-  border-left-color: #8d9bc3;
-  background-color: #8d9bc3;
+  border-left-color: #85395a;
+  background-color: #85395a;
 
   &:is(:hover, :focus) {
     color: rgb(255, 255, 255);
-    border-left-color: #8d9bc3;
+    border-left-color: #85395a;
   }
 }
 

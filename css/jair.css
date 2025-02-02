@@ -2,12 +2,13 @@
 
 #contenedor {
   background: transparent;
-  background-image: url(../img/charlotte/char1.webp),
-    url(../img/charlotte/marco1.webp), url(../img/charlotte/marco2.webp),
-    url(../img/charlotte/marco3.webp), url(../img/charlotte/marco4.webp),
-    url(../img/charlotte/marco5.webp),
-    linear-gradient(
-      135deg,
+  background-image: url(../img/jair/jair1.webp),
+    url(../img/jair/jair2.webp),
+    url(../img/jair/marco3.webp),
+    url(../img/jair/marco2.webp),
+    url(../img/jair/marco4.webp),
+    url(../img/jair/marco5.webp),
+    linear-gradient(135deg,
       transparent 0%,
       transparent 20%,
       #8d9bc3 20%,
@@ -17,21 +18,18 @@
       #8d9bc3 70%,
       #8d9bc3 80%,
       transparent 80%,
-      transparent 100%
-    ),
+      transparent 100%),
     linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
-  background-position: right 10px center, left -10px center, left 23% top -6px,
-    left 23% bottom -10px, right 26% top, right 23% bottom, left top, left top;
-  background-size: contain, 23%, 17%, 17%, 17%, 17%, 50px 50px, 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-    no-repeat, repeat, no-repeat;
+  background-position:right 10px center, left 10px center, left 23% top -6px, left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+  background-size: contain, contain, 17%, 17%, 17%, 17%, 50px 50px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
 }
 
 header {
   border-color: rgb(85, 124, 196);
   background-color: rgb(85, 124, 196);
 
-  & > h1 {
+  &>h1 {
     color: white;
     text-shadow: 0px 0px 2px black;
   }
@@ -40,7 +38,7 @@ header {
 footer {
   border-color: rgb(85, 124, 196);
   background-color: rgb(85, 124, 196);
-  background-image: url(../img/charlotte/name.webp);
+  background-image: url(../img/jair/name.webp);
   background-position: right 20px center;
   background-repeat: no-repeat;
 }
@@ -66,8 +64,8 @@ footer {
 
 #Denominacion_Modal {
   background-color: rgb(0, 0, 0, 0.8);
-  background-image: url(../img/charlotte/char2.webp);
-  background-size: 30%;
+  background-image: url(../img/jair/jair3.webp);
+  background-size: 22%;
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -103,12 +101,12 @@ footer {
   background-color: #ebebeb;
   border-color: #8d9bc3;
 
-  [id|="Radio"]:checked + & {
+  [id|="Radio"]:checked+& {
     background-color: rgb(85, 124, 196);
     border-color: slateblue;
   }
 
-  [id|="Radio"]:is(:hover, :focus) + & {
+  [id|="Radio"]:is(:hover, :focus)+& {
     background-color: lightsteelblue;
     border-color: rgb(85, 124, 196);
   }
@@ -118,12 +116,12 @@ footer {
   color: black;
   text-shadow: 0px 0px 1px white;
 
-  [id|="Radio"]:checked + .Box_Denominacion & {
+  [id|="Radio"]:checked+.Box_Denominacion & {
     color: white;
     text-shadow: 0px 0px 1px black;
   }
 
-  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
     color: black;
     text-shadow: 0px 0px 1px white;
   }

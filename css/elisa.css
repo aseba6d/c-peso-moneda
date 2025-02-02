@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+#contenedor {
+  background: transparent;
+  background-image: url(../img/elisa/elisa1.webp), url(../img/elisa/marco1.webp),
+    url(../img/elisa/marco3.webp), url(../img/elisa/marco2.webp),
+    url(../img/elisa/marco4.webp), url(../img/elisa/marco5.webp),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 20%,
+      #8d9bc3 20%,
+      #8d9bc3 30%,
+      transparent 30%,
+      transparent 70%,
+      #8d9bc3 70%,
+      #8d9bc3 80%,
+      transparent 80%,
+      transparent 100%
+    ),
+    linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
+  background-position: right 10px center, left -10px center, left 23% top -6px,
+    left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+  background-size: contain, 23%, 17%, 17%, 17%, 17%, 50px 50px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, repeat, no-repeat;
+}
+
+header {
+  border-color: #42924b;
+  background-color: #42924b;
+
+  & > h1 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+footer {
+  border-color: #42924b;
+  background-color: #42924b;
+  background-image: url(../img/elisa/name.webp);
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+}
+
+[id|="Subtitles"] {
+  color: #296430;
+  text-shadow: 0px 0px 2px white;
+}
+
+#Content_Main {
+  border-color: #42924b;
+}
+
+#Items_Box-Input {
+  background-color: #aad25a;
+  border-color: #42924b;
+
+  &:is(:hover, :focus) {
+    background-color: #a1cb4f;
+  }
+
+  & #Input_Peso {
+    &::placeholder {
+      color: #42924b;
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  & .Texto_Items-Input {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
+}
+
+#Items_Box-Select {
+  background-color: #aad25a;
+  border-color: #42924b;
+
+  &:is(:hover, :focus) {
+    background-color: #a1cb4f;
+  }
+
+  & .Texto_Items-Select {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
+}
+
+#Items_Box-Answer {
+  background-color: #42924b;
+  border-color: #2e6a35;
+
+  & .Texto_Items-Answer-1 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Denominacion_Modal {
+  background-color: rgb(0, 0, 0, 0.8);
+  background-image: url(../img/elisa/elisa2.webp),
+    linear-gradient(
+      135deg,
+      rgba(187, 187, 187, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(187, 187, 187, 0.5) 100%
+    );
+  background-size: 25%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, left top;
+}
+
+#Denominacion_Modal-Content {
+  border-color: #42924b;
+  background-image: radial-gradient(white, #95db9d);
+}
+
+#Denominacion_Header {
+  background-color: #42924b;
+  border-bottom-color: #42924b;
+}
+
+#Header_Denominacion {
+  text-shadow: 0px 0px 2px black;
+  color: white;
+}
+
+#Close_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: white;
+  border-left-color: #42924b;
+  background-color: #42924b;
+
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    border-left-color: #42924b;
+  }
+}
+
+.Box_Denominacion {
+  background-color: white;
+  border-color: #2e6a35;
+
+  [id|="Radio"]:checked + & {
+    background-color: #42924b;
+    border-color: #2e6a35;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #CFFF6D;
+    border-color: #2e6a35;
+  }
+}
+
+.Texto_Radio {
+  color: black;
+  text-shadow: 0px 0px 1px white;
+
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
+}
