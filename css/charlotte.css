@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+#contenedor {
+  background: transparent;
+  background-image: url(../img/charlotte/char1.webp),
+    url(../img/charlotte/marco1.webp), url(../img/charlotte/marco2.webp),
+    url(../img/charlotte/marco3.webp), url(../img/charlotte/marco4.webp),
+    url(../img/charlotte/marco5.webp),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 20%,
+      #8d9bc3 20%,
+      #8d9bc3 30%,
+      transparent 30%,
+      transparent 70%,
+      #8d9bc3 70%,
+      #8d9bc3 80%,
+      transparent 80%,
+      transparent 100%
+    ),
+    linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
+  background-position: right 10px center, left -10px center, left 23% top -6px,
+    left 23% bottom -10px, right 26% top, right 23% bottom, left top, left top;
+  background-size: contain, 23%, 17%, 17%, 17%, 17%, 50px 50px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, repeat, no-repeat;
+}
+
+header {
+  border-color: rgb(85, 124, 196);
+  background-color: rgb(85, 124, 196);
+
+  & > h1 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+footer {
+  border-color: rgb(85, 124, 196);
+  background-color: rgb(85, 124, 196);
+  background-image: url(../img/charlotte/name.webp);
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+}
+
+#Content_Main {
+  border-color: rgb(85, 124, 196);
+}
+
+#Items_Box-Answer {
+  background-color: rgb(85, 124, 196);
+  border-color: rgb(51, 80, 133);
+
+  & .Texto_Items-Answer-1 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Denominacion_Modal {
+  background-color: rgb(0, 0, 0, 0.8);
+  background-image: url(../img/charlotte/char2.webp);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+#Denominacion_Modal-Content {
+  border-color: #8d9bc3;
+  background-image: radial-gradient(white, #8d9bc3);
+}
+
+#Denominacion_Header {
+  background-color: #8d9bc3;
+  border-bottom-color: #8d9bc3;
+}
+
+#Header_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: black;
+}
+
+#Close_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: white;
+  border-left-color: #8d9bc3;
+  background-color: #8d9bc3;
+
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    border-left-color: #8d9bc3;
+  }
+}
+
+.Box_Denominacion {
+  background-color: #ebebeb;
+  border-color: #8d9bc3;
+
+  [id|="Radio"]:checked + & {
+    background-color: rgb(85, 124, 196);
+    border-color: slateblue;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: lightsteelblue;
+    border-color: rgb(85, 124, 196);
+  }
+}
+
+.Texto_Radio {
+  color: black;
+  text-shadow: 0px 0px 1px white;
+
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: black;
+    text-shadow: 0px 0px 1px white;
+  }
+}
