@@ -104,10 +104,16 @@ footer {
 
 #Denominacion_Modal {
   background-color: rgb(0, 0, 0, 0.8);
-  background-image: url(../img/liliana/lily200a.webp);
-  background-size: 22%;
-  background-repeat: no-repeat;
-  background-position: right bottom;
+  background-image: url(../img/liliana/lily200a.webp),
+  linear-gradient(
+      135deg,
+      rgba(187, 187, 187, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(187, 187, 187, 0.5) 100%
+    );
+  background-size: 22%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right bottom, left top;
 }
 
 #Denominacion_Modal-Content {
