@@ -18,7 +18,7 @@
     ),
     linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
   background-position: top center, left top, left top;
-  background-size: 100vw, 50px 50px, 100%;
+  background-size: contain, 50px 50px, 100%;
   background-repeat: no-repeat, repeat, no-repeat;
 }
 

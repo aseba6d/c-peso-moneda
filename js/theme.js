@@ -84,7 +84,7 @@ let datostheme = [
     },
     {
         name: "Emily",
-        file: "css/Emily.css",
+        file: "css/emily.css",
         type: ['default', 'Url'],
         urlCodigo: 10
     },
