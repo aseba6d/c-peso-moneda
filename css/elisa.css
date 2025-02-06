@@ -2,9 +2,11 @@
 
 #contenedor {
   background: transparent;
-  background-image: url(../img/elisa/elisa1.webp), url(../img/elisa/marco1.webp),
+  background-image: url(../img/elisa/elisa1.webp), url(../img/elisa/marco6.webp),
     url(../img/elisa/marco3.webp), url(../img/elisa/marco2.webp),
     url(../img/elisa/marco4.webp), url(../img/elisa/marco5.webp),
+    url(../img/elisa/marco1.webp), url(../img/elisa/marco8.webp),
+    url(../img/elisa/marco7.webp),
     linear-gradient(
       135deg,
       transparent 0%,
@@ -19,10 +21,10 @@
       transparent 100%
     ),
     linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
-  background-position: right 10px center, left -10px center, left 23% top -6px,
-    left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
-  background-size: contain, 23%, 17%, 17%, 17%, 17%, 50px 50px, 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+  background-position: right 10px center, left -10px top 20%, left 23% top -6px,
+    left 23% bottom -10px, right 25% top, right 23% bottom,center top -10px, center bottom -15px, left -10px bottom 20%, left top, left top;
+  background-size: contain, 18%, 17%, 17%, 17%, 17%, 16%, 16%, 18%, 50px 50px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
     no-repeat, repeat, no-repeat;
 }
 
