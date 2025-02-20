@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+#contenedor {
+  background: transparent;
+  background-image: url(../img/7a04m/7a04m.webp),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 20%,
+      #8d9bc3 20%,
+      #8d9bc3 30%,
+      transparent 30%,
+      transparent 70%,
+      #8d9bc3 70%,
+      #8d9bc3 80%,
+      transparent 80%,
+      transparent 100%
+    ),
+    linear-gradient(135deg, #bbbbbb 0%, #ebebeb 50%, #bbbbbb 100%);
+  background-position: top center, left top, left top;
+  background-size: contain, 50px 50px, 100%;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+header {
+  border-color: #85395a;
+  background-color: #85395a;
+
+  &>h1 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+footer {
+  border-color: #85395a;
+  background-color: #85395a;
+  padding: 0px;
+}
+footer::after {
+    display: block;
+    position: relative;
+    left: 60%;
+    top: 0px;
+    width: fit-content;
+    content: "Credito: 七百屋 なおしま（@7a04m）";
+    font-size: 1.2rem;
+    font-family: Arial;
+    color: white;
+  }
+
+#Content_Main {
+  border-color: #85395a;
+}
+
+[id|="Subtitles"] {
+  color: #8c315c;
+  text-shadow: 0px 0px 2px #fff;
+}
+
+#Items_Box-Input {
+  background-color: #f97788;
+  border-color: #85395a;
+
+  &:is(:hover, :focus) {
+    background-color: #f97788;
+  }
+
+  & #Input_Peso {
+    &::placeholder {
+      color: #8c315c;
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  & .Texto_Items-Input {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Items_Box-Select {
+  background-color: #f97788;
+  border-color: #85395a;
+
+  &:is(:hover, :focus) {
+    background-color: #f896a3;
+  }
+
+  & .Texto_Items-Select {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Items_Box-Answer {
+  background-color: #f97788;
+  border-color: #85395a;
+
+  & .Texto_Items-Answer-1 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Denominacion_Modal-Content {
+  border-color: #85395a;
+  background-image: radial-gradient(white, #fdb2d3);
+}
+
+#Denominacion_Header {
+  border-color: #85395a;
+  background-color: #85395a;
+}
+
+#Header_Denominacion {
+  text-shadow: 0px 0px 2px #85395a;
+  color: white;
+}
+
+#Close_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: white;
+  border-left-color: #85395a;
+  background-color: #85395a;
+
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    border-left-color: #85395a;
+  }
+}
+
+.Box_Denominacion {
+  background-color: #ebebeb;
+  border-color: #85395a;
+
+  [id|="Radio"]:checked+& {
+    background-color: #85395a;
+    border-color: black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+& {
+    background-color: #f97788;
+    border-color: #85395a;
+  }
+}
+
+.Texto_Radio {
+  color: #8c315c;
+  text-shadow: 0px 0px 1px white;
+
+  [id|="Radio"]:checked+.Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  [id|="Radio"]:is(:hover, :focus)+.Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}

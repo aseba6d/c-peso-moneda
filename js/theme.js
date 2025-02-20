@@ -93,6 +93,12 @@ let datostheme = [
         file: "css/jair.css",
         type: ['default', 'Url'],
         urlCodigo: 11
+    },
+    {
+        name: "Nao-Ya",
+        file: "css/7a04m.css",
+        type: ['default', 'Url'],
+        urlCodigo: 12
     }
 ];
 datostheme.forEach((temas, idx) => {
