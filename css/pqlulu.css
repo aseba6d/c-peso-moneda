@@ -41,7 +41,7 @@ footer {
   border-bottom-width: 3px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-image: radial-gradient(#f3d8ef 50%, #f4b3ec);
+  background-image: radial-gradient(#f6b3ee 50%, #f69dec);
   border-color: black;
 }
 
@@ -51,64 +51,59 @@ footer {
 }
 
 #Items_Box-Input {
-  background-color: #f97788;
+  background-color: white;
   border-color: black;
 
   &:is(:hover, :focus) {
-    background-color: #f97788;
+    background-color: #ebebeb;
   }
 
   & #Input_Peso {
     &::placeholder {
-      color: #8c315c;
-      text-shadow: 0 0 2px white;
+      color: #f58094;
     }
   }
 
   & .Texto_Items-Input {
-    color: white;
-    text-shadow: 0px 0px 1px black;
+    color: #bf0121;
   }
 }
 
 #Items_Box-Select {
-  background-color: #f97788;
+  background-color: white;
   border-color: black;
 
   &:is(:hover, :focus) {
-    background-color: #f896a3;
+    background-color: #ebebeb;
   }
 
   & .Texto_Items-Select {
-    color: white;
-    text-shadow: 0px 0px 1px black;
+    color: #bf0121;
   }
 }
 
 #Items_Box-Answer {
-  background-color: #f97788;
+  background-color: white;
   border-color: black;
 
   & .Texto_Items-Answer-1 {
-    color: white;
-    text-shadow: 0px 0px 1px black;
+    color: #bf0121;
   }
 
   & .Texto_Items-Answer-2 {
-    color: white;
-    text-shadow: 0px 0px 1px black;
+    color: #bf0121;
   }
 }
 
 #Denominacion_Modal-Content {
-  border-color: #bf0121;
-  background-color: #f8aec5;
-  background-image: radial-gradient(#f8cde1, #f8aec5);
+  border-color: #711f67;
+  background-color: #f6b3ee;
+  background-image: radial-gradient(#f6b3ee, #f69dec);
 }
 
 #Denominacion_Header {
-  background-color: #bf0121;
-  border-bottom-color: #bf0121;
+  background-color: #a33597;
+  border-bottom-color: #711f67;
 }
 
 #Header_Denominacion {
@@ -118,26 +113,26 @@ footer {
 
 #Close_Denominacion {
   text-shadow: 0px 0px 2px white;
-  color: #8c315c;
-  border-left-color: #bf0121;
+  color: #711f67;
+  border-left-color: #711f67;
 
   &:is(:hover, :focus) {
     color: rgb(255, 255, 255);
-    border-left-color: #bf0121;
+    border-left-color: #711f67;
   }
 }
 
 .Box_Denominacion {
-  border-color: #bf0121;
-  background-color: #f38db2;
+  border-color: #711f67;
+  background-color: #d73cc6;
 
   [id|="Radio"]:checked + & {
     background-color: #ebebeb;
-    border-color: #f38db2;
+    border-color: #d73cc6;
   }
 
   [id|="Radio"]:is(:hover, :focus) + & {
-    background-color: #bf0121;
+    background-color: #711f67;
     border-color: black;
   }
 }
@@ -147,7 +142,7 @@ footer {
   text-shadow: 0px 0px 1px black;
 
   [id|="Radio"]:checked + .Box_Denominacion & {
-    color: #8c315c;
+    color: #711f67;
     text-shadow: 0px 0px 1px white;
   }
 
