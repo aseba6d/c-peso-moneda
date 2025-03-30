@@ -99,6 +99,12 @@ let datostheme = [
         file: "css/7a04m.css",
         type: ['default', 'Url'],
         urlCodigo: 12
+    },
+    {
+        name: "Pequeña Lulu",
+        file: "css/pqlulu.css",
+        type: ['Url'],
+        urlCodigo: 13
     }
 ];
 datostheme.forEach((temas, idx) => {

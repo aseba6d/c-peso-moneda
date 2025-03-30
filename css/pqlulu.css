@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+* {
+  --font-family: Arial;
+}
+
+body {
+  background: #ebebeb;
+}
+
+#contenedor {
+  background-color: #d73cc6;
+  background-image: url("../img/pqlulu/lulu2.png"),
+    url("../img/pqlulu/lulu1.png"), url("../img/pqlulu/lulu3.png"),
+    url("../img/pqlulu/lulu-anita.webp"), url("../img/pqlulu/club-lulu.png"),
+    url("../img/pqlulu/pq-Logo.png"), radial-gradient(#d73cc6 60%, #711f67 100%);
+  background-size: auto 300px, auto 300px, auto 200px, auto 200px, auto 200px,
+    auto 200px, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat;
+  background-position: left bottom, right bottom, center bottom, left top,
+    right top, center top;
+}
+
+header {
+  border-color: black;
+  background-color: #bf0121;
+
+  & > h1 {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+footer {
+  display: none;
+}
+
+#Content_Main {
+  padding: 10px 10px 20px;
+  border-bottom-width: 3px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-image: radial-gradient(#f3d8ef 50%, #f4b3ec);
+  border-color: black;
+}
+
+[id|="Subtitles"] {
+  color: #bf0121;
+  text-shadow: 0px 0px 2px #fff;
+}
+
+#Items_Box-Input {
+  background-color: #f97788;
+  border-color: black;
+
+  &:is(:hover, :focus) {
+    background-color: #f97788;
+  }
+
+  & #Input_Peso {
+    &::placeholder {
+      color: #8c315c;
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  & .Texto_Items-Input {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Items_Box-Select {
+  background-color: #f97788;
+  border-color: black;
+
+  &:is(:hover, :focus) {
+    background-color: #f896a3;
+  }
+
+  & .Texto_Items-Select {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Items_Box-Answer {
+  background-color: #f97788;
+  border-color: black;
+
+  & .Texto_Items-Answer-1 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+
+  & .Texto_Items-Answer-2 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+#Denominacion_Modal-Content {
+  border-color: #bf0121;
+  background-color: #f8aec5;
+  background-image: radial-gradient(#f8cde1, #f8aec5);
+}
+
+#Denominacion_Header {
+  background-color: #bf0121;
+  border-bottom-color: #bf0121;
+}
+
+#Header_Denominacion {
+  text-shadow: 0px 0px 2px black;
+  color: white;
+}
+
+#Close_Denominacion {
+  text-shadow: 0px 0px 2px white;
+  color: #8c315c;
+  border-left-color: #bf0121;
+
+  &:is(:hover, :focus) {
+    color: rgb(255, 255, 255);
+    border-left-color: #bf0121;
+  }
+}
+
+.Box_Denominacion {
+  border-color: #bf0121;
+  background-color: #f38db2;
+
+  [id|="Radio"]:checked + & {
+    background-color: #ebebeb;
+    border-color: #f38db2;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + & {
+    background-color: #bf0121;
+    border-color: black;
+  }
+}
+
+.Texto_Radio {
+  color: white;
+  text-shadow: 0px 0px 1px black;
+
+  [id|="Radio"]:checked + .Box_Denominacion & {
+    color: #8c315c;
+    text-shadow: 0px 0px 1px white;
+  }
+
+  [id|="Radio"]:is(:hover, :focus) + .Box_Denominacion & {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+  }
+}
