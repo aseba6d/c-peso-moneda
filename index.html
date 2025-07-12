@@ -4,124 +4,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de monedas por peso</title>
-    <meta name="description" content="Contador de monedas por peso">
+
+    <title>Calculadora de Monedas por Peso</title>
+    <meta name="description"
+        content="Una herramienta sencilla para calcular la cantidad y el el valor de las monedas según su peso total.">
     <meta name="author" content="asebabd">
-    <meta name="robots" content="noindex, nofollow , noimageindex, nopagereadaloud, notranslate">
-    <link rel="stylesheet" id="CssStyle" href="css/css.css" type="text/css">
-    <link rel="stylesheet" id="csstheme" href="" type="text/css">
-    <script src="js/theme.js" defer></script>
-    <script src="js/js.js" defer></script>
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes-laptop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="css/themes-desktop.css" media="(min-width: 1280px)">
+
 </head>
 
 <body>
-    <div id="contenedor" class="container">
-        <header>
-            <h1>Contador de monedas por peso</h1>
+
+    <div id="settings-container">
+        <button id="settings-btn" aria-label="Abrir menú de configuración">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 -960 960 960" fill="currentColor">
+                <path
+                    d="m419-137-14-110.5q-21.5-6-47.75-20.25T314-298l-101 43-61.5-108 88-66q-2.5-12-3.75-24.5T234.5-479q0-10.5 1.5-23.25l3.5-29.75-88-66L213-703.5 314-661q19.5-16.5 43-30.25t47-21.25l15-111h122.5l14 111.5q26 9 45.75 20.75T642-661l105.5-42.5L809-598l-93.5 70q3.5 14 4.25 25t.75 23q0 10.5-1 22t-4 28l91 67L745-255l-103-44.5q-20.5 18-41 30.5t-45.5 20.5l-14 111.5H419Zm58-257.5q36 0 60.75-24.75T562.5-480q0-36-24.75-60.75T477-565.5q-36 0-60.75 24.75T391.5-480q0 36 24.75 60.75T477-394.5Z" />
+            </svg>
+        </button>
+        <div id="settings-dropdown">
+            <div class="settings-section">
+                <h3>Modalidad de Cálculo</h3>
+                <label>
+                    <input type="radio" name="calculation-method" value="weight-to-value" checked>
+                    Peso a Cantidad/$
+                </label>
+                <label>
+                    <input type="radio" name="calculation-method" value="value-to-weight">
+                    $ a Cantidad/Peso
+                </label>
+                <label>
+                    <input type="radio" name="calculation-method" value="quantity-to-value">
+                    Cantidad a $/Peso
+                </label>
+            </div>
+            <div class="settings-section">
+                <h3>Monedas Visibles</h3>
+                <label><input type="checkbox" class="coin-visibility-toggle" value="1"> $1</label>
+                <label><input type="checkbox" class="coin-visibility-toggle" value="5"> $5</label>
+                <label disabled><input type="checkbox" class="coin-visibility-toggle" value="10" checked disabled>
+                    $10</label>
+                <label disabled><input type="checkbox" class="coin-visibility-toggle" value="50" checked disabled>
+                    $50</label>
+                <div class="combined-coin-group">
+                    <p style="margin-bottom: 0.5rem; font-weight: 600;">$100 (Variantes)</p>
+                    <div style="margin-left: 1.5rem;">
+                        <label><input type="checkbox" class="coin-visibility-toggle" value="100" checked> $100
+                            (Nueva)</label>
+                        <label><input type="checkbox" class="coin-visibility-toggle" value="100-100y" checked> $100 (100
+                            años)</label>
+                        <label><input type="checkbox" class="coin-visibility-toggle" value="100-antigua" checked> $100
+                            (Antigua)</label>
+                    </div>
+                </div>
+                <label disabled><input type="checkbox" class="coin-visibility-toggle" value="500" checked disabled>
+                    $500</label>
+            </div>
+            <div class="settings-section">
+                <h3>Apariencia</h3>
+                <div class="appearance-controls">
+                    <button id="palette-toggle-btn" class="theme-toggle-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 -960 960 960" fill="currentColor">
+                            <path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                        </svg>
+                    </button>
+                    <button id="theme-toggle" class="theme-toggle-btn">
+                        <svg id="theme-toggle-dark-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="theme-toggle-light-icon" fill="currentColor" viewBox="0 -960 960 960">
+                            <path
+                                d="M467.5-739.5V-865H493v125.5h-25.5ZM672-654l-17.5-17 87.5-91 19.5 18.5L672-654Zm67.5 186.5V-493H865v25.5H739.5Zm-272 372V-220H493v124.5h-25.5Zm-177-559L198-742l20.5-18 88.5 88-16.5 17.5Zm451.5 457L655-289l17.5-16.5 88 87.5-18.5 20.5Zm-646.5-270V-493H221v25.5H95.5ZM217-198l-17-20 87.5-87.5 8.5 9.48 10 9.02-89 89Zm263.29-95.5q-77.79 0-132.29-54.35-54.5-54.36-54.5-132 0-77.65 54.35-132.4 54.36-54.75 132-54.75 77.65 0 132.4 54.46Q667-558.09 667-480.29q0 77.79-54.46 132.29-54.45 54.5-132.25 54.5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calculator-container">
+
+        <header class="header">
+            <h1 class="title">Calculadora de Monedas</h1>
         </header>
-        <main id="Content_Main" class="Box-Main">
-            <section id="Box_Item-0">
-                <div id="Items_Box-Header"></div>
-            </section>
-            <section id="Box_Item-1">
-                <fieldset class="Fieldset_Items">
-                    <legend id="Subtitles-1" class="Legend_Items">
-                        Peso:
-                    </legend>
-                    <div id="Items_Box-Input" class="">
-                        <div id="Items-Input" class="">
-                            <input id="Input_Peso" class="Texto_Items-Input" type="number" min="0" max="99999"
-                                step="3.5" maxlength="9" placeholder="0" />
-                        </div>
-                        <div id="Items-Unidad" for="Input_Unidad" class="">
-                            <span class="Texto_Items-Input">g</span>
-                        </div>
+
+        <main class="main-content">
+            <section aria-labelledby="peso-legend">
+                <fieldset class="fieldset">
+                    <legend id="peso-legend" class="legend">Entrada</legend>
+                    <div class="input-group">
+                        <input id="input-peso" type="number" min="0" max="9999.9999" step="any" placeholder="0"
+                            class="input-peso">
+                        <span id="input-adornment" class="input-adornment">g</span>
                     </div>
                 </fieldset>
             </section>
-            <section id="Box_Item-2">
-                <fieldset class="Fieldset_Items">
-                    <legend id="Subtitles-2" class="Legend_Items">
-                        Denominacíon:
-                    </legend>
-                    <div id="Items_Box-Select" class="">
-                        <input type="checkbox" id="Checkbox_Menu-Denominacion" value="3.5" title="10" />
-                        <label for="Checkbox_Menu-Denominacion" id="Items-Select" class="Texto_Items-Select">
-                            <span id="Select" class="Texto_Items-Select">10</span>
-                        </label>
-                    </div>
+
+            <section aria-labelledby="denominacion-legend">
+                <fieldset class="fieldset">
+                    <legend id="denominacion-legend" class="legend">Denominación</legend>
+                    <button id="open-modal-btn" type="button" class="select-coin-btn">
+                        <span id="selected-coin-text">$10</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
                 </fieldset>
             </section>
-            <section id="Box_Item-3">
-                <fieldset class="Fieldset_Items">
-                    <legend id="Subtitles-3" class="Legend_Items">
-                        Total:
-                    </legend>
-                    <div id="Items_Box-Answer" class="">
-                        <div id="Items-Answer-1" class="">
-                            <span id="Answer-1" class="Texto_Items-Answer-1">10 x 0</span>
-                        </div>
-                        <div id="Items-Answer-2" class="">
-                            <span id="Answer-2" class="Texto_Items-Answer-2">0</span>
-                        </div>
+
+            <section aria-labelledby="total-legend">
+                <fieldset class="fieldset-total">
+                    <legend id="total-legend" class="legend">Total</legend>
+                    <div id="resultado-contenedor" class="result-container">
+                        <p id="resultado-cantidad" class="result-quantity">0 monedas</p>
+                        <p id="resultado-total" class="result-total">$0</p>
                     </div>
                 </fieldset>
             </section>
         </main>
-        <footer>
-            &nbsp;
+
+        <footer class="footer">
+            <span class="footer-left" id="footer-author-text">asebabd</span>
+            <span class="footer-right" id="footer-theme-credit"></span>
         </footer>
+
     </div>
-    <div id="Denominacion_Modal" class="modal">
-        <div id="Denominacion_Modal-Content" class="modal-content">
-            <section id="Denominacion_Header" class="modal-titles">
-                <span id="Header_Denominacion" class="modal-header">Denominación:</span>
-                <span id="Close_Denominacion" class="modal-close">&times;</span>
-            </section>
-            <section id="Items_Denominacion" class="modal-items">
-                <input type="radio" id="Radio-1" name="Moneda" value="3.5" title="10" checked />
-                <label for="Radio-1" class="Box_Denominacion">
-                    <div id="Denominacion-1" class="">
-                        <span class="Texto_Radio">10</span>
+
+    <div class="corner-decoration"></div>
+
+    <div id="denominacion-modal" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 class="modal-title">Seleccionar Moneda</h2>
+                <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+            </header>
+            <div class="modal-body">
+                <label class="coin-option" data-coin-id="1">
+                    <input type="radio" name="moneda" value="0.7" data-denominacion="1" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$1</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$1-anverso.png"
+                                    alt="Anverso de la moneda de 1 peso" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$1-reverso.png"
+                                    alt="Reverso de la moneda de 1 peso" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
                     </div>
-                    <img id="Moneda-A-1" src="img/monedas/$10-anverso.png" alt="">
-                    <img id="Moneda-I-1" src="img/monedas/$10-reverso.png" alt="">
                 </label>
-                <input type="radio" id="Radio-2" name="Moneda" value="6.988" title="50" />
-                <label for="Radio-2" class="Box_Denominacion">
-                    <div id="Denominacion-2" class="">
-                        <span class="Texto_Radio">50</span>
+                <!-- New coin: $5 -->
+                <label class="coin-option" data-coin-id="5">
+                    <input type="radio" name="moneda" value="2.2" data-denominacion="5" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$5</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$5-anverso.png"
+                                    alt="Anverso de la moneda de 5 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$5-reverso.png"
+                                    alt="Reverso de la moneda de 5 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
                     </div>
-                    <img id="Moneda-A-2" src="img/monedas/$50-anverso.png" alt="">
-                    <img id="Moneda-I-2" src="img/monedas/$50-reverso.png" alt="">
                 </label>
-                <input type="radio" id="Radio-3" name="Moneda" value="7.56" title="100" />
-                <label for="Radio-3" class="Box_Denominacion">
-                    <div id="Denominacion-3" class="">
-                        <span class="Texto_Radio">100</span>
+                <label class="coin-option" data-coin-id="10">
+                    <input type="radio" name="moneda" value="3.5" data-denominacion="10" class="sr-only" checked>
+                    <div class="coin-info">
+                        <span class="coin-denomination">$10</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$10-anverso.png"
+                                    alt="Anverso de la moneda de 10 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$10-reverso.png"
+                                    alt="Reverso de la moneda de 10 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
                     </div>
-                    <img id="Moneda-A-3" src="img/monedas/$100-anverso.png" alt="">
-                    <img id="Moneda-I-3" src="img/monedas/$100-reverso.png" alt="">
                 </label>
-                <input type="radio" id="Radio-4" name="Moneda" value="8.9554" title="100" />
-                <label for="Radio-4" class="Box_Denominacion">
-                    <div id="Denominacion-4" class="">
-                        <span class="Texto_Radio">100<span class="small-sup"> (Antigua)</span></span>
+                <label class="coin-option" data-coin-id="50">
+                    <input type="radio" name="moneda" value="6.988" data-denominacion="50" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$50</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$50-anverso.png"
+                                    alt="Anverso de la moneda de 50 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$50-reverso.png"
+                                    alt="Reverso de la moneda de 50 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
                     </div>
-                    <img id="Moneda-A-4" src="img/monedas/$100-anverso-antigua.png" alt="">
-                    <img id="Moneda-I-4" src="img/monedas/$100-reverso-antigua.png" alt="">
                 </label>
-                <input type="radio" id="Radio-5" name="Moneda" value="6.505" title="500" />
-                <label for="Radio-5" class="Box_Denominacion">
-                    <div id="Denominacion-5" class="">
-                        <span class="Texto_Radio">500</span>
+                <label class="coin-option" data-coin-id="100">
+                    <input type="radio" name="moneda" value="7.56" data-denominacion="100" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$100</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$100-anverso.png"
+                                    alt="Anverso de la moneda de 100 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$100-reverso.png"
+                                    alt="Reverso de la moneda de 100 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
                     </div>
-                    <img id="Moneda-A-5" src="img/monedas/$500-anverso.png" alt="">
-                    <img id="Moneda-I-5" src="img/monedas/$500-reverso.png" alt="">
                 </label>
-            </section>
+                <label class="coin-option" data-coin-id="100-100y">
+                    <input type="radio" name="moneda" value="7.56" data-denominacion="100 (100 años)" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$100 <span class="coin-denomination-small">(100
+                                años)</span></span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$100-anverso-centenario.png"
+                                    alt="Anverso de la moneda de 100 pesos Centenario" loading="lazy"
+                                    class="coin-face coin-front">
+                                <img src="img/monedas/$100-reverso-centenario.png"
+                                    alt="Reverso de la moneda de 100 pesos Centenario" loading="lazy"
+                                    class="coin-face coin-back">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="coin-option" data-coin-id="100-100y-combo" style="display: none;">
+                    <input type="radio" name="moneda" value="7.56" data-denominacion="100 / 100 años" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$100 <span class="coin-denomination-small">(100/100
+                                años)</span></span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$100-anverso.png"
+                                    alt="Anverso de la moneda de 100 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$100-reverso.png"
+                                    alt="Reverso de la moneda de 100 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$100-anverso-centenario.png"
+                                    alt="Anverso de la moneda de 100 pesos Centenario" loading="lazy"
+                                    class="coin-face coin-front">
+                                <img src="img/monedas/$100-reverso-centenario.png"
+                                    alt="Reverso de la moneda de 100 pesos Centenario" loading="lazy"
+                                    class="coin-face coin-back">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="coin-option" data-coin-id="100-antigua">
+                    <input type="radio" name="moneda" value="8.9554" data-denominacion="100 (Antigua)" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$100 <span
+                                class="coin-denomination-small">(Antigua)</span></span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$100-anverso-antigua.png"
+                                    alt="Anverso de la moneda de 100 pesos antigua" loading="lazy"
+                                    class="coin-face coin-front">
+                                <img src="img/monedas/$100-reverso-antigua.png"
+                                    alt="Reverso de la moneda de 100 pesos antigua" loading="lazy"
+                                    class="coin-face coin-back">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="coin-option" data-coin-id="500">
+                    <input type="radio" name="moneda" value="6.505" data-denominacion="500" class="sr-only">
+                    <div class="coin-info">
+                        <span class="coin-denomination">$500</span>
+                        <div class="coin-images">
+                            <div class="flippable-coin">
+                                <img src="img/monedas/$500-anverso.png"
+                                    alt="Anverso de la moneda de 500 pesos" loading="lazy" class="coin-face coin-front">
+                                <img src="img/monedas/$500-reverso.png"
+                                    alt="Reverso de la moneda de 500 pesos" loading="lazy" class="coin-face coin-back">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
         </div>
     </div>
+
+    <script src="js/themes.js"></script>
+    <script src="js/calculator.js"></script>
+
 </body>
 
 </html>

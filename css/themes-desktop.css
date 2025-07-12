@@ -1,0 +1,781 @@
+html.theme-christmas {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #fee2e5;
+    --text-color: #b70000;
+    --text-secondary-color: #004d00;
+    --border-color: #ffd700;
+    --input-bg-color: #ffe0b2;
+    --btn-primary-bg-color: #228b22;
+    --btn-primary-hover-bg-color: #1e7a1e;
+    --result-border-color: #ffd700;
+    --result-text-color: #b70000;
+    --result-bg-color: #fffacd;
+    --container-border-color: #ffd700;
+    --header-bg-color: #fffacd;
+    --header-text-color: #b70000;
+    --footer-bg-color: #fffacd;
+    --footer-text-color: #004d00;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #fee2e5;
+    --modal-header-bg-color: #fffacd;
+    --modal-title-color: #b70000;
+    --modal-close-btn-color: #004d00;
+    --modal-close-btn-hover-color: #b70000;
+    --modal-body-text-color: #b70000;
+    --coin-option-hover-bg-color: #ffe0b2;
+    --coin-option-selected-border-color: #228b22;
+    --coin-option-selected-bg-color: #dcfce7;
+    --coin-option-selected-text-color: #1e7a1e;
+    --coin-option-selected-hover-bg-color: #a7f3d0;
+    --coin-option-selected-hover-text-color: #1e7a1e;
+    --container-bg-image: url('img/navidad/doradito1.png');
+    --container-bg-image-size: contain;
+    --container-bg-image-position: left top -20px;
+    --container-bg-image-repeat: repeat;
+    --bg-stripe-color-1: #c8e6c9;
+    --bg-stripe-color-2: #ffebee;
+    --desktop-bg-image: url(../img/navidad/fondo-navidad.png);
+    --desktop-bg-size: cover;
+    --desktop-bg-position: top center;
+    --desktop-bg-repeat: no-repeat;
+}
+
+html.dark.theme-christmas {
+    --bg-color: #111827;
+    --container-bg-color: #1f2937;
+    --text-color: #a7f3d0;
+    --text-secondary-color: #facc15;
+    --border-color: #facc15;
+    --input-bg-color: #374151;
+    --btn-primary-bg-color: #10b981;
+    --btn-primary-hover-bg-color: #059669;
+    --result-border-color: #facc15;
+    --result-text-color: #f87171;
+    --result-bg-color: #2d3748;
+    --container-border-color: #facc15;
+    --header-bg-color: #9e0b0b;
+    --header-text-color: #a7f3d0;
+    --footer-bg-color: #9e0b0b;
+    --footer-text-color: #facc15;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
+    --modal-header-bg-color: #9e0b0b;
+    --modal-title-color: #a7f3d0;
+    --modal-close-btn-color: #facc15;
+    --modal-close-btn-hover-color: #a7f3d0;
+    --modal-body-text-color: #a7f3d0;
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #10b981;
+    --coin-option-selected-bg-color: #10b981;
+    --coin-option-selected-text-color: #a7f3d0;
+    --coin-option-selected-hover-bg-color: #059669;
+    --coin-option-selected-hover-text-color: #ccfbf1;
+    --bg-stripe-color-1: #2d3748;
+    --bg-stripe-color-2: black;
+    --desktop-bg-image: url(../img/navidad/fondo-navidad2.png);
+}
+
+html.theme-fiesta-patrias {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #ffffff;
+    --text-color: #0032A0;
+    --text-secondary-color: #DA291C;
+    --border-color: #DA291C;
+    --input-bg-color: #ffcdd2;
+    --btn-primary-bg-color: #2563EB;
+    --btn-primary-hover-bg-color: #1D4ED8;
+    --result-border-color: #DA291C;
+    --result-text-color: #DA291C;
+    --result-bg-color: #ffcdd2;
+    --container-border-color: #DA291C;
+    --header-bg-color: #fee2e5;
+    --header-text-color: #0032A0;
+    --footer-bg-color: #fee2e5;
+    --footer-text-color: #DA291C;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #ffcdd2;
+    --modal-title-color: #0032A0;
+    --modal-close-btn-color: #DA291C;
+    --modal-close-btn-hover-color: #0032A0;
+    --modal-body-text-color: #0032A0;
+    --coin-option-hover-bg-color: #ffcdd2;
+    --coin-option-selected-border-color: #2563EB;
+    --coin-option-selected-bg-color: #bfdbfe;
+    --coin-option-selected-text-color: #1D4ED8;
+    --coin-option-selected-hover-bg-color: #2563EB;
+    --coin-option-selected-hover-text-color: #ffffff;
+    --desktop-bg-image: url(../img/18Sept/guasa2.png), url(../img/18Sept/guaso2.png),
+    url(../img/18Sept/18_fondo.jpg);
+    --desktop-bg-size: 50vh, 50vh, cover;
+    --desktop-bg-position: left bottom, right bottom, center top;
+    --desktop-bg-repeat: no-repeat, no-repeat;
+}
+
+html.dark.theme-fiesta-patrias {
+    --bg-color: #111827;
+    --container-bg-color: #002266;
+    --text-color: #ffffff;
+    --text-secondary-color: #fbd2d2;
+    --border-color: #ef4444;
+    --input-bg-color: #23478f;
+    --btn-primary-bg-color: #ef4444;
+    --btn-primary-hover-bg-color: #9e0b0b;
+    --result-border-color: #ef4444;
+    --result-text-color: #ffffff;
+    --result-bg-color: #23478f;
+    --container-border-color: #ef4444;
+    --header-bg-color: #23478f;
+    --header-text-color: #ffffff;
+    --footer-bg-color: #23478f;
+    --footer-text-color: #fbd2d2;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #002266;
+    --modal-header-bg-color: #23478f;
+    --modal-title-color: #ffffff;
+    --modal-close-btn-color: #fbd2d2;
+    --modal-close-btn-hover-color: #ffffff;
+    --modal-body-text-color: #ffffff;
+    --coin-option-hover-bg-color: #23478f;
+    --coin-option-selected-border-color: #ef4444;
+    --coin-option-selected-bg-color: #ef4444;
+    --coin-option-selected-text-color: #ffffff;
+    --coin-option-selected-hover-bg-color: #dc2626;
+    --coin-option-selected-hover-text-color: #ffffff;
+}
+
+html.theme-pkm {
+    --bg-color: #ed7660;
+    --container-bg-color: #e75454;
+    --text-color: #ffffff;
+    --text-secondary-color: #ffffff;
+    --border-color: #000000;
+    --input-bg-color: #cc0000;
+    --btn-primary-bg-color: #cc0000;
+    --btn-primary-hover-bg-color: #a30000;
+    --result-border-color: #000000;
+    --result-text-color: #e5da0e;
+    --result-bg-color: #e12e2e;
+    --container-border-color: #000000;
+    --header-bg-color: #e12e2e;
+    --header-text-color: #ffffff;
+    --footer-bg-color: #e12e2e;
+    --footer-text-color: #ffffff;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #e75454;
+    --modal-header-bg-color: #cc0000;
+    --modal-title-color: #ffffff;
+    --modal-close-btn-color: #ffffff;
+    --modal-close-btn-hover-color: #000000;
+    --modal-body-text-color: #ffffff;
+    --coin-option-hover-bg-color: #fe6574;
+    --coin-option-selected-border-color: #cc0000;
+    --coin-option-selected-bg-color: #ffcdd2;
+    --coin-option-selected-text-color: #cc0000;
+    --coin-option-selected-hover-bg-color: #ef9a9a;
+    --coin-option-selected-hover-text-color: #cc0000;
+    --desktop-bg-image:url("../img/theme-4/pokeball.webp"),
+    url("../img/theme-4/pokemon_eevee_2x.webp"),
+    url("../img/theme-4/pokemon_pikachu_2x.webp"),
+    url("../img/theme-4/pokemon_SV.webp"), url("../img/theme-4/pkm.webp"),
+    repeating-linear-gradient( -45deg, #ed7660 10%, #ed7660 20%, #ef816a 20%, #ef816a 23%);
+    --desktop-bg-size: 50px, auto 250px, auto 250px, auto 200px, 300px, cover;
+    --desktop-bg-position: 130px bottom, left bottom, right bottom, center bottom, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    --corner-decoration-x-offset: 0px;
+    --corner-decoration-y-offset: -15px;
+    --corner-decoration-rotation: 0deg;
+    --corner-decoration-bg-color: transparent;
+    --corner-decoration-bg-image: url("../img/theme-4/pokemon_yamper_2x.webp");
+    --corner-decoration-bg-size: contain;
+    --corner-decoration-bg-position: center bottom;
+    --corner-decoration-bg-repeat: no-repeat;
+    --corner-decoration-width: 150px;
+    --corner-decoration-height: 150px;
+}
+
+html.dark.theme-pkm {
+    --bg-color: #242424;
+    --container-bg-color: #2f2f2f;
+    --text-color: #ffffff;
+    --text-secondary-color: #ffffff;
+    --border-color: #ffffff;
+    --input-bg-color: #404040;
+    --btn-primary-bg-color: #cc0000;
+    --btn-primary-hover-bg-color: #a30000;
+    --result-border-color: #ffffff;
+    --result-text-color: #ffffff;
+    --result-bg-color: #404040;
+    --container-border-color: #a30000;
+    --header-bg-color: #e12e2e;
+    --header-text-color: #ffffff;
+    --footer-bg-color: #e12e2e;
+    --footer-text-color: #ffffff;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #2f2f2f;
+    --modal-header-bg-color: #e12e2e;
+    --modal-title-color: #ffffff;
+    --modal-close-btn-color: #ffffff;
+    --modal-close-btn-hover-color: #ffffff;
+    --modal-body-text-color: #ffffff;
+    --coin-option-hover-bg-color: #404040;
+    --coin-option-selected-border-color: #e12e2e;
+    --coin-option-selected-bg-color: #ffcdd2;
+    --coin-option-selected-text-color: #cc0000;
+    --coin-option-selected-hover-bg-color: #ef9a9a;
+    --coin-option-selected-hover-text-color: #cc0000;
+}
+
+html.theme-yoamero {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #ffffff;
+    --text-color: #1565c0;
+    --text-secondary-color: #2196f3;
+    --border-color: #90caf9;
+    --input-bg-color: #bbdefb;
+    --btn-primary-bg-color: #1976d2;
+    --btn-primary-hover-bg-color: #1565c0;
+    --result-border-color: #64b5f6;
+    --result-text-color: #1976d2;
+    --result-bg-color: #e3f2fd;
+    --container-border-color: #90caf9;
+    --header-bg-color: #e3f2fd;
+    --header-text-color: #1565c0;
+    --footer-bg-color: #e3f2fd;
+    --footer-text-color: #2196f3;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #e3f2fd;
+    --modal-title-color: #1565c0;
+    --modal-close-btn-color: #2196f3;
+    --modal-close-btn-hover-color: #1565c0;
+    --modal-body-text-color: #1565c0;
+    --coin-option-hover-bg-color: #bbdefb;
+    --coin-option-selected-border-color: #1976d2;
+    --coin-option-selected-bg-color: #90caf9;
+    --coin-option-selected-text-color: #1976d2;
+    --coin-option-selected-hover-bg-color: #64b5f6;
+    --coin-option-selected-hover-text-color: #1976d2;
+    --bg-stripe-color-1: #8d9bc3;
+    --bg-stripe-color-2: #bbbbbb;
+    --desktop-bg-image: url(../img/asebabd/asebabd.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, 50px 50px, 100%;
+    --desktop-bg-position: center, left top, center;
+    --desktop-bg-repeat: no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero {
+    --bg-color: #111827;
+    --container-bg-color: #1f2937;
+    --text-color: #bfdbfe;
+    --text-secondary-color: #93c5fd;
+    --border-color: #60a5fa;
+    --input-bg-color: #374151;
+    --btn-primary-bg-color: #2563eb;
+    --btn-primary-hover-bg-color: #1d4ed8;
+    --result-border-color: #3b82f6;
+    --result-text-color: #bfdbfe;
+    --result-bg-color: #2d3748;
+    --container-border-color: #60a5fa;
+    --header-bg-color: #072e6b;
+    --header-text-color: #bfdbfe;
+    --footer-bg-color: #072e6b;
+    --footer-text-color: #93c5fd;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
+    --modal-header-bg-color: #072e6b;
+    --modal-title-color: #bfdbfe;
+    --modal-close-btn-color: #93c5fd;
+    --modal-close-btn-hover-color: #bfdbfe;
+    --modal-body-text-color: #bfdbfe;
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #2563eb;
+    --coin-option-selected-bg-color: #60a5fa;
+    --coin-option-selected-text-color: #bfdbfe;
+    --coin-option-selected-hover-bg-color: #3b82f6;
+    --coin-option-selected-hover-text-color: #bfdbfe;
+    --bg-stripe-color-1: #2d3748;
+    --bg-stripe-color-2: black;
+}
+
+html.theme-yoamero-lily {
+    --bg-color: #f5f0eb;
+    --container-bg-color: #ffffff;
+    --text-color: #85395a;
+    --text-secondary-color: #c60e8c;
+    --border-color: #bcaaa4;
+    --input-bg-color: #d7c8d2;
+    --btn-primary-bg-color: #85395a;
+    --btn-primary-hover-bg-color: #6d2e46;
+    --result-border-color: #85395a;
+    --result-text-color: #85395a;
+    --result-bg-color: #fdf3f9;
+    --container-border-color: #bcaaa4;
+    --header-bg-color: #f9d7e3;
+    --header-text-color: #85395a;
+    --footer-bg-color: #f9d7e3;
+    --footer-text-color: #c60e8c;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #f9d7e3;
+    --modal-title-color: #85395a;
+    --modal-close-btn-color: #c60e8c;
+    --modal-close-btn-hover-color: #85395a;
+    --modal-body-text-color: #85395a;
+    --coin-option-hover-bg-color: #d7c8d2;
+    --coin-option-selected-border-color: #85395a;
+    --coin-option-selected-bg-color: #d7c8d2;
+    --coin-option-selected-text-color: #85395a;
+    --coin-option-selected-hover-bg-color: #f8bbd0;
+    --coin-option-selected-hover-text-color: #85395a;
+    --bg-stripe-color-1: #f8bbd0;
+    --bg-stripe-color-2: #fce4ec;
+    --desktop-bg-image: url(../img/liliana/lily200.webp),
+        url(../img/liliana/lily210.webp),
+        url(../img/liliana/marco1.webp),
+        url(../img/liliana/marco2.webp),
+        url(../img/liliana/marco3.webp),
+        url(../img/liliana/marco4.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, contain, 15%, 15%, 15%, 15%, 50px 50px, 100%;
+    --desktop-bg-position: left center, right center, right 25% top, right 23% bottom, left 23% top -6px, left 23% bottom -10px, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-lily {
+    --bg-color: #2c2420;
+    --container-bg-color: #3a322e;
+    --text-color: #e0d8d0;
+    --text-secondary-color: #a1887f;
+    --border-color: #5a263a;
+    --input-bg-color: #4c4440;
+    --btn-primary-bg-color: #85395a;
+    --btn-primary-hover-bg-color: #6d2e46;
+    --result-border-color: #85395a;
+    --result-text-color: #e0d8d0;
+    --result-bg-color: #4c4440;
+    --container-border-color: #5a263a;
+    --header-bg-color: #572136;
+    --header-text-color: #e0d8d0;
+    --footer-bg-color: #572136;
+    --footer-text-color: #a1887f;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #3a322e;
+    --modal-header-bg-color: #572136;
+    --modal-title-color: #e0d8d0;
+    --modal-close-btn-color: #a1887f;
+    --modal-close-btn-hover-color: #e0d8d0;
+    --modal-body-text-color: #e0d8d0;
+    --coin-option-hover-bg-color: #4c4440;
+    --coin-option-selected-border-color: #85395a;
+    --coin-option-selected-bg-color: #5a263a;
+    --coin-option-selected-text-color: #e0d8d0;
+    --coin-option-selected-hover-bg-color: #4c4440;
+    --coin-option-selected-hover-text-color: #e0d8d0;
+    --bg-stripe-color-1: #572136;
+    --bg-stripe-color-2: #020202;
+    --desktop-bg-image: url(../img/liliana/lily200.webp),
+        url(../img/liliana/lily210.webp),
+        url(../img/liliana/marco1.webp),
+        url(../img/liliana/marco2.webp),
+        url(../img/liliana/marco3.webp),
+        url(../img/liliana/marco4.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+}
+
+html.theme-yoamero-sebastian {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #ffffff;
+    --text-color: #4e342e;
+    --text-secondary-color: #8d6e63;
+    --border-color: #bcaaa4;
+    --input-bg-color: #d7ccc8;
+    --btn-primary-bg-color: #6d4c41;
+    --btn-primary-hover-bg-color: #5d4037;
+    --result-border-color: #a1887f;
+    --result-text-color: #4e342e;
+    --result-bg-color: #efebe9;
+    --container-border-color: #bcaaa4;
+    --header-bg-color: #efebe9;
+    --header-text-color: #4e342e;
+    --footer-bg-color: #efebe9;
+    --footer-text-color: #8d6e63;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #efebe9;
+    --modal-title-color: #4e342e;
+    --modal-close-btn-color: #8d6e63;
+    --modal-close-btn-hover-color: #4e342e;
+    --modal-body-text-color: #4e342e;
+    --coin-option-hover-bg-color: #d7ccc8;
+    --coin-option-selected-border-color: #6d4c41;
+    --coin-option-selected-bg-color: #d7ccc8;
+    --coin-option-selected-text-color: #4e342e;
+    --coin-option-selected-hover-bg-color: #bcaaa4;
+    --coin-option-selected-hover-text-color: #4e342e;
+    --bg-stripe-color-1: #d7ccc8;
+    --bg-stripe-color-2: #efebe9;
+    --desktop-bg-image: url(../img/sebastian/seba200.webp),
+        url(../img/sebastian/marco1.webp),
+        url(../img/sebastian/marco2.webp),
+        url(../img/sebastian/marco3.webp),
+        url(../img/sebastian/marco4.webp),
+        url(../img/sebastian/marco5.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, 23%, 15%, 15%, 15%, 15%, 50px 50px, 100%;
+    --desktop-bg-position: right 10px center, left -10px center, left 23% top -6px, left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-sebastian {
+    --bg-color: #111827;
+    --container-bg-color: #1f2937;
+    --text-color: #efebe9;
+    --text-secondary-color: #bcaaa4;
+    --border-color: #6d4c41;
+    --input-bg-color: #374151;
+    --btn-primary-bg-color: #6d4c41;
+    --btn-primary-hover-bg-color: #5d4037;
+    --result-border-color: #6d4c41;
+    --result-text-color: #efebe9;
+    --result-bg-color: #2d3748;
+    --container-border-color: #6d4c41;
+    --header-bg-color: #3e2723;
+    --header-text-color: #efebe9;
+    --footer-bg-color: #3e2723;
+    --footer-text-color: #bcaaa4;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
+    --modal-header-bg-color: #3e2723;
+    --modal-title-color: #efebe9;
+    --modal-close-btn-color: #bcaaa4;
+    --modal-close-btn-hover-color: #efebe9;
+    --modal-body-text-color: #efebe9;
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #6d4c41;
+    --coin-option-selected-bg-color: #6d4c41;
+    --coin-option-selected-text-color: #efebe9;
+    --coin-option-selected-hover-bg-color: #4e342e;
+    --coin-option-selected-hover-text-color: #efebe9;
+    --bg-stripe-color-1: #4e342e;
+    --bg-stripe-color-2: black;
+}
+
+html.theme-yoamero-elisa {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #ffffff;
+    --text-color: #004d40;
+    --text-secondary-color: #26a69a;
+    --border-color: #80cbc4;
+    --input-bg-color: #b2ebf2;
+    --btn-primary-bg-color: #00897b;
+    --btn-primary-hover-bg-color: #00695c;
+    --result-border-color: #4db6ac;
+    --result-text-color: #004d40;
+    --result-bg-color: #e0f2f7;
+    --container-border-color: #80cbc4;
+    --header-bg-color: #e0f2f7;
+    --header-text-color: #004d40;
+    --footer-bg-color: #e0f2f7;
+    --footer-text-color: #26a69a;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #e0f2f7;
+    --modal-title-color: #004d40;
+    --modal-close-btn-color: #26a69a;
+    --modal-close-btn-hover-color: #004d40;
+    --modal-body-text-color: #004d40;
+    --coin-option-hover-bg-color: #b2ebf2;
+    --coin-option-selected-border-color: #00897b;
+    --coin-option-selected-bg-color: #b2ebf2;
+    --coin-option-selected-text-color: #004d40;
+    --coin-option-selected-hover-bg-color: #80cbc4;
+    --coin-option-selected-hover-text-color: #004d40;
+    --bg-stripe-color-1: #b2dfdb;
+    --bg-stripe-color-2: #e3f2fd;
+    --desktop-bg-image: url(../img/elisa/elisa1.webp), url(../img/elisa/marco6.webp),
+        url(../img/elisa/marco3.webp), url(../img/elisa/marco2.webp),
+        url(../img/elisa/marco4.webp), url(../img/elisa/marco5.webp),
+        url(../img/elisa/marco1.webp), url(../img/elisa/marco8.webp),
+        url(../img/elisa/marco7.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, 18%, 15%, 15%, 15%, 15%, 15%, 15%, 18%, 50px 50px, 100%;
+    --desktop-bg-position: right 10px center, left -10px top 20%, left 23% top -6px,
+        left 23% bottom -10px, right 25% top, right 23% bottom, center top -10px, center bottom -15px, left -10px bottom 20%, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-elisa {
+    --bg-color: #001a1a;
+    --container-bg-color: #002d2d;
+    --text-color: #e0f7fa;
+    --text-secondary-color: #80cbc4;
+    --border-color: #26a69a;
+    --input-bg-color: #003e3e;
+    --btn-primary-bg-color: #00897b;
+    --btn-primary-hover-bg-color: #00695c;
+    --result-border-color: #26a69a;
+    --result-text-color: #e0f7fa;
+    --result-bg-color: #003e3e;
+    --container-border-color: #26a69a;
+    --header-bg-color: #001a1a;
+    --header-text-color: #e0f7fa;
+    --footer-bg-color: #001a1a;
+    --footer-text-color: #80cbc4;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #002d2d;
+    --modal-header-bg-color: #001a1a;
+    --modal-title-color: #e0f7fa;
+    --modal-close-btn-color: #80cbc4;
+    --modal-close-btn-hover-color: #e0f7fa;
+    --modal-body-text-color: #e0f7fa;
+    --coin-option-hover-bg-color: #003e3e;
+    --coin-option-selected-border-color: #00897b;
+    --coin-option-selected-bg-color: #26a69a;
+    --coin-option-selected-text-color: #e0f7fa;
+    --coin-option-selected-hover-bg-color: #00897b;
+    --coin-option-selected-hover-text-color: #e0f7fa;
+    --bg-stripe-color-1: #002d2d;
+    --bg-stripe-color-2: black;
+}
+
+html.theme-yoamero-jair {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #ffffff;
+    --text-color: #1565c0;
+    --text-secondary-color: #2196f3;
+    --border-color: #90caf9;
+    --input-bg-color: #bbdefb;
+    --btn-primary-bg-color: #1976d2;
+    --btn-primary-hover-bg-color: #1565c0;
+    --result-border-color: #64b5f6;
+    --result-text-color: #1976d2;
+    --result-bg-color: #e3f2fd;
+    --container-border-color: #90caf9;
+    --header-bg-color: #e3f2fd;
+    --header-text-color: #1565c0;
+    --footer-bg-color: #e3f2fd;
+    --footer-text-color: #2196f3;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #e3f2fd;
+    --modal-title-color: #1565c0;
+    --modal-close-btn-color: #2196f3;
+    --modal-close-btn-hover-color: #1565c0;
+    --modal-body-text-color: #1565c0;
+    --coin-option-hover-bg-color: #bbdefb;
+    --coin-option-selected-border-color: #1976d2;
+    --coin-option-selected-bg-color: #90caf9;
+    --coin-option-selected-text-color: #1976d2;
+    --coin-option-selected-hover-bg-color: #64b5f6;
+    --coin-option-selected-hover-text-color: #1976d2;
+    --bg-stripe-color-1: #8d9bc3;
+    --bg-stripe-color-2: #e3f2fd;
+    --desktop-bg-image: url(../img/jair/jair1.webp),
+        url(../img/jair/jair2.webp),
+        url(../img/jair/marco3.webp),
+        url(../img/jair/marco2.webp),
+        url(../img/jair/marco4.webp),
+        url(../img/jair/marco5.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, contain, 15%, 15%, 15%, 15%, 50px 50px, 100%;
+    --desktop-bg-position: right 10px center, left 10px center, left 23% top -6px, left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-jair {
+    --bg-color: #111827;
+    --container-bg-color: #1f2937;
+    --text-color: #bfdbfe;
+    --text-secondary-color: #93c5fd;
+    --border-color: #60a5fa;
+    --input-bg-color: #374151;
+    --btn-primary-bg-color: #2563eb;
+    --btn-primary-hover-bg-color: #1d4ed8;
+    --result-border-color: #3b82f6;
+    --result-text-color: #bfdbfe;
+    --result-bg-color: #2d3748;
+    --container-border-color: #60a5fa;
+    --header-bg-color: #072e6b;
+    --header-text-color: #bfdbfe;
+    --footer-bg-color: #072e6b;
+    --footer-text-color: #93c5fd;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
+    --modal-header-bg-color: #072e6b;
+    --modal-title-color: #bfdbfe;
+    --modal-close-btn-color: #93c5fd;
+    --modal-close-btn-hover-color: #bfdbfe;
+    --modal-body-text-color: #bfdbfe;
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #2563eb;
+    --coin-option-selected-bg-color: #60a5fa;
+    --coin-option-selected-text-color: #bfdbfe;
+    --coin-option-selected-hover-bg-color: #3b82f6;
+    --coin-option-selected-hover-text-color: #bfdbfe;
+    --bg-stripe-color-1: #2d3748;
+    --bg-stripe-color-2: black;
+}
+
+html.theme-yoamero-emily {
+    --bg-color: #f3f4f6;
+    --container-bg-color: #fff3e0;
+    --text-color: #e65100;
+    --text-secondary-color: #ff9800;
+    --border-color: #ffcc80;
+    --input-bg-color: #ffe0b2;
+    --btn-primary-bg-color: #fb8c00;
+    --btn-primary-hover-bg-color: #f57c00;
+    --result-border-color: #ffb74d;
+    --result-text-color: #e65100;
+    --result-bg-color: #ffffff;
+    --container-border-color: #ffcc80;
+    --header-bg-color: #ffffff;
+    --header-text-color: #e65100;
+    --footer-bg-color: #ffffff;
+    --footer-text-color: #ff9800;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #fff3e0;
+    --modal-header-bg-color: #ffffff;
+    --modal-title-color: #e65100;
+    --modal-close-btn-color: #ff9800;
+    --modal-close-btn-hover-color: #e65100;
+    --modal-body-text-color: #e65100;
+    --coin-option-hover-bg-color: #ffe0b2;
+    --coin-option-selected-border-color: #fb8c00;
+    --coin-option-selected-bg-color: #ffcc80;
+    --coin-option-selected-text-color: #e65100;
+    --coin-option-selected-hover-bg-color: #ffb74d;
+    --coin-option-selected-hover-text-color: #e65100;
+    --bg-stripe-color-1: #d7ccc8;
+    --bg-stripe-color-2: #fff3e0;
+    --desktop-bg-image: url(../img/emily/emily1.webp),
+        url(../img/emily/marco1.webp),
+        url(../img/emily/marco2.webp),
+        url(../img/emily/marco3.webp),
+        url(../img/emily/marco4.webp),
+        url(../img/emily/marco5.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, 23%, 15%, 15%, 15%, 15%, 50px 50px, 100%;
+    --desktop-bg-position: right 10px center, left -10px center, left 23% top -6px, left 23% bottom -10px, right 25% top, right 23% bottom, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-emily {
+    --bg-color: #111827;
+    --container-bg-color: #1f2937;
+    --text-color: #fff3e0;
+    --text-secondary-color: #ffcc80;
+    --border-color: #fb8c00;
+    --input-bg-color: #374151;
+    --btn-primary-bg-color: #fb8c00;
+    --btn-primary-hover-bg-color: #f57c00;
+    --result-border-color: #fb8c00;
+    --result-text-color: #fff3e0;
+    --result-bg-color: #2d3748;
+    --container-border-color: #fb8c00;
+    --header-bg-color: #6b3c05;
+    --header-text-color: #fff3e0;
+    --footer-bg-color: #6b3c05;
+    --footer-text-color: #ffcc80;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
+    --modal-header-bg-color: #6b3c05;
+    --modal-title-color: #fff3e0;
+    --modal-close-btn-color: #ffcc80;
+    --modal-close-btn-hover-color: #fff3e0;
+    --modal-body-text-color: #fff3e0;
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #fb8c00;
+    --coin-option-selected-bg-color: #fb8c00;
+    --coin-option-selected-text-color: #fff3e0;
+    --coin-option-selected-hover-bg-color: #e65100;
+    --coin-option-selected-hover-text-color: #fff3e0;
+    --bg-stripe-color-1: #2d3748;
+    --bg-stripe-color-2: black;
+}
+
+html.theme-yoamero-charlotte {
+    --bg-color: #ffffff;
+    --container-bg-color: #e2f0fb;
+    --text-color: #2196f3;
+    --text-secondary-color: #2196f3;
+    --border-color: #4fc3f7;
+    --input-bg-color: #ffffff;
+    --btn-primary-bg-color: #03a9f4;
+    --btn-primary-hover-bg-color: #0288d1;
+    --result-border-color: #81d4fa;
+    --result-text-color: #1976d2;
+    --result-bg-color: #ffffff;
+    --container-border-color: #4fc3f7;
+    --header-bg-color: #c5e2f6;
+    --header-text-color: #2196f3;
+    --footer-bg-color: #c5e2f6;
+    --footer-text-color: #2196f3;
+    --modal-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #e2f0fb;
+    --modal-header-bg-color: #c5e2f6;
+    --modal-title-color: #2196f3;
+    --modal-close-btn-color: #2196f3;
+    --modal-close-btn-hover-color: #1976d2;
+    --modal-body-text-color: #2196f3;
+    --coin-option-hover-bg-color: #ffffff;
+    --coin-option-selected-border-color: #03a9f4;
+    --coin-option-selected-bg-color: #81d4fa;
+    --coin-option-selected-text-color: #1976d2;
+    --coin-option-selected-hover-bg-color: #4fc3f7;
+    --coin-option-selected-hover-text-color: #1976d2;
+    --bg-stripe-color-1: #bbdefb;
+    --bg-stripe-color-2: #e3f2fd;
+    --desktop-bg-image: url(../img/charlotte/char1.webp),
+        url(../img/charlotte/marco1.webp), url(../img/charlotte/marco2.webp),
+        url(../img/charlotte/marco3.webp), url(../img/charlotte/marco4.webp),
+        url(../img/charlotte/marco5.webp),
+        linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
+        linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+    --desktop-bg-size: contain, 23%, 15%, 15%, 15%, 15%, 50px 50px, 100%;
+    --desktop-bg-position: right 10px center, left -10px center, left 23% top -6px, left 23% bottom -10px, right 26% top, right 23% bottom, left top, left top;
+    --desktop-bg-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+html.dark.theme-yoamero-charlotte {
+    --bg-color: #0d1a26;
+    --container-bg-color: #1a2a3a;
+    --text-color: #b3e5fc;
+    --text-secondary-color: #81d4fa;
+    --border-color: #2196f3;
+    --input-bg-color: #2a3d4d;
+    --btn-primary-bg-color: #03a9f4;
+    --btn-primary-hover-bg-color: #0288d1;
+    --result-border-color: #2196f3;
+    --result-text-color: #b3e5fc;
+    --result-bg-color: #2a3d4d;
+    --container-border-color: #2196f3;
+    --header-bg-color: #0d1a26;
+    --header-text-color: #b3e5fc;
+    --footer-bg-color: #0d1a26;
+    --footer-text-color: #81d4fa;
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1a2a3a;
+    --modal-header-bg-color: #0d1a26;
+    --modal-title-color: #b3e5fc;
+    --modal-close-btn-color: #81d4fa;
+    --modal-close-btn-hover-color: #b3e5fc;
+    --modal-body-text-color: #b3e5fc;
+    --coin-option-hover-bg-color: #2a3d4d;
+    --coin-option-selected-border-color: #03a9f4;
+    --coin-option-selected-bg-color: #4fc3f7;
+    --coin-option-selected-text-color: #b3e5fc;
+    --coin-option-selected-hover-bg-color: #2196f3;
+    --coin-option-selected-hover-text-color: #b3e5fc;
+    --bg-stripe-color-1: #1a2a3a;
+    --bg-stripe-color-2: #0d1a26;
+}
