@@ -1,34 +1,95 @@
+/* Variables CSS para temas claro y oscuro */
 :root {
-    --bg-color: #f3f4f6;
-    --container-bg-color: #ffffff;
-    --text-color: #1f2937;
-    --text-secondary-color: #6b7280;
-    --border-color: #d1d5db;
-    --input-bg-color: #f3f4f6;
-    --btn-primary-bg-color: #2563eb;
-    --btn-primary-hover-bg-color: #1d4ed8;
-    --btn-primary-text-color: white;
-    --result-border-color: #22c55e;
-    --result-text-color: #16a34a;
-    --result-bg-color: #f9fafb;
-    --container-border-color: #d1d5db;
-    --header-bg-color: transparent; /* Nueva variable para el color de fondo del header */
-    --header-text-color: #1f2937; /* Nueva variable para el color del texto del header */
-    --footer-bg-color: transparent; /* Nueva variable para el color de fondo del footer */
-    --footer-text-color: #6b7280; /* Nueva variable para el color del texto del footer */
-    --modal-bg-color: rgba(0, 0, 0, 0.6); /* Color de fondo del overlay del modal */
-    --modal-content-bg-color: #ffffff; /* Color de fondo del contenido del modal */
-    --modal-header-bg-color: #f9fafb; /* Color de fondo del encabezado del modal */
-    --modal-title-color: #1f2937; /* Color del título del modal */
-    --modal-close-btn-color: #6b7280; /* Color del botón de cerrar del modal */
-    --modal-close-btn-hover-color: #1f2937; /* Color del botón de cerrar del modal al pasar el ratón */
-    --modal-body-text-color: #1f2937; /* Color del texto del cuerpo del modal */
-    --coin-option-hover-bg-color: #f3f4f6; /* Color de fondo de la opción de moneda al pasar el ratón */
-    --coin-option-selected-border-color: #2563eb; /* Color del borde de la opción de moneda seleccionada */
-    --coin-option-selected-bg-color: #f0f4ff; /* Suavizado: Color de fondo de la opción seleccionada */
-    --coin-option-selected-text-color: #2563eb; /* Suavizado: Color de texto de la opción seleccionada */
-    --coin-option-selected-hover-bg-color: #dbeafe; /* Nuevo: Fondo de la opción seleccionada al pasar el ratón */
-    --coin-option-selected-hover-text-color: #1d4ed8; /* Nuevo: Texto de la opción seleccionada al pasar el ratón */
+    /* Colores base */
+    --body-bg-color: #f3f4f6;
+    --body-text-color: #1f2937;
+    --body-striped-bg-color-1: #e0e0e0;
+    --body-striped-bg-color-2: #f0f0f0;
+
+    /* Fondo de escritorio */
+    --desktop-body-bg-image: none;
+    --desktop-body-bg-size: auto;
+    --desktop-body-bg-position: center;
+    --desktop-body-bg-repeat: no-repeat;
+
+    /* Contenedor de la calculadora */
+    --calculator-container-bg-color: #ffffff;
+    --calculator-container-border-color: #d1d5db;
+    --desktop-calculator-container-bg-image: none;
+    --desktop-calculator-container-bg-size: initial;
+    --desktop-calculator-container-bg-position: initial;
+    --desktop-calculator-container-bg-repeat: initial;
+
+    /* Encabezado y pie de página */
+    --header-bg-color: transparent;
+    --header-text-color: #1f2937;
+    --title-text-color: inherit;
+    --footer-bg-color: transparent;
+    --footer-text-color: #6b7280;
+
+    /* Campos de formulario */
+    --fieldset-border-color: #d1d5db;
+    --legend-text-color: #1f2937;
+    --input-field-bg-color: #f3f4f6;
+    --input-field-text-color: #1f2937;
+    --input-adornment-color: #6b7280;
+
+    /* Botones primarios */
+    --primary-btn-bg-color: #2563eb;
+    --primary-btn-hover-bg-color: #1d4ed8;
+    --primary-btn-text-color: white;
+
+    /* Sección de resultados */
+    --result-section-border-color: #22c55e;
+    --result-section-bg-color: #f9fafb;
+    --result-quantity-text-color: #6b7280;
+    --result-total-text-color: #16a34a;
+
+    /* Botones y menú de configuración */
+    --settings-btn-bg-color: #ffffff;
+    --settings-btn-border-color: #d1d5db;
+    --settings-btn-icon-color: #6b7280;
+    --settings-dropdown-bg-color: #ffffff;
+    --settings-dropdown-border-color: #d1d5db;
+    --settings-dropdown-title-color: #1f2937;
+    --settings-option-text-color: #1f2937;
+    --settings-option-hover-bg-color: #f3f4f6;
+    --settings-option-hover-text-color: #1f2937;
+    --settings-option-focus-outline-color: #2563eb;
+    --settings-option-active-bg-color: #1d4ed8;
+    --settings-option-active-text-color: white;
+    --settings-radio-checkbox-accent-color: #2563eb;
+    --settings-disabled-option-color: #6b7280;
+
+    /* Botón de alternancia de tema */
+    --theme-toggle-btn-bg-color: #ffffff;
+    --theme-toggle-btn-border-color: #d1d5db;
+    --theme-toggle-btn-icon-color: #6b7280;
+    --theme-toggle-btn-hover-bg-color: #f3f4f6;
+
+    /* Modal */
+    --modal-overlay-bg-color: rgba(0, 0, 0, 0.6);
+    --modal-content-bg-color: #ffffff;
+    --modal-header-bg-color: #f9fafb;
+    --modal-header-border-color: #d1d5db;
+    --modal-title-color: #1f2937;
+    --modal-close-btn-color: #6b7280;
+    --modal-close-btn-hover-color: #1f2937;
+    --modal-body-text-color: #1f2937;
+
+    /* Opciones de moneda */
+    --coin-option-bg-color: transparent;
+    --coin-option-hover-bg-color: #f3f4f6;
+    --coin-option-selected-border-color: #2563eb;
+    --coin-option-selected-shadow-color: #2563eb;
+    --coin-option-selected-bg-color: #f0f4ff;
+    --coin-option-selected-text-color: #2563eb;
+    --coin-option-selected-hover-bg-color: #dbeafe;
+    --coin-option-selected-hover-text-color: #1d4ed8;
+    --coin-denomination-color: inherit;
+    --coin-denomination-small-color: inherit;
+
+    /* Decoración de esquina */
     --corner-decoration-x-offset: 0px;
     --corner-decoration-y-offset: 0px;
     --corner-decoration-rotation: 0deg;
@@ -39,58 +100,95 @@
     --corner-decoration-bg-repeat: no-repeat;
     --corner-decoration-width: 0px;
     --corner-decoration-height: 0px;
-    --bg-stripe-color-1: #e0e0e0;
-    --bg-stripe-color-2: #f0f0f0;
-    --desktop-bg-image: none;
-    --desktop-bg-size: auto;
-    --desktop-bg-position: center;
-    --desktop-bg-repeat: no-repeat;
 }
 
+/* Tema oscuro */
 html.dark {
-    --bg-color: #111827;
-    --container-bg-color: #1f2937;
-    --text-color: #f3f4f6;
-    --text-secondary-color: #9ca3af;
-    --border-color: #4b5563;
-    --input-bg-color: #374151;
-    --btn-primary-bg-color: #2563eb;
-    --btn-primary-hover-bg-color: #1d4ed8;
-    --result-border-color: #4ade80;
-    --result-text-color: #4ade80;
-    --result-bg-color: #2d3748;
-    --container-border-color: #4b5563;
-    --header-bg-color: transparent; /* Nueva variable para el color de fondo del header */
-    --header-text-color: #f3f4f6; /* Nueva variable para el color del texto del header */
-    --footer-bg-color: transparent; /* Nueva variable para el color de fondo del footer */
-    --footer-text-color: #9ca3af; /* Nueva variable para el color del texto del footer */
-    --modal-bg-color: rgba(0, 0, 0, 0.8); /* Color de fondo del overlay del modal */
-    --modal-content-bg-color: #1f2937; /* Color de fondo del contenido del modal */
-    --modal-header-bg-color: #1f2937; /* Color de fondo del encabezado del modal */
-    --modal-title-color: #f3f4f6; /* Color del título del modal */
-    --modal-close-btn-color: #9ca3af; /* Color del botón de cerrar del modal */
-    --modal-close-btn-hover-color: #f3f4f6; /* Color del botón de cerrar del modal al pasar el ratón */
-    --modal-body-text-color: #f3f4f6; /* Color del texto del cuerpo del modal */
-    --coin-option-hover-bg-color: #374151; /* Color de fondo de la opción de moneda al pasar el ratón */
-    --coin-option-selected-border-color: #2563eb; /* Color del borde de la opción de moneda seleccionada */
-    --coin-option-selected-bg-color: #3b82f6; /* Suavizado: Color de fondo de la opción seleccionada */
-    --coin-option-selected-text-color: #bfdbfe; /* Suavizado: Color de texto de la opción seleccionada */
-    --coin-option-selected-hover-bg-color: #2563eb; /* Nuevo: Fondo de la opción seleccionada al pasar el ratón */
-    --coin-option-selected-hover-text-color: #e0e7ff; /* Nuevo: Texto de la opción seleccionada al pasar el ratón */
+    /* Colores base */
+    --body-bg-color: #111827;
+    --body-text-color: #f3f4f6;
+    --body-striped-bg-color-1: #2a3442;
+    --body-striped-bg-color-2: black;
+
+    /* Contenedor de la calculadora */
+    --calculator-container-bg-color: #1f2937;
+    --calculator-container-border-color: #4b5563;
+
+    /* Encabezado y pie de página */
+    --header-bg-color: transparent;
+    --header-text-color: #f3f4f6;
+    --footer-bg-color: transparent;
+    --footer-text-color: #9ca3af;
+
+    /* Campos de formulario */
+    --fieldset-border-color: #4b5563;
+    --legend-text-color: #f3f4f6;
+    --input-field-bg-color: #374151;
+    --input-field-text-color: #f3f4f6;
+    --input-adornment-color: #9ca3af;
+
+    /* Botones primarios */
+    --primary-btn-bg-color: #2563eb;
+    --primary-btn-hover-bg-color: #1d4ed8;
+    --primary-btn-text-color: white;
+
+    /* Sección de resultados */
+    --result-section-border-color: #4ade80;
+    --result-section-bg-color: #2d3748;
+    --result-quantity-text-color: #9ca3af;
+    --result-total-text-color: #4ade80;
+
+    /* Botones y menú de configuración */
+    --settings-btn-bg-color: #1f2937;
+    --settings-btn-border-color: #4b5563;
+    --settings-btn-icon-color: #9ca3af;
+    --settings-dropdown-bg-color: #1f2937;
+    --settings-dropdown-border-color: #4b5563;
+    --settings-dropdown-title-color: #f3f4f6;
+    --settings-option-text-color: #f3f4f6;
+    --settings-option-hover-bg-color: #374151;
+    --settings-option-hover-text-color: #f3f4f6;
+    --settings-option-focus-outline-color: #2563eb;
+    --settings-option-active-bg-color: #1d4ed8;
+    --settings-option-active-text-color: white;
+    --settings-radio-checkbox-accent-color: #2563eb;
+    --settings-disabled-option-color: #9ca3af;
+
+    /* Botón de alternancia de tema */
+    --theme-toggle-btn-bg-color: #1f2937;
+    --theme-toggle-btn-border-color: #4b5563;
+    --theme-toggle-btn-icon-color: #9ca3af;
+    --theme-toggle-btn-hover-bg-color: #374151;
+
+    /* Modal */
+    --modal-overlay-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-content-bg-color: #1f2937;
     --modal-header-bg-color: #1f2937;
-    --bg-stripe-color-1: #2a3442;
-    --bg-stripe-color-2: black;
+    --modal-header-border-color: #4b5563;
+    --modal-title-color: #f3f4f6;
+    --modal-close-btn-color: #9ca3af;
+    --modal-close-btn-hover-color: #f3f4f6;
+    --modal-body-text-color: #f3f4f6;
+
+    /* Opciones de moneda */
+    --coin-option-hover-bg-color: #374151;
+    --coin-option-selected-border-color: #2563eb;
+    --coin-option-selected-shadow-color: #2563eb;
+    --coin-option-selected-bg-color: #3b82f6;
+    --coin-option-selected-text-color: #bfdbfe;
+    --coin-option-selected-hover-bg-color: #2563eb;
+    --coin-option-selected-hover-text-color: #e0e7ff;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
     font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
@@ -117,37 +215,33 @@ body {
     max-width: 28rem;
     margin: auto;
     padding: 1rem;
-    background-color: var(--container-bg-color);
+    background-color: var(--calculator-container-bg-color);
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border: 1px solid var(--container-border-color);
+    border: 1px solid var(--calculator-container-border-color);
     transition: border-color 0.3s ease;
 }
 
 .header {
     text-align: center;
     margin-bottom: 1rem;
-    background-color: var(--header-bg-color); /* Usando la nueva variable */
-    color: var(--header-text-color); /* Usando la nueva variable para el color del texto del header */
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
 }
 
 .title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: inherit; /* Hereda el color de texto del header */
+    color: var(--title-text-color);
 }
 
 .footer {
     text-align: center;
-    margin-top: 0rem;
+    margin-top: 0;
     font-size: 0.875rem;
     color: var(--footer-text-color);
     padding: 0.625rem;
     transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
     background-color: var(--footer-bg-color);
 }
 
@@ -159,7 +253,7 @@ body {
 
 .fieldset {
     padding: 0.75rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--fieldset-border-color);
     border-radius: 0.5rem;
 }
 
@@ -167,14 +261,17 @@ body {
     padding: 0 0.5rem;
     font-size: 1.125rem;
     font-weight: 600;
+    color: var(--legend-text-color);
 }
 
 .input-group {
     display: flex;
     align-items: center;
-    background-color: var(--input-bg-color);
+    background-color: var(--input-field-bg-color);
     border-radius: 0.375rem;
     padding: 0.75rem;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .input-peso {
@@ -184,7 +281,9 @@ body {
     text-align: right;
     border: none;
     outline: none;
-    color: var(--text-color);
+    color: var(--input-field-text-color);
+    flex-grow: 1;
+    order: 1;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -198,9 +297,14 @@ input[type=number] {
 }
 
 .input-adornment {
-    margin-left: 0.5rem;
     font-size: 1.125rem;
-    color: var(--text-secondary-color);
+    color: var(--input-adornment-color);
+    order: 2;
+    white-space: nowrap;
+}
+
+.input-group #input-adornment.adornment-left {
+    order: 0;
 }
 
 .select-coin-btn {
@@ -209,8 +313,8 @@ input[type=number] {
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem;
-    background-color: var(--btn-primary-bg-color);
-    color: var(--btn-primary-text-color, white);
+    background-color: var(--primary-btn-bg-color);
+    color: var(--primary-btn-text-color);
     border: none;
     border-radius: 0.375rem;
     font-size: 1.125rem;
@@ -220,7 +324,7 @@ input[type=number] {
 }
 
 .select-coin-btn:hover {
-    background-color: var(--btn-primary-hover-bg-color);
+    background-color: var(--primary-btn-hover-bg-color);
 }
 
 .arrow-icon {
@@ -233,8 +337,8 @@ input[type=number] {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     border: none;
-    border-top: 0.25rem solid var(--result-border-color);
-    background-color: var(--result-bg-color);
+    border-top: 0.25rem solid var(--result-section-border-color);
+    background-color: var(--result-section-bg-color);
 }
 
 .result-container {
@@ -243,14 +347,14 @@ input[type=number] {
 
 .result-quantity {
     font-size: 1.25rem;
-    color: var(--text-secondary-color);
+    color: var(--result-quantity-text-color);
     margin-bottom: 0.25rem;
 }
 
 .result-total {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--result-text-color);
+    color: var(--result-total-text-color);
     margin-top: 0;
 }
 
@@ -265,9 +369,9 @@ input[type=number] {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 9999px;
-    background-color: var(--container-bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary-color);
+    background-color: var(--settings-btn-bg-color);
+    border: 1px solid var(--settings-btn-border-color);
+    color: var(--settings-btn-icon-color);
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
     display: flex;
@@ -281,10 +385,10 @@ input[type=number] {
     top: calc(100% + 0.3125rem);
     right: 0;
     width: 280px;
-    background-color: var(--container-bg-color);
+    background-color: var(--settings-dropdown-bg-color);
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--settings-dropdown-border-color);
     padding: 0.5rem;
     z-index: 199;
 }
@@ -297,9 +401,10 @@ input[type=number] {
     font-size: 1rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 0.25rem;
     padding-bottom: 0.125rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--settings-dropdown-border-color);
+    color: var(--settings-dropdown-title-color);
+    margin-bottom: 0.25rem;
 }
 
 #settings-dropdown .settings-section {
@@ -319,39 +424,37 @@ input[type=number] {
     padding: 0.25rem 0.5rem;
     border-radius: 0.375rem;
     transition: background-color 0.2s ease, color 0.2s ease;
+    color: var(--settings-option-text-color);
 }
 
-/* Estilos para hover, focus y active en las opciones de configuración */
 #settings-dropdown label:hover {
-    background-color: var(--input-bg-color);
-    color: var(--text-color);
+    background-color: var(--settings-option-hover-bg-color);
+    color: var(--settings-option-hover-text-color);
 }
 
 #settings-dropdown label:focus-within {
-    outline: 2px solid var(--btn-primary-bg-color);
+    outline: 2px solid var(--settings-option-focus-outline-color);
     outline-offset: 2px;
-    background-color: var(--input-bg-color);
-    color: var(--text-color);
+    background-color: var(--settings-option-hover-bg-color);
+    color: var(--settings-option-hover-text-color);
 }
 
 #settings-dropdown label:active {
-    background-color: var(--btn-primary-hover-bg-color);
-    color: white;
+    background-color: var(--settings-option-active-bg-color);
+    color: var(--settings-option-active-text-color);
 }
-
 
 #settings-dropdown input[type="radio"],
 #settings-dropdown input[type="checkbox"] {
     margin-right: 0.5rem;
-    accent-color: var(--btn-primary-bg-color);
+    accent-color: var(--settings-radio-checkbox-accent-color);
 }
 
 #settings-dropdown label[disabled] {
     cursor: not-allowed;
-    color: var(--text-secondary-color);
+    color: var(--settings-disabled-option-color);
 }
 
-/* --- Start of new styles for appearance buttons --- */
 #settings-dropdown .settings-section h3 {
     margin-top: 0.5rem;
 }
@@ -369,25 +472,24 @@ input[type=number] {
 }
 
 #settings-dropdown .theme-toggle-btn {
-    position: static; /* Override absolute positioning */
-    display: flex !important; /* Override display styles and ensure flex layout */
+    position: static;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border-color);
-    background-color: var(--container-bg-color); /* Changed from --input-bg-color to harmonize */
+    border: 1px solid var(--theme-toggle-btn-border-color);
+    background-color: var(--theme-toggle-btn-bg-color);
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.5rem;
     border-radius: 9999px;
-    color: var(--text-secondary-color);
+    color: var(--theme-toggle-btn-icon-color);
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #settings-dropdown .theme-toggle-btn:hover {
-    background-color: var(--input-bg-color); /* Changed from --border-color to match other hover effects */
+    background-color: var(--theme-toggle-btn-hover-bg-color);
 }
-/* --- End of new styles --- */
 
 .combined-coin-group {
     margin-bottom: 0.5rem;
@@ -405,7 +507,7 @@ input[type=number] {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: var(--modal-bg-color); /* Usando la nueva variable */
+    background-color: var(--modal-overlay-bg-color);
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -417,12 +519,11 @@ input[type=number] {
 }
 
 .modal-content {
-    background-color: var(--modal-content-bg-color); /* Usando la nueva variable */
+    background-color: var(--modal-content-bg-color);
     border-radius: 0.75rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     width: 100%;
     max-width: 24rem;
-    /* Default max-width for smaller screens */
     max-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -433,8 +534,8 @@ input[type=number] {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--modal-header-bg-color); /* Usando la nueva variable */
+    border-bottom: 1px solid var(--modal-header-border-color);
+    background-color: var(--modal-header-bg-color);
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
 }
@@ -442,60 +543,86 @@ input[type=number] {
 .modal-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--modal-title-color); /* Usando la nueva variable */
+    color: var(--modal-title-color);
 }
 
 .modal-close-btn {
     font-size: 1.5rem;
-    color: var(--modal-close-btn-color); /* Usando la nueva variable */
+    color: var(--modal-close-btn-color);
     background: none;
     border: none;
     cursor: pointer;
 }
 
 .modal-close-btn:hover {
-    color: var(--modal-close-btn-hover-color); /* Usando la nueva variable */
+    color: var(--modal-close-btn-hover-color);
 }
 
 .modal-body {
     padding: 0.75rem;
-    /* Reduced from 1rem */
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* Default for smaller screens */
     gap: 0.75rem;
-    /* Reduced from 1rem */
     overflow-y: auto;
-    color: var(--modal-body-text-color); /* Usando la nueva variable */
+    color: var(--modal-body-text-color);
 }
 
 .coin-option {
     display: block;
     cursor: pointer;
     padding: 0.5rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--coin-option-bg-color);
     border-radius: 0.5rem;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; /* Added border-color and box-shadow to transition */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .coin-option:hover {
-    background-color: var(--coin-option-hover-bg-color); /* Usando la nueva variable */
+    background-color: var(--coin-option-hover-bg-color);
 }
 
 .coin-option:has(:checked) {
-    border-color: var(--coin-option-selected-border-color); /* Usando la nueva variable */
-    box-shadow: 0 0 0 2px var(--coin-option-selected-border-color); /* Usando la nueva variable */
-    background-color: var(--coin-option-selected-bg-color); /* Nuevo: Usando la nueva variable */
-    color: var(--coin-option-selected-text-color); /* Nuevo: Usando la nueva variable */
+    border-color: var(--coin-option-selected-border-color);
+    box-shadow: 0 0 0 2px var(--coin-option-selected-shadow-color);
+    background-color: var(--coin-option-selected-bg-color);
+    color: var(--coin-option-selected-text-color);
 }
 
-/* Nuevas reglas para el hover/focus de la moneda seleccionada */
 .coin-option:has(:checked):hover,
 .coin-option:has(:checked):focus {
     background-color: var(--coin-option-selected-hover-bg-color);
     color: var(--coin-option-selected-hover-text-color);
-    border-color: var(--coin-option-selected-border-color); /* Asegura que el borde se mantenga */
-    box-shadow: 0 0 0 2px var(--coin-option-selected-border-color); /* Asegura que la sombra se mantenga */
+    border-color: var(--coin-option-selected-border-color);
+    box-shadow: 0 0 0 2px var(--coin-option-selected-shadow-color);
+}
+
+.coin-option:has(:checked) .flippable-coin {
+    transform: rotateY(180deg);
+}
+
+.coin-option:has(:checked) .flippable-coin .coin-front {
+    opacity: 0;
+}
+
+.coin-option:has(:checked) .flippable-coin .coin-back {
+    opacity: 1;
+}
+
+.coin-option:has(:checked):hover .flippable-coin,
+.coin-option:has(:checked):focus .flippable-coin,
+.coin-option:has(:checked):active .flippable-coin {
+    transform: rotateY(0deg);
+}
+
+.coin-option:has(:checked):hover .flippable-coin .coin-front,
+.coin-option:has(:checked):focus .flippable-coin .coin-front,
+.coin-option:has(:checked):active .flippable-coin .coin-front {
+    opacity: 1;
+}
+
+.coin-option:has(:checked):hover .flippable-coin .coin-back,
+.coin-option:has(:checked):focus .flippable-coin .coin-back,
+.coin-option:has(:checked):active .flippable-coin .coin-back {
+    opacity: 0;
 }
 
 .coin-info {
@@ -506,10 +633,12 @@ input[type=number] {
     font-weight: 700;
     font-size: 1.125rem;
     word-break: break-word;
+    color: var(--coin-denomination-color);
 }
 
 .coin-denomination-small {
     font-size: 0.875rem;
+    color: var(--coin-denomination-small-color);
 }
 
 .coin-images {
@@ -518,19 +647,14 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     gap: 0.25rem;
-    /* Reduced gap */
     margin-top: 0.25rem;
-    /* Reduced from 0.5rem */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Container for each flippable coin */
 .flippable-coin {
     width: 3rem;
-    /* Reduced from 3.5rem */
     height: 3rem;
-    /* Reduced from 3.5rem */
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -556,7 +680,6 @@ input[type=number] {
     transform: rotateY(180deg);
 }
 
-/* Default state for unselected coins: show front, hide back */
 .coin-option:not(:has(:checked)) .flippable-coin .coin-front {
     opacity: 1;
 }
@@ -565,7 +688,6 @@ input[type=number] {
     opacity: 0;
 }
 
-/* Unselected coins on hover/focus/active: Flip the flippable-coin */
 .coin-option:not(:has(:checked)):hover .flippable-coin,
 .coin-option:not(:has(:checked)):focus .flippable-coin,
 .coin-option:not(:has(:checked)):active .flippable-coin {
@@ -584,38 +706,6 @@ input[type=number] {
     opacity: 1;
 }
 
-/* Initial state for CHECKED coin: show back */
-.coin-option:has(:checked) .flippable-coin {
-    transform: rotateY(180deg);
-}
-
-.coin-option:has(:checked) .flippable-coin .coin-front {
-    opacity: 0;
-}
-
-.coin-option:has(:checked) .flippable-coin .coin-back {
-    opacity: 1;
-}
-
-/* Checked coin on hover/focus/active: Flip to show front */
-.coin-option:has(:checked):hover .flippable-coin,
-.coin-option:has(:checked):focus .flippable-coin,
-.coin-option:has(:checked):active .flippable-coin {
-    transform: rotateY(0deg);
-}
-
-.coin-option:has(:checked):hover .flippable-coin .coin-front,
-.coin-option:has(:checked):focus .flippable-coin .coin-front,
-.coin-option:has(:checked):active .flippable-coin .coin-front {
-    opacity: 1;
-}
-
-.coin-option:has(:checked):hover .flippable-coin .coin-back,
-.coin-option:has(:checked):focus .flippable-coin .coin-back,
-.coin-option:has(:checked):active .flippable-coin .coin-back {
-    opacity: 0;
-}
-
 .corner-decoration {
     width: var(--corner-decoration-width);
     height: var(--corner-decoration-height);
@@ -628,14 +718,116 @@ input[type=number] {
     z-index: 1;
     display: none;
     transform: rotate(var(--corner-decoration-rotation));
-    -webkit-transform: rotate(var(--corner-decoration-rotation));
-    -moz-transform: rotate(var(--corner-decoration-rotation));
-    -ms-transform: rotate(var(--corner-decoration-rotation));
-    -o-transform: rotate(var(--corner-decoration-rotation));
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--settings-disabled-option-color);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--settings-radio-checkbox-accent-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--settings-radio-checkbox-accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider::after {
+    content: "OFF";
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 70%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+input:checked + .slider::after {
+    content: "ON";
+    left: 30%;
+}
+
+.theme-url-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.theme-url-btn {
+    background-color: var(--settings-btn-bg-color);
+    border: 1px solid var(--settings-btn-border-color);
+    color: var(--settings-option-text-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.theme-url-btn:hover {
+    background-color: var(--settings-option-hover-bg-color);
+    color: var(--settings-option-hover-text-color);
+}
+
+.theme-url-btn.active {
+    background-color: var(--settings-option-active-bg-color);
+    color: var(--settings-option-active-text-color);
+    border-color: var(--settings-option-active-bg-color);
 }
 
 @media (max-width: 1023px) {
-    /* Hacemos la regla más específica para asegurar que sobrescriba otras */
     #settings-dropdown #palette-toggle-btn {
         display: none !important;
     }
@@ -649,11 +841,9 @@ input[type=number] {
 
 @media (min-width: 1024px) {
     body {
-        /* Striped background for laptop and desktop viewports */
-        background-image: linear-gradient(135deg, transparent 0%, transparent 20%, var(--bg-stripe-color-1) 20%, var(--bg-stripe-color-1) 30%, transparent 30%, transparent 70%, var(--bg-stripe-color-1) 70%, var(--bg-stripe-color-1) 80%, transparent 80%, transparent 100%),
-            linear-gradient(135deg, var(--bg-stripe-color-2) 0%, transparent 40%, transparent 60%, var(--bg-stripe-color-2) 100%);
+        background-image: linear-gradient(135deg, transparent 0%, transparent 20%, var(--body-striped-bg-color-1) 20%, var(--body-striped-bg-color-1) 30%, transparent 30%, transparent 70%, var(--body-striped-bg-color-1) 70%, var(--body-striped-bg-color-1) 80%, transparent 80%, transparent 100%),
+            linear-gradient(135deg, var(--body-striped-bg-color-2) 0%, transparent 40%, transparent 60%, var(--body-striped-bg-color-2) 100%);
         background-size: 50px 50px, 100%;
-        /* Adjust as needed for stripe size */
         background-position: center, center;
         background-repeat: repeat, no-repeat;
     }
@@ -666,7 +856,6 @@ input[type=number] {
         justify-content: space-between;
         padding: 0;
         overflow: hidden;
-        /* Remove striped background from calculator-container */
         background-image: none;
     }
 
@@ -685,8 +874,8 @@ input[type=number] {
 
     .header {
         margin-bottom: 0.5rem;
-        background-color: var(--header-bg-color); /* Usando la nueva variable */
-        color: var(--header-text-color); /* Usando la nueva variable para el color del texto del header */
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
         width: 100%;
         padding: 0.5rem 0;
         transition: background-color 0.3s ease;
@@ -709,10 +898,10 @@ input[type=number] {
 
     .footer {
         margin-top: 0.5rem;
-        background-color: transparent; /* Usando la nueva variable */
-        color: var(--footer-text-color); /* Usando la nueva variable para el color del texto del footer */
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
         width: 100%;
-        padding: 0.5rem;
+        padding: 0rem;
         transition: background-color 0.3s ease;
         text-align: center;
         display: block;
@@ -730,7 +919,6 @@ input[type=number] {
         padding-right: 0;
     }
 
-    /* Larger coins for laptop+ viewports */
     .flippable-coin {
         width: 4.5rem;
         height: 4.5rem;
@@ -743,17 +931,17 @@ input[type=number] {
 
 @media (min-width: 1280px) {
     body {
-        background-image: var(--desktop-bg-image, none);
-        background-size: var(--desktop-bg-size, auto);
-        background-position: var(--desktop-bg-position, center);
-        background-repeat: var(--desktop-bg-repeat, no-repeat);
+        background-image: var(--desktop-body-bg-image);
+        background-size: var(--desktop-body-bg-size);
+        background-position: var(--desktop-body-bg-position);
+        background-repeat: var(--desktop-body-bg-repeat);
     }
 
     .calculator-container {
-        background-image: var(--container-bg-image, none);
-        background-size: var(--container-bg-image-size, initial);
-        background-position: var(--container-bg-image-position, initial);
-        background-repeat: var(--container-bg-image-repeat, initial);
+        background-image: var(--desktop-calculator-container-bg-image);
+        background-size: var(--desktop-calculator-container-bg-size);
+        background-position: var(--desktop-calculator-container-bg-position);
+        background-repeat: var(--desktop-calculator-container-bg-repeat);
     }
 
     .fieldset {
@@ -773,8 +961,8 @@ input[type=number] {
         padding: 0.75rem 1rem;
         border-radius: 0.5rem;
         border: none;
-        border-top: 0.25rem solid var(--result-border-color);
-        background-color: var(--result-bg-color);
+        border-top: 0.25rem solid var(--result-section-border-color);
+        background-color: var(--result-section-bg-color);
     }
 
     #footer-theme-credit {
@@ -782,8 +970,8 @@ input[type=number] {
     }
 
     .footer {
-        background-color: var(--footer-bg-color); /* Usando la nueva variable */
-        color: var(--footer-text-color); /* Usando la nueva variable para el color del texto del footer */
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -811,6 +999,58 @@ input[type=number] {
 
     .modal-content {
         max-width: 48rem;
-        /* Increased max-width for 3 columns */
+    }
+
+    #settings-dropdown {
+        width: auto;
+        max-width: none;
+        padding: 1rem;
+    }
+
+    .settings-columns {
+        display: grid;
+        grid-template-areas: "left-col right-col";
+        grid-template-columns: minmax(150px, auto) 220px;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .settings-left-column {
+        grid-area: left-col;
+        padding-right: 0.75rem;
+        border-right: 1px solid var(--settings-dropdown-border-color);
+    }
+
+    .settings-right-column {
+        grid-area: right-col;
+        padding-left: 0.75rem;
+    }
+
+    #settings-dropdown .settings-section {
+        margin-bottom: 0.75rem;
+    }
+
+    #settings-dropdown .settings-section:last-child {
+        margin-bottom: 0;
+    }
+
+    #settings-dropdown .settings-section h3 {
+        margin-top: 0;
+    }
+
+    .appearance-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 0;
+    }
+
+    #seasonal-theme-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: none;
     }
 }
