@@ -45,7 +45,7 @@ Haz clic en el icono de ajustes (engranaje) en la esquina superior derecha para 
 Para tener una copia local de este proyecto y ejecutarlo en tu máquina:
 
 1. **Clona el repositorio**:  
-   git clone https://github.com/aseba6d/c-peso-moneda.git
+   git clone https://github.com/aseba6d/c-peso-moneda
 
 2. **Navega al directorio del proyecto**:  
    cd nombre-del-repositorio
