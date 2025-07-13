@@ -1,6 +1,6 @@
 # **Calculadora de Monedas por Peso**
 
-Una herramienta sencilla y personalizable para calcular la cantidad y el valor total de monedas chilenas según su peso. Ideal para coleccionistas, comerciantes o cualquier persona que necesite una forma rápida de contar grandes volúmenes de monedas.
+Una herramienta sencilla y personalizable para calcular la cantidad y el valor total de monedas chilenas según su peso. Ideal para cualquier persona que necesite una forma rápida de contar grandes volúmenes de monedas.
 
 ## **Características**
 
@@ -45,7 +45,7 @@ Haz clic en el icono de ajustes (engranaje) en la esquina superior derecha para 
 Para tener una copia local de este proyecto y ejecutarlo en tu máquina:
 
 1. **Clona el repositorio**:  
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   git clone https://github.com/aseba6d/c-peso-moneda.git
 
 2. **Navega al directorio del proyecto**:  
    cd nombre-del-repositorio
@@ -54,7 +54,7 @@ Para tener una copia local de este proyecto y ejecutarlo en tu máquina:
 
 ## **Créditos**
 
-* **Autor**: [asebabd](https://www.google.com/search?q=https://github.com/asebabd)  
+* **Autor**: [asebabd](https://github.com/aseba6d)  
 * **Diseño y Concepto**: Inspirado en la necesidad de una herramienta práctica para el conteo de monedas.
 
 ## **Licencia**
