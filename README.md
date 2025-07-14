@@ -48,7 +48,7 @@ Para tener una copia local de este proyecto y ejecutarlo en tu máquina:
    git clone https://github.com/aseba6d/c-peso-moneda.git
 
 2. **Navega al directorio del proyecto**:  
-   cd nombre-del-repositorio
+   cd c-peso-moneda
 
 3. **Abre index.html en tu navegador**: Simplemente abre el archivo index.html directamente desde tu explorador de archivos, o usa una extensión de "Live Server" si estás en un editor como VS Code para una mejor experiencia de desarrollo.
 

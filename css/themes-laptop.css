@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 html.theme-blue {
     --body-bg-color: #f3f4f6;
     --body-text-color: #1565c0;
@@ -7,7 +9,6 @@ html.theme-blue {
     --calculator-container-border-color: #90caf9;
     --header-bg-color: transparent;
     --header-text-color: #1565c0;
-    --title-text-color: #1565c0;
     --footer-bg-color: #e3f2fd;
     --footer-text-color: #2196f3;
     --fieldset-border-color: #90caf9;
@@ -69,7 +70,6 @@ html.dark.theme-blue {
     --calculator-container-border-color: #60a5fa;
     --header-bg-color: transparent;
     --header-text-color: #bfdbfe;
-    --title-text-color: #bfdbfe;
     --footer-bg-color: #072e6b;
     --footer-text-color: #93c5fd;
     --fieldset-border-color: #60a5fa;
@@ -131,7 +131,6 @@ html.theme-red {
     --calculator-container-border-color: #ef9a9a;
     --header-bg-color: transparent;
     --header-text-color: #c62828;
-    --title-text-color: #c62828;
     --footer-bg-color: #ffebee;
     --footer-text-color: #ef5350;
     --fieldset-border-color: #ef9a9a;
@@ -193,7 +192,6 @@ html.dark.theme-red {
     --calculator-container-border-color: #dc2626;
     --header-bg-color: #5d001e;
     --header-text-color: #fecaca;
-    --title-text-color: #fecaca;
     --footer-bg-color: #5d001e;
     --footer-text-color: #ef9a9a;
     --fieldset-border-color: #dc2626;
@@ -255,7 +253,6 @@ html.theme-green {
     --calculator-container-border-color: #a5d6a7;
     --header-bg-color: transparent;
     --header-text-color: #2e7d32;
-    --title-text-color: #2e7d32;
     --footer-bg-color: #e8f5e9;
     --footer-text-color: #4caf50;
     --fieldset-border-color: #a5d6a7;
@@ -317,7 +314,6 @@ html.dark.theme-green {
     --calculator-container-border-color: #2dd4bf;
     --header-bg-color: transparent;
     --header-text-color: #ccfbf1;
-    --title-text-color: #ccfbf1;
     --footer-bg-color: #0d330d;
     --footer-text-color: #5eead4;
     --fieldset-border-color: #2dd4bf;
@@ -379,7 +375,6 @@ html.theme-violet {
     --calculator-container-border-color: #ce93d8;
     --header-bg-color: transparent;
     --header-text-color: #6a1b9a;
-    --title-text-color: #6a1b9a;
     --footer-bg-color: #f3e5f5;
     --footer-text-color: #9c27b0;
     --fieldset-border-color: #ce93d8;
@@ -441,7 +436,6 @@ html.dark.theme-violet {
     --calculator-container-border-color: #a78bfa;
     --header-bg-color: transparent;
     --header-text-color: #e0e7ff;
-    --title-text-color: #e0e7ff;
     --footer-bg-color: #2d005e;
     --footer-text-color: #c4b5fd;
     --fieldset-border-color: #a78bfa;
@@ -503,7 +497,6 @@ html.theme-rosado {
     --calculator-container-border-color: #f48fb1;
     --header-bg-color: transparent;
     --header-text-color: #ad1457;
-    --title-text-color: #ad1457;
     --footer-bg-color: #fce4ec;
     --footer-text-color: #ec407a;
     --fieldset-border-color: #f48fb1;
@@ -565,7 +558,6 @@ html.dark.theme-rosado {
     --calculator-container-border-color: #e91e63;
     --header-bg-color: transparent;
     --header-text-color: #fce4ec;
-    --title-text-color: #fce4ec;
     --footer-bg-color: #6b0549;
     --footer-text-color: #f48fb1;
     --fieldset-border-color: #e91e63;
@@ -627,7 +619,6 @@ html.theme-naranja {
     --calculator-container-border-color: #ffcc80;
     --header-bg-color: transparent;
     --header-text-color: #e65100;
-    --title-text-color: #e65100;
     --footer-bg-color: #fff3e0;
     --footer-text-color: #ff9800;
     --fieldset-border-color: #ffcc80;
@@ -689,7 +680,6 @@ html.dark.theme-naranja {
     --calculator-container-border-color: #fb8c00;
     --header-bg-color: transparent;
     --header-text-color: #fff3e0;
-    --title-text-color: #fff3e0;
     --footer-bg-color: #6b3c05;
     --footer-text-color: #ffcc80;
     --fieldset-border-color: #fb8c00;
@@ -751,7 +741,6 @@ html.theme-cafe {
     --calculator-container-border-color: #bcaaa4;
     --header-bg-color: transparent;
     --header-text-color: #4e342e;
-    --title-text-color: #4e342e;
     --footer-bg-color: #efebe9;
     --footer-text-color: #8d6e63;
     --fieldset-border-color: #bcaaa4;
@@ -813,7 +802,6 @@ html.dark.theme-cafe {
     --calculator-container-border-color: #6d4c41;
     --header-bg-color: transparent;
     --header-text-color: #efebe9;
-    --title-text-color: #efebe9;
     --footer-bg-color: #3e2723;
     --footer-text-color: #bcaaa4;
     --fieldset-border-color: #6d4c41;

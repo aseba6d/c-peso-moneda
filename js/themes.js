@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Yoamero/Jair", className: "theme-yoamero-jair", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByDefault: true, defaultOrder: 5 }, viewportTarget: "desktop" },
     { name: "Yoamero/Emily", className: "theme-yoamero-emily", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByDefault: true, defaultOrder: 6 }, viewportTarget: "desktop" },
     { name: "Yoamero/Charlotte", className: "theme-yoamero-charlotte", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByDefault: true, defaultOrder: 7 }, viewportTarget: "desktop" },
-    { name: "Pokémon", className: "theme-pkm", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByUrl: true, urlOrder: 1 }, viewportTarget: "desktop" }
+    { name: "Pokémon", className: "theme-pkm", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByUrl: true, urlOrder: 1 }, viewportTarget: "desktop" },
+    { name: "Slam Dunk", className: "theme-slam-dunk", fixed: false, monthRange: null, dayRange: null, lastDaysOfMonth: -1, hourRange: null, availability: { availableByUrl: true, urlOrder: 2 }, viewportTarget: "desktop" }
   ];
 
   const htmlElement = document.documentElement;

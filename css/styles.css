@@ -23,7 +23,6 @@
     /* Encabezado y pie de página */
     --header-bg-color: transparent;
     --header-text-color: #1f2937;
-    --title-text-color: inherit;
     --footer-bg-color: transparent;
     --footer-text-color: #6b7280;
 
@@ -226,13 +225,12 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     background-color: var(--header-bg-color);
-    color: var(--header-text-color);
 }
 
 .title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--title-text-color);
+    color: var(--header-text-color);
 }
 
 .footer {
