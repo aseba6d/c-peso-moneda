@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
     urlAvailableThemes.sort((a, b) => (a.availability?.urlOrder || 999) - (b.availability?.urlOrder || 999));
 
     const urlParams = new URLSearchParams(window.location.search);
-    const currentTemaUrl = urlParams.get('tema');
-    const isOffParamPresent = urlParams.get('off') !== null;
+    const currentTemaUrl = urlParams.get('tema'); 
+    const isOffParamPresent = urlParams.get('off') === 'true';
 
     urlAvailableThemes.forEach(theme => {
       const button = document.createElement('button');
@@ -174,31 +174,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
       urlThemeButtonsContainer.appendChild(button);
     });
+
+    const closeThemeButton = document.createElement('button');
+    closeThemeButton.textContent = 'Cerrar Tema Url';
+    closeThemeButton.classList.add('theme-url-btn', 'clear-url-theme-btn');
+    closeThemeButton.addEventListener('click', () => {
+      updateUrlParameter('tema', null); 
+      updateUrlParameter('off', null);  
+      updateUrlParameter('menu', null); 
+      checkViewportAndThemes(); 
+    });
+    urlThemeButtonsContainer.appendChild(closeThemeButton);
   }
 
   function checkViewportAndThemes() {
     const currentDate = new Date();
     const urlParams = new URLSearchParams(window.location.search);
-    const disableFixedThemes = urlParams.get("off") !== null;
+    const disableFixedThemes = urlParams.get("off") === 'true';
     let resolvedPalette = null;
 
     const isDesktopViewport = window.innerWidth >= 1280;
-    const temaParam = urlParams.get("tema");
-    const isTemaLista = temaParam === "lista";
+    const menuParam = urlParams.get("menu"); 
+    const isMenuLista = menuParam === "lista";
     
     const isFixedThemeConfiguredForDate = getMatchingFixedTheme(currentDate, false) !== null;
 
-    if (isDesktopViewport && isTemaLista && isFixedThemeConfiguredForDate) {
+    if (isDesktopViewport && isMenuLista && isFixedThemeConfiguredForDate) {
         seasonalThemeSection.style.display = 'flex';
-        seasonalThemeToggle.checked = !disableFixedThemes;
+        seasonalThemeToggle.checked = !disableFixedThemes; // Invertir el checked para que "ON" signifique temas fijos activos
     } else {
         seasonalThemeSection.style.display = 'none';
         seasonalThemeToggle.checked = false;
     }
 
-    if (isDesktopViewport && isTemaLista) {
+    if (isDesktopViewport && isMenuLista) {
         urlThemesSection.style.display = 'block';
-        renderUrlThemes();
+        renderUrlThemes(); 
     } else {
         urlThemesSection.style.display = 'none';
     }
@@ -226,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const relevantPalettes = getEffectivePalettes(viewportTarget, true);
 
+      const temaParam = urlParams.get("tema"); 
       if (temaParam && temaParam !== "lista" && !isNaN(parseInt(temaParam))) {
         const requestedUrlOrder = parseInt(temaParam);
         const selectedThemeFromUrl = relevantPalettes.find(
@@ -272,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentDate = new Date();
     const urlParams = new URLSearchParams(window.location.search);
-    const disableFixedThemes = urlParams.get("off") !== null;
+    const disableFixedThemes = urlParams.get("off") === 'true';
 
     if (getMatchingFixedTheme(currentDate, disableFixedThemes) && !disableFixedThemes) return;
 
@@ -289,6 +301,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextIndex = (currentIndex + 1) % palettesToCycle.length;
     const nextPalette = palettesToCycle[nextIndex];
     applyPalette(nextPalette, true);
+
+    updateUrlParameter('tema', null);
+    updateUrlParameter('menu', null);
+    checkViewportAndThemes(); 
   });
 
   themeToggleBtn.addEventListener("click", () => {
@@ -297,19 +313,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   seasonalThemeToggle.addEventListener('change', () => {
-    if (seasonalThemeToggle.checked) {
-      updateUrlParameter('off', null);
-    } else {
-      updateUrlParameter('off', 'true');
+    if (seasonalThemeToggle.checked) { // Si el toggle está "ON" (visual ON) -> Temas fijos ACTIVOS
+      updateUrlParameter('off', null); // Eliminar el parámetro 'off'
+    } else { // Si el toggle está "OFF" (visual OFF) -> Temas fijos DESACTIVADOS
+      updateUrlParameter('off', 'true'); // Establecer off=true
     }
     checkViewportAndThemes();
   });
 
-  urlThemeButtonsContainer.addEventListener('click', (event) => {
+  urlThemesSection.addEventListener('click', (event) => {
     const clickedButton = event.target.closest('.theme-url-btn');
-    if (clickedButton) {
+    if (clickedButton && !clickedButton.classList.contains('clear-url-theme-btn')) { 
       const urlOrder = clickedButton.dataset.urlOrder;
-      updateUrlParameter('tema', urlOrder);
+      updateUrlParameter('tema', urlOrder); 
+      updateUrlParameter('menu', null); 
       checkViewportAndThemes();
     }
   });
