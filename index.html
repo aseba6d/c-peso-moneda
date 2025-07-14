@@ -6,7 +6,7 @@
     <title>Calculadora de Monedas por Peso</title>
     <meta name="description" content="Una herramienta sencilla para calcular la cantidad y el el valor de las monedas según su peso total.">
     <meta name="author" content="asebabd">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, nosnippet, noarchive, noimageindex">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/themes-laptop.css" media="(min-width: 1024px)">
     <link rel="stylesheet" href="css/themes-desktop.css" media="(min-width: 1280px)">
@@ -25,38 +25,41 @@
                     <div class="settings-section">
                         <h3>Modalidad de Cálculo</h3>
                         <label>
-                            <input type="radio" name="calculation-method" value="weight-to-value" checked>
+                            <input type="radio" name="calculation-method" value="weight-to-value" class="sr-only" checked>
+                            <span class="custom-control"></span>
                             Peso a Cantidad/$
                         </label>
                         <label>
-                            <input type="radio" name="calculation-method" value="value-to-weight">
+                            <input type="radio" name="calculation-method" value="value-to-weight" class="sr-only">
+                            <span class="custom-control"></span>
                             $ a Cantidad/Peso
                         </label>
                         <label>
-                            <input type="radio" name="calculation-method" value="quantity-to-value">
+                            <input type="radio" name="calculation-method" value="quantity-to-value" class="sr-only">
+                            <span class="custom-control"></span>
                             Cantidad a $/Peso
                         </label>
                     </div>
                     <div class="settings-section">
                         <h3>Monedas Visibles</h3>
-                        <label><input type="checkbox" class="coin-visibility-toggle" value="1"> $1</label>
-                        <label><input type="checkbox" class="coin-visibility-toggle" value="5"> $5</label>
-                        <label disabled><input type="checkbox" class="coin-visibility-toggle" value="10" checked disabled>
+                        <label><input type="checkbox" class="coin-visibility-toggle sr-only" value="1"><span class="custom-control"></span> $1</label>
+                        <label><input type="checkbox" class="coin-visibility-toggle sr-only" value="5"><span class="custom-control"></span> $5</label>
+                        <label disabled><input type="checkbox" class="coin-visibility-toggle sr-only" value="10" checked disabled><span class="custom-control"></span>
                             $10</label>
-                        <label disabled><input type="checkbox" class="coin-visibility-toggle" value="50" checked disabled>
+                        <label disabled><input type="checkbox" class="coin-visibility-toggle sr-only" value="50" checked disabled><span class="custom-control"></span>
                             $50</label>
                         <div class="combined-coin-group">
                             <p>$100 (Variantes)</p>
                             <div>
-                                <label><input type="checkbox" class="coin-visibility-toggle" value="100" checked> $100
+                                <label><input type="checkbox" class="coin-visibility-toggle sr-only" value="100" checked><span class="custom-control"></span> $100
                                     (Nueva)</label>
-                                <label><input type="checkbox" class="coin-visibility-toggle" value="100-100y" checked> $100 (100
+                                <label><input type="checkbox" class="coin-visibility-toggle sr-only" value="100-100y" checked><span class="custom-control"></span> $100 (100
                                     años)</label>
-                                <label><input type="checkbox" class="coin-visibility-toggle" value="100-antigua" checked> $100
+                                <label><input type="checkbox" class="coin-visibility-toggle sr-only" value="100-antigua" checked><span class="custom-control"></span> $100
                                     (Antigua)</label>
                             </div>
                         </div>
-                        <label disabled><input type="checkbox" class="coin-visibility-toggle" value="500" checked disabled>
+                        <label disabled><input type="checkbox" class="coin-visibility-toggle sr-only" value="500" checked disabled><span class="custom-control"></span>
                             $500</label>
                     </div>
                 </div>
